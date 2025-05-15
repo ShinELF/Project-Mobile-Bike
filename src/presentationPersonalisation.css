@@ -1,0 +1,164 @@
+
+/* let the body takes all the page */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    color: #006680;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 200px;
+}
+
+/* hide the arrow for small screen */
+.arrow {
+    display:none;
+}
+
+@media screen and (min-width: 720px) {
+    body {
+        width:100%;
+    }
+    .mainSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 100px;
+    }
+    .texte {
+        width: 100%;
+    }
+    
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    img.centerBike {
+        width:170px;
+    }
+    
+    img.leftBike {
+        margin-right: -150px;
+        width: 120px;
+        /* put the img in perspective */
+        z-index: -1;
+        position:relative;
+    }
+    img.rightBike {
+        margin-left: -120px;
+        width: 120px;
+        /* put the img in perspective */
+        z-index: -1;
+        position: relative;
+    }
+    .caroussel {
+        width:90%;
+        height: 50%;
+    }
+    .arrow {
+        display: block;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:100%;
+    }
+    .mainSection {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 100px;
+    }
+    .texte {
+        width: 100%;
+        padding:100px;
+        font-size: 30px;
+        p {
+            font-size: 25px;
+        }
+    }
+    
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    img.centerBike {
+        width:500px;
+    }
+    
+    img.leftBike {
+        margin-right: -200px;
+        width: 350px;
+        /* put the img in perspective */
+        z-index: -1;
+        position:relative;
+    }
+    img.rightBike {
+        margin-left: -200px;
+        width: 350px;
+        /* put the img in perspective */
+        z-index: -1;
+        position: relative;
+    }
+    .caroussel {
+        width:90%;
+        height: 50%;
+    }
+    .arrow {
+        display: block;
+        width: 50%;
+    }
+    .communiquer {
+        font-size: 200px;
+        position: absolute;
+        z-index: -1;
+        left: 200px;
+        color:lightgrey;
+        margin-top: 100px;
+        padding-top: 520px;
+        opacity: 50%;
+        font-weight: bolder;
+    }
+    .demarquer {
+        font-size: 100px;
+        position: absolute;
+        z-index: -1;
+        left: 200px;
+        color:lightgrey;
+        margin-bottom: 0px;
+        padding-top: 550px;
+        opacity: 50%;
+        font-weight: bolder;
+    }
+    .marquer {
+        font-size: 80px;
+        position: absolute;
+        z-index: -1;
+        left: 200px;
+        color:lightgrey;
+        margin-bottom: 0px;
+        opacity: 50%;
+        font-weight: bolder;
+    }
+}
+
