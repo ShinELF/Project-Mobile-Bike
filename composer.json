@@ -1,0 +1,16 @@
+{
+    "name": "mobilebike/src",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mobilebike\\Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alice Tiertant",
+            "email": "alice.tiertant@gmail.com"
+        }
+    ],
+    "require": {}
+}
