@@ -49,13 +49,13 @@ class __TwigTemplate_83eaed8aac3e0603e2f52d57db98f2e1 extends Template
         // line 6
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</title>
-\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT\" crossorigin=\"anonymous\">
+\t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 
 \t</head>
 \t<body>
-\t\t<header class=\"mt-2 mb-4 container\">
+\t\t<header>
 \t\t\t<nav>
-\t\t\t\t<ul class=\"nav nav-tabs\">
+\t\t\t\t<ul>
 \t\t\t\t\t";
         // line 14
         $context['_parent'] = $context;
@@ -63,7 +63,7 @@ class __TwigTemplate_83eaed8aac3e0603e2f52d57db98f2e1 extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
             // line 15
             yield "
-\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"";
             // line 17
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "path", [], "any", false, false, false, 17), "html", null, true);
@@ -83,13 +83,15 @@ class __TwigTemplate_83eaed8aac3e0603e2f52d57db98f2e1 extends Template
         // line 20
         yield "\t\t\t\t</ul>
 \t\t\t</nav>
-\t\t</body>
-\t</body>
-</html></header><div class=\"container\"> ";
+\t\t</header>
+\t\t<div>
+\t\t\t";
         // line 24
         yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
         // line 25
-        yield "</div></body></html></body></html>
+        yield "\t\t</div>
+\t</body>
+</html>
 ";
         yield from [];
     }
@@ -125,7 +127,7 @@ class __TwigTemplate_83eaed8aac3e0603e2f52d57db98f2e1 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  98 => 24,  92 => 25,  90 => 24,  84 => 20,  69 => 17,  65 => 15,  61 => 14,  50 => 6,  43 => 1,);
+        return array (  100 => 24,  92 => 25,  90 => 24,  84 => 20,  69 => 17,  65 => 15,  61 => 14,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -136,25 +138,27 @@ class __TwigTemplate_83eaed8aac3e0603e2f52d57db98f2e1 extends Template
 \t\t<meta charset=\"UTF-8\">
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 \t\t<title>{{ title }}</title>
-\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT\" crossorigin=\"anonymous\">
+\t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 
 \t</head>
 \t<body>
-\t\t<header class=\"mt-2 mb-4 container\">
+\t\t<header>
 \t\t\t<nav>
-\t\t\t\t<ul class=\"nav nav-tabs\">
+\t\t\t\t<ul>
 \t\t\t\t\t{% for link in links %}
 
-\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"{{ link.path }}\" class=\"nav-link {% if link.active %} active{% endif %}\">{{ link.title }}</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t{% endfor %}
 \t\t\t\t</ul>
 \t\t\t</nav>
-\t\t</body>
+\t\t</header>
+\t\t<div>
+\t\t\t{% block content %}{% endblock %}
+\t\t</div>
 \t</body>
-</html></header><div class=\"container\"> {% block content %}{% endblock %}
-</div></body></html></body></html>
+</html>
 ", "base.twig", "C:\\Users\\Alice\\Documents\\01_Diginamic\\Exercices\\PROJET\\Projet-Mobile-Bike\\src\\Views\\base.twig");
     }
 }

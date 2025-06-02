@@ -1,0 +1,23 @@
+{
+  "name": "projet-mobile-bike",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass src/assets/scss/main.scss src/assets/css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShinELF/Project-Mobile-Bike.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShinELF/Project-Mobile-Bike/issues"
+  },
+  "homepage": "https://github.com/ShinELF/Project-Mobile-Bike#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.1"
+  }
+}
