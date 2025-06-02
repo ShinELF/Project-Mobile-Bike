@@ -1,0 +1,20 @@
+{
+    "name": "diginamic/framework",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Diginamic\\Framework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alice Tiertant",
+            "email": "alice.tiertant@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0",
+        "vlucas/phpdotenv": "^5.6",
+        "guzzlehttp/guzzle": "^7.9"
+    }
+}
