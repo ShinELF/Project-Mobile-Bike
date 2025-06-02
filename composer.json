@@ -12,5 +12,8 @@
             "email": "alice.tiertant@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "7.9",
+        "twig/twig": "^3.0"
+    }
 }
