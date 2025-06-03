@@ -2,18 +2,24 @@
     font-family: CenturyGothic;
     src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
 }
+
 @font-face {
     font-family: Calibri;
     src: url("./../../../Ressources/Font/Calibri/calibri.ttf");
 }
-body{
+
+body {
     font-family: Calibri;
 }
 
-main{
+main {
     text-align: justify;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -26,6 +32,7 @@ header {
     box-shadow: 0 2px 0 0 #162d5019;
     background-color: #F7F7F7;
     padding-top: 1%;
+    margin-bottom: 1%;
 }
 
 ul {
@@ -33,6 +40,10 @@ ul {
     align-items: center;
     list-style: none;
     padding-left: 1%;
+
+    & :visited {
+        color: #006680;
+    }
 
     & :hover {
         font-weight: bold;
@@ -47,6 +58,10 @@ ul {
     & #cart:hover {
         fill: #162d50;
     }
+}
+
+.active {
+    font-weight: bold;
 }
 
 li {
@@ -121,6 +136,44 @@ footer {
     box-shadow: 0 0 0 2px #162d5019;
     background-color: #F7F7F7;
     padding-bottom: 1%;
-    position:relative;
-    bottom : 0%;
+    position: relative;
+    bottom: 0%;
+    margin-top:1%;
+}
+
+p {
+    color: #006680;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+h1,h2,h3,h4 {
+    color: #162d50;
+    font-family: CenturyGothic;
+}
+
+section {
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &.intro{
+        margin-bottom: 1.5%;
+    }
+}
+
+article {
+    max-width: 50%;
+}
+@media screen and (max-width: 768px) {
+    section {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .Avis {
+        top: 0%;
+    }
 }
