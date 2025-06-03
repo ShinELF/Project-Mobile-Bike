@@ -56,32 +56,30 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
         $macros = $this->macros;
         // line 4
         yield "\t<section>
-\t\t<h2>";
-        // line 5
+
+\t\t<h2>
+\t\t\t";
+        // line 7
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</h2>
 
 \t\t<form method=\"post\" action=\"/login-post\">
-
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login:
-\t\t\t\t</label>
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
 \t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
 \t\t\t</div>
 
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"passwordLabel\" for=\"password\">Votre mot de passe:
-\t\t\t\t</label>
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
 \t\t\t</div>
 
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<button id=\"btnForm\" type=\"submit\" class=\"btn btn-primary btn-lg\">Envoyer</button>
+\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
 \t\t\t</div>
 \t\t</form>
+
 \t</section>
-
-
 ";
         yield from [];
     }
@@ -107,7 +105,7 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  61 => 5,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  63 => 7,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -116,29 +114,27 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
 
 {% block content %}
 \t<section>
-\t\t<h2>{{ title }}</h2>
+
+\t\t<h2>
+\t\t\t{{ title }}</h2>
 
 \t\t<form method=\"post\" action=\"/login-post\">
-
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login:
-\t\t\t\t</label>
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
 \t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
 \t\t\t</div>
 
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"passwordLabel\" for=\"password\">Votre mot de passe:
-\t\t\t\t</label>
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
 \t\t\t</div>
 
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<button id=\"btnForm\" type=\"submit\" class=\"btn btn-primary btn-lg\">Envoyer</button>
+\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
 \t\t\t</div>
 \t\t</form>
+
 \t</section>
-
-
 {% endblock %}
 ", "login/formLogin.twig", "/home/thang/Documents/diginamic/TP/Project-Mobile-Bike/src/Views/login/formLogin.twig");
     }
