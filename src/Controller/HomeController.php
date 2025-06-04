@@ -88,8 +88,8 @@ class HomeController extends Controller
   {
 
     $html = $this->twig->render('home/entretien.twig', [
-      'title' => "Boutique en ligne",
-      'links' => $this->navService->routesToLinks('/boutique'),
+      'title' => "Entretien",
+      'links' => $this->navService->routesToLinks('/entretien'),
       'date' => date(DATE_ATOM, strtotime('now'))
     ]);
     /* $html = View::header($links);
