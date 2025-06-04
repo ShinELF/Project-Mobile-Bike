@@ -48,6 +48,39 @@ body section.login form #inputForm #btnForm {
   border-radius: 10px;
 }
 
+.haute {
+  display: flex;
+  gap: 50px;
+}
+.haute .hauteChild {
+  flex: 1;
+}
+.haute .hauteChild h2 {
+  padding-bottom: 20px;
+}
+.haute .hauteChild p {
+  font-size: 25px;
+}
+.haute .hauteImage {
+  width: 700px;
+}
+
+.basse {
+  display: flex;
+  gap: 50px;
+}
+.basse .basse {
+  flex: 1;
+}
+.basse .basseImage {
+  width: 700px;
+}
+.basse .basseReservation {
+  font-size: 30px;
+  padding-left: 100px;
+  padding-top: 250px;
+}
+
 @font-face {
   font-family: CenturyGothic;
   src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");

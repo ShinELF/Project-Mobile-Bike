@@ -1,0 +1,36 @@
+.haute {
+    display:flex;
+    gap: 50px;
+    .hauteChild {
+        flex:1;
+        h2 {
+            padding-bottom: 20px;
+        }
+        p {
+            font-size: 25px;
+        }
+    }
+    .hauteImage {
+        width: 700px;
+    }
+}
+
+.basse {
+    display:flex;
+    gap: 50px;
+
+    .basse {
+        flex:1;
+    }
+    .basseImage {
+        width: 700px;
+    }
+    .basseReservation {
+        font-size: 30px;
+        padding-left: 100px;
+        padding-top: 250px;
+    }
+}
+
+
+
