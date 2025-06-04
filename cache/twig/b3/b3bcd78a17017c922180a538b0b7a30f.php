@@ -55,37 +55,31 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
     {
         $macros = $this->macros;
         // line 4
-        yield "\t<div class=\"container py-5\">
-\t\t<div class=\"row justify-content-center\">
-\t\t\t<div class=\"col-md-5\">
-\t\t\t\t<div class=\"card shadow\">
-\t\t\t\t\t<div class=\"card-body p-4\">
-\t\t\t\t\t\t<h2 class=\"card-title text-center mb-4\">";
-        // line 9
+        yield "\t<section class=\"login\">
+
+\t\t<h2>
+\t\t\t";
+        // line 7
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</h2>
 
-\t\t\t\t\t\t<form method=\"post\" action=\"/login-post\">
-\t\t\t\t\t\t\t<div class=\"form-floating mb-3\">
-\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"login\" name=\"login\" required>
-\t\t\t\t\t\t\t\t<label for=\"login\">Votre login</label>
-\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t<div class=\"form-floating mb-3\">
-\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" required>
-\t\t\t\t\t\t\t\t<label for=\"password\">Votre mot de passe</label>
-\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t<div class=\"d-grid gap-2 mt-4\">
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary btn-lg\">Connexion</button>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</form>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t<form method=\"post\" action=\"/login-post\">
+\t\t\t<div id=\"inputForm\">
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
+\t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
 \t\t\t</div>
-\t\t</div>
-\t</div>
 
+\t\t\t<div id=\"inputForm\">
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
+\t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
+\t\t\t</div>
+
+\t\t\t<div id=\"inputForm\">
+\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
+\t\t\t</div>
+\t\t</form>
+
+\t</section>
 ";
         yield from [];
     }
@@ -111,7 +105,7 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  65 => 9,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  63 => 7,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -119,34 +113,28 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
-\t<div class=\"container py-5\">
-\t\t<div class=\"row justify-content-center\">
-\t\t\t<div class=\"col-md-5\">
-\t\t\t\t<div class=\"card shadow\">
-\t\t\t\t\t<div class=\"card-body p-4\">
-\t\t\t\t\t\t<h2 class=\"card-title text-center mb-4\">{{ title }}</h2>
+\t<section class=\"login\">
 
-\t\t\t\t\t\t<form method=\"post\" action=\"/login-post\">
-\t\t\t\t\t\t\t<div class=\"form-floating mb-3\">
-\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"login\" name=\"login\" required>
-\t\t\t\t\t\t\t\t<label for=\"login\">Votre login</label>
-\t\t\t\t\t\t\t</div>
+\t\t<h2>
+\t\t\t{{ title }}</h2>
 
-\t\t\t\t\t\t\t<div class=\"form-floating mb-3\">
-\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" required>
-\t\t\t\t\t\t\t\t<label for=\"password\">Votre mot de passe</label>
-\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t<div class=\"d-grid gap-2 mt-4\">
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary btn-lg\">Connexion</button>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</form>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t<form method=\"post\" action=\"/login-post\">
+\t\t\t<div id=\"inputForm\">
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
+\t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
 \t\t\t</div>
-\t\t</div>
-\t</div>
 
+\t\t\t<div id=\"inputForm\">
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
+\t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
+\t\t\t</div>
+
+\t\t\t<div id=\"inputForm\">
+\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
+\t\t\t</div>
+\t\t</form>
+
+\t</section>
 {% endblock %}
 ", "login/formLogin.twig", "C:\\Users\\Alice\\Documents\\01_Diginamic\\Exercices\\PROJET\\Projet-Mobile-Bike\\src\\Views\\login\\formLogin.twig");
     }

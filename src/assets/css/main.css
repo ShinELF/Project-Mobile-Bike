@@ -1,44 +1,44 @@
-body section {
+body section.login {
   margin-top: 30px;
-  margin-inline: 550px;
-  padding-bottom: 50px;
+  margin-inline: 33%;
+  padding-bottom: 10px;
   border-radius: 10px;
   background-color: #F7F7F7;
   text-align: center;
 }
-body section h2 {
+body section.login h2 {
   margin-top: 50px;
   padding-top: 20px;
 }
-body section form {
+body section.login form {
   margin-top: 60px;
 }
-body section form #inputForm {
+body section.login form #inputForm {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
-body section form #inputForm #loginLabel {
+body section.login form #inputForm #loginLabel {
   margin-right: 64px;
   padding-left: 7px;
   padding-right: 5px;
 }
-body section form #inputForm #login {
+body section.login form #inputForm #login {
   background-color: #AFE9C6;
   border-color: #2CA05A;
   border-radius: 5px;
   padding: 4px;
 }
-body section form #inputForm #passwordLabel {
+body section.login form #inputForm #passwordLabel {
   margin-right: 10px;
   padding: 5px;
 }
-body section form #inputForm #password {
+body section.login form #inputForm #password {
   background-color: #AFE9C6;
   border-color: #2CA05A;
   border-radius: 5px;
 }
-body section form #inputForm #btnForm {
+body section.login form #inputForm #btnForm {
   font-weight: bold;
   margin-top: 30px;
   padding: 15px;
@@ -68,6 +68,7 @@ main {
 
 a {
   text-decoration: none;
+  color: #006680;
 }
 
 header {
@@ -193,7 +194,7 @@ h1, h2, h3, h4 {
   font-family: CenturyGothic;
 }
 
-section {
+.home {
   text-align: justify;
   font-size: 1.3rem;
   line-height: 1.3;
@@ -201,7 +202,7 @@ section {
   flex-direction: row;
   justify-content: space-between;
 }
-section.intro {
+.home.intro {
   margin-bottom: 1.5%;
 }
 

@@ -51,4 +51,21 @@ class HomeController extends Controller
       $html
     );
   } //View::baseTemplate("Accueil", $html)
+
+      public function event(ServerRequestInterface $request): ResponseInterface
+  {
+
+    $html = $this->twig->render('home/evenement.twig', [
+      'title' => "Évènements",
+      'links' => $this->navService->routesToLinks('/evenement'),
+      'date' => date(DATE_ATOM, strtotime('now'))
+    ]);
+    /* $html = View::header($links);
+    $html .= "<h1>Page d'accueil</h1>"; */
+    return new Response(
+      200,
+      ['Content-Type' => 'text/html'],
+      $html
+    );
+  } //View::baseTemplate("Accueil", $html)
 }

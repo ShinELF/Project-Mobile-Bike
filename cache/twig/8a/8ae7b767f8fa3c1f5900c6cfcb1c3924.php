@@ -55,7 +55,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
     {
         $macros = $this->macros;
         // line 4
-        yield "\t<section class=\"intro\">
+        yield "\t<section class=\"home index\">
 \t\t<article>
 \t\t\t<h1>Mobile Bike</h1>
 \t\t\t<p>
@@ -73,7 +73,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
 \t\t</article>
 \t</section>
 
-\t<section class=\"Avis\">
+\t<section class=\"home\">
 \t<article><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article>
 \t<article>
 \t\t<h1>Témoignages et avis clients</h1>
@@ -123,7 +123,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
-\t<section class=\"intro\">
+\t<section class=\"home index\">
 \t\t<article>
 \t\t\t<h1>Mobile Bike</h1>
 \t\t\t<p>
@@ -141,7 +141,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
 \t\t</article>
 \t</section>
 
-\t<section class=\"Avis\">
+\t<section class=\"home\">
 \t<article><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article>
 \t<article>
 \t\t<h1>Témoignages et avis clients</h1>
