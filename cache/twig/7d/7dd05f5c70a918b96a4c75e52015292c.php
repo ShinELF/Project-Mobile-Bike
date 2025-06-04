@@ -54,6 +54,36 @@ class __TwigTemplate_dad2a321d94ea399ffc9a2fe70ba9009 extends Template
     public function block_content(array $context, array $blocks = []): iterable
     {
         $macros = $this->macros;
+        // line 4
+        yield "<section class=\"haute\">
+    <section class=\"hauteChild\">
+        <h2>Salon \"Le Vélorizon</h2>
+        <p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
+    </section>
+
+    <section class=\"hauteChild\">
+        <img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
+    </section>
+</section>
+
+<section class=\"basse\">
+    <section>
+        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la france\">
+    </section>
+
+    <section class=\"basseReservation\">
+        <p >Selectionnez la ville de votre choix</p>
+    </section>
+
+</section>
+
+
+
+
+
+
+
+";
         yield from [];
     }
 
@@ -78,7 +108,7 @@ class __TwigTemplate_dad2a321d94ea399ffc9a2fe70ba9009 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  51 => 3,  40 => 1,);
+        return array (  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -86,6 +116,34 @@ class __TwigTemplate_dad2a321d94ea399ffc9a2fe70ba9009 extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
+<section class=\"haute\">
+    <section class=\"hauteChild\">
+        <h2>Salon \"Le Vélorizon</h2>
+        <p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
+    </section>
+
+    <section class=\"hauteChild\">
+        <img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
+    </section>
+</section>
+
+<section class=\"basse\">
+    <section>
+        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la france\">
+    </section>
+
+    <section class=\"basseReservation\">
+        <p >Selectionnez la ville de votre choix</p>
+    </section>
+
+</section>
+
+
+
+
+
+
+
 {% endblock %}", "home/entretien.twig", "/home/thang/Documents/diginamic/TP/Project-Mobile-Bike/src/Views/home/entretien.twig");
     }
 }
