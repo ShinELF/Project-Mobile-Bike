@@ -114,5 +114,13 @@ return [
     'titleMenu' => '',
     'middlewares' => []
   ],
-
+  [
+    'path' => '/presentation',
+    'controller' => HomeController::class,
+    'controllerMethod' => 'presentation',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => 'Présentation',
+    'middlewares' => []
+  ],
 ];

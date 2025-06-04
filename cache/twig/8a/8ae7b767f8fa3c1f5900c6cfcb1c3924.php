@@ -55,38 +55,41 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
     {
         $macros = $this->macros;
         // line 4
-        yield "\t";
-        // line 5
-        yield "\t";
-        $context["i"] = 12;
-        // line 6
-        yield "
-\t<h1>
-\t\t<strong>";
-        // line 8
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
-        yield "</strong>
+        yield "\t<section class=\"intro\">
+\t\t<article>
+\t\t\t<h1>Mobile Bike</h1>
+\t\t\t<p>
+\t\t\t\tStructurellement le vélomobile est un tricycle couché caréné.<br>
+\t\t\t</p>
+\t\t\t<p>
+\t\t\t\tCe véhicule à pédales permet de se déplacer à l'abri du froid et de la pluie, il offre également un volume utile pour le transport de bagages.
+\t\t\t</p>
+\t\t\t<p>
+\t\t\t\tCe mode de déplacement est encore peu répandu en France, c'est seulement dans les années 2000 que le concept a été développé dans les \"pays du vélo\" : La Belgique, les Pays-Bas et l'Allemagne.
+\t\t\t</p>
+\t\t</article>
+\t\t<article>
+\t\t\t<img src=\"./../../../Ressources/Atelier.png\" width=\"400px\">
+\t\t</article>
+\t</section>
 
-\t</h1>
-\t<h2>Date du jour
-\t\t";
-        // line 12
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(($context["date"] ?? null), "d/m/Y H:i", "Europe/Paris"), "html", null, true);
-        yield "
-\t\t";
-        // line 13
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["i"] ?? null), "html", null, true);
-        yield "</h2>
-\t";
-        // line 14
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "home/test.twig");
-        yield "
-
-\t<h4>";
-        // line 16
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["i"] ?? null), "html", null, true);
-        yield "</h4>
-
+\t<section class=\"Avis\">
+\t<article><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article>
+\t<article>
+\t\t<h1>Témoignages et avis clients</h1>
+\t\t<p>
+\t\t\t\"Le vélomobile m'a donné l'occasion de faire du sport là où je n'en n'aurais jamais fais avec d'autres moyens et je n'ai pas forcément le temps de faire du sport le reste de la semaine\".<br>
+\t\t\tBenoît, 25 ans, Bretagne.
+\t\t</p>
+\t\t<p>
+\t\t\t\"Ce vélomobile, développé dans l'optique de répondre aux besoins des \"vélotafeurs\", combine tout un tas d'avantages : confort, entretien quasi nul, protection face à la météo, vitesse... J'ai donc aujourd'hui le bonheur d'utiliser ce vélomobile pour l'ensemble de mes déplacements utilitaires, sans perdre de temps par rapport à l'utilisation d'une voiture, tout en faisant une activité physique et tout en oubliant le prix du litre de diesel !\".<br>
+\t\t\tJean-Jacques, 42 ans, Haute-Normandie.
+\t\t</p>
+\t\t<p>
+\t\t\t\"Le confort est vraiment super, même dans le froid et sous la pluie, grâce entre autre au toit amovible. Ca me fait vraiment beaucoup de bien cet entrainement régulier, c'est bon pour le cardio, ça maintient une bonne forme physique, et c'est très bon pour le moral, et le mental sans compter les économies essence, d'entretien de voiture, et c'est aussi meilleur pour la planète... Donc, que du Bonheur !\".<br>
+\t\t\tStéphanie, 52 ans, Occitanie.
+\t\t</p></article>
+\t</section>
 ";
         yield from [];
     }
@@ -112,7 +115,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  87 => 16,  82 => 14,  78 => 13,  74 => 12,  67 => 8,  63 => 6,  60 => 5,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -120,20 +123,41 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
-\t{# Déclaration de la variable locale i #}
-\t{% set i = 12 %}
+\t<section class=\"intro\">
+\t\t<article>
+\t\t\t<h1>Mobile Bike</h1>
+\t\t\t<p>
+\t\t\t\tStructurellement le vélomobile est un tricycle couché caréné.<br>
+\t\t\t</p>
+\t\t\t<p>
+\t\t\t\tCe véhicule à pédales permet de se déplacer à l'abri du froid et de la pluie, il offre également un volume utile pour le transport de bagages.
+\t\t\t</p>
+\t\t\t<p>
+\t\t\t\tCe mode de déplacement est encore peu répandu en France, c'est seulement dans les années 2000 que le concept a été développé dans les \"pays du vélo\" : La Belgique, les Pays-Bas et l'Allemagne.
+\t\t\t</p>
+\t\t</article>
+\t\t<article>
+\t\t\t<img src=\"./../../../Ressources/Atelier.png\" width=\"400px\">
+\t\t</article>
+\t</section>
 
-\t<h1>
-\t\t<strong>{{ title }}</strong>
-
-\t</h1>
-\t<h2>Date du jour
-\t\t{{ date|date('d/m/Y H:i', timezone: \"Europe/Paris\") }}
-\t\t{{ i }}</h2>
-\t{{ include('home/test.twig') }}
-
-\t<h4>{{ i }}</h4>
-
+\t<section class=\"Avis\">
+\t<article><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article>
+\t<article>
+\t\t<h1>Témoignages et avis clients</h1>
+\t\t<p>
+\t\t\t\"Le vélomobile m'a donné l'occasion de faire du sport là où je n'en n'aurais jamais fais avec d'autres moyens et je n'ai pas forcément le temps de faire du sport le reste de la semaine\".<br>
+\t\t\tBenoît, 25 ans, Bretagne.
+\t\t</p>
+\t\t<p>
+\t\t\t\"Ce vélomobile, développé dans l'optique de répondre aux besoins des \"vélotafeurs\", combine tout un tas d'avantages : confort, entretien quasi nul, protection face à la météo, vitesse... J'ai donc aujourd'hui le bonheur d'utiliser ce vélomobile pour l'ensemble de mes déplacements utilitaires, sans perdre de temps par rapport à l'utilisation d'une voiture, tout en faisant une activité physique et tout en oubliant le prix du litre de diesel !\".<br>
+\t\t\tJean-Jacques, 42 ans, Haute-Normandie.
+\t\t</p>
+\t\t<p>
+\t\t\t\"Le confort est vraiment super, même dans le froid et sous la pluie, grâce entre autre au toit amovible. Ca me fait vraiment beaucoup de bien cet entrainement régulier, c'est bon pour le cardio, ça maintient une bonne forme physique, et c'est très bon pour le moral, et le mental sans compter les économies essence, d'entretien de voiture, et c'est aussi meilleur pour la planète... Donc, que du Bonheur !\".<br>
+\t\t\tStéphanie, 52 ans, Occitanie.
+\t\t</p></article>
+\t</section>
 {% endblock %}
 ", "home/index.twig", "C:\\Users\\Alice\\Documents\\01_Diginamic\\Exercices\\PROJET\\Projet-Mobile-Bike\\src\\Views\\home\\index.twig");
     }
