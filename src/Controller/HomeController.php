@@ -83,5 +83,21 @@ class HomeController extends Controller
       ['Content-Type' => 'text/html'],
       $html
     );
+  } 
+          public function entretien(ServerRequestInterface $request): ResponseInterface
+  {
+
+    $html = $this->twig->render('home/entretien.twig', [
+      'title' => "Boutique en ligne",
+      'links' => $this->navService->routesToLinks('/boutique'),
+      'date' => date(DATE_ATOM, strtotime('now'))
+    ]);
+    /* $html = View::header($links);
+    $html .= "<h1>Page d'accueil</h1>"; */
+    return new Response(
+      200,
+      ['Content-Type' => 'text/html'],
+      $html
+    );
   } //View::baseTemplate("Accueil", $html)
 }

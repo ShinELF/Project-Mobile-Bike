@@ -132,13 +132,22 @@ return [
     'titleMenu' => 'Évènements',
     'middlewares' => []
   ],
-      [
+  [
     'path' => '/boutique',
     'controller' => HomeController::class,
     'controllerMethod' => 'shop',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => 'Boutique en ligne',
+    'middlewares' => []
+  ],
+    [
+    'path' => '/entretien',
+    'controller' => HomeController::class,
+    'controllerMethod' => 'entretien',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => 'Entretien',
     'middlewares' => []
   ],
 ];
