@@ -54,6 +54,118 @@ class __TwigTemplate_4d3e99c4abd7dc05a7c5dc73ecf6cb06 extends Template
     public function block_content(array $context, array $blocks = []): iterable
     {
         $macros = $this->macros;
+        // line 4
+        yield "<section>
+            <ul>
+                <li>Filtre</li>
+                <li>Accessoires</li>
+                <li>Moteur</li>
+                <li>Prix</li>
+            </ul>
+        </section>
+
+        <section>
+            <section>
+                <p>100 Article(s)</p>
+                <p>trier par : Popularité </p>
+
+            </section>
+            <section>
+                <article>
+                    <a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9S.png\" alt=\"\">
+                        <h3>
+                            ALPHA W9S
+                        </h3>
+                        <p>
+                            A partir de 13,255.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK7.png\" alt=\"\">
+                        <h3>
+                            MILAN GT MK7
+
+                        </h3>
+                        <p>
+                            A partir de 11,629.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 7.png\" alt=\"\">
+                        <h3>
+                            ALPHA 7
+                        </h3>
+                        <p>
+                            A partir de 11,846.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK 4 MORE.png\" alt=\"\">
+                        <h3>
+                            BÜLK 4 MORE
+                        </h3>
+                        <p>
+                            A partir de 6,970.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK MK1.png\" alt=\"\">
+                        <h3>
+                            BÜLK MK1
+                        </h3>
+                        <p>
+                            A partir de 10,596.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK URBAN.png\" alt=\"\">
+                        <h3>
+                            BÜLK URBAN
+                        </h3>
+                        <p>
+                            A partir de 10,596.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9.png\" alt=\"\">
+                        <h3>
+                            ALPHA W9
+                        </h3>
+                        <p>
+                            A partir de 12,933.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA M9.png\" alt=\"\">
+                        <h3>
+                            ALPHA M9
+                        </h3>
+                        <p>
+                            A partir de 12,933.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 9.2.png\" alt=\"\">
+                        <h3>
+                            ALPHA 9.2
+                        </h3>
+                        <p>
+                            A partir de 12,933.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK8.png\" alt=\"\">
+                        <h3>
+                            MILAN GT MK8
+                        </h3>
+                        <p>
+                            A partir de 11,629.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+            </section>
+        </section>
+";
         yield from [];
     }
 
@@ -78,7 +190,7 @@ class __TwigTemplate_4d3e99c4abd7dc05a7c5dc73ecf6cb06 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  51 => 3,  40 => 1,);
+        return array (  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -86,6 +198,116 @@ class __TwigTemplate_4d3e99c4abd7dc05a7c5dc73ecf6cb06 extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
+<section>
+            <ul>
+                <li>Filtre</li>
+                <li>Accessoires</li>
+                <li>Moteur</li>
+                <li>Prix</li>
+            </ul>
+        </section>
+
+        <section>
+            <section>
+                <p>100 Article(s)</p>
+                <p>trier par : Popularité </p>
+
+            </section>
+            <section>
+                <article>
+                    <a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9S.png\" alt=\"\">
+                        <h3>
+                            ALPHA W9S
+                        </h3>
+                        <p>
+                            A partir de 13,255.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK7.png\" alt=\"\">
+                        <h3>
+                            MILAN GT MK7
+
+                        </h3>
+                        <p>
+                            A partir de 11,629.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 7.png\" alt=\"\">
+                        <h3>
+                            ALPHA 7
+                        </h3>
+                        <p>
+                            A partir de 11,846.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK 4 MORE.png\" alt=\"\">
+                        <h3>
+                            BÜLK 4 MORE
+                        </h3>
+                        <p>
+                            A partir de 6,970.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK MK1.png\" alt=\"\">
+                        <h3>
+                            BÜLK MK1
+                        </h3>
+                        <p>
+                            A partir de 10,596.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK URBAN.png\" alt=\"\">
+                        <h3>
+                            BÜLK URBAN
+                        </h3>
+                        <p>
+                            A partir de 10,596.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9.png\" alt=\"\">
+                        <h3>
+                            ALPHA W9
+                        </h3>
+                        <p>
+                            A partir de 12,933.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA M9.png\" alt=\"\">
+                        <h3>
+                            ALPHA M9
+                        </h3>
+                        <p>
+                            A partir de 12,933.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 9.2.png\" alt=\"\">
+                        <h3>
+                            ALPHA 9.2
+                        </h3>
+                        <p>
+                            A partir de 12,933.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+                <article><a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK8.png\" alt=\"\">
+                        <h3>
+                            MILAN GT MK8
+                        </h3>
+                        <p>
+                            A partir de 11,629.00 € (TVA compris)
+                        </p>
+                    </a>
+                </article>
+            </section>
+        </section>
 {% endblock %}", "home/boutique.twig", "C:\\Users\\Alice\\Documents\\01_Diginamic\\Exercices\\PROJET\\Projet-Mobile-Bike\\src\\Views\\home\\boutique.twig");
     }
 }

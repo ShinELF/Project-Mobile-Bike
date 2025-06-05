@@ -57,9 +57,8 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
         // line 4
         yield "\t<section class=\"login\">
 
-\t\t<h2>
-\t\t\t";
-        // line 7
+\t\t<h2>";
+        // line 6
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</h2>
 
@@ -105,7 +104,7 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  63 => 7,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  62 => 6,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -115,8 +114,7 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
 {% block content %}
 \t<section class=\"login\">
 
-\t\t<h2>
-\t\t\t{{ title }}</h2>
+\t\t<h2>{{ title }}</h2>
 
 \t\t<form method=\"post\" action=\"/login-post\">
 \t\t\t<div id=\"inputForm\">
