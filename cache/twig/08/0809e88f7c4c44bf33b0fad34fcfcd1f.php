@@ -14,8 +14,8 @@ use Twig\Source;
 use Twig\Template;
 use Twig\TemplateWrapper;
 
-/* login/formLogin.twig */
-class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
+/* home/boutique.twig */
+class __TwigTemplate_84138b73a7b11d94cfe354e0564bd74b extends Template
 {
     private Source $source;
     /**
@@ -54,32 +54,6 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
     public function block_content(array $context, array $blocks = []): iterable
     {
         $macros = $this->macros;
-        // line 4
-        yield "\t<section class=\"login\">
-
-\t\t<h2>";
-        // line 6
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
-        yield "</h2>
-
-\t\t<form method=\"post\" action=\"/login-post\">
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
-\t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
-\t\t\t</div>
-
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
-\t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
-\t\t\t</div>
-
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
-\t\t\t</div>
-\t\t</form>
-
-\t</section>
-";
         yield from [];
     }
 
@@ -88,7 +62,7 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
      */
     public function getTemplateName(): string
     {
-        return "login/formLogin.twig";
+        return "home/boutique.twig";
     }
 
     /**
@@ -104,7 +78,7 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  62 => 6,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -112,28 +86,6 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
-\t<section class=\"login\">
-
-\t\t<h2>{{ title }}</h2>
-
-\t\t<form method=\"post\" action=\"/login-post\">
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
-\t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
-\t\t\t</div>
-
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
-\t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
-\t\t\t</div>
-
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
-\t\t\t</div>
-\t\t</form>
-
-\t</section>
-{% endblock %}
-", "login/formLogin.twig", "/home/thang/Documents/diginamic/TP/Project-Mobile-Bike/src/Views/login/formLogin.twig");
+{% endblock %}", "home/boutique.twig", "/home/thang/Documents/diginamic/TP/Project-Mobile-Bike/src/Views/home/boutique.twig");
     }
 }
