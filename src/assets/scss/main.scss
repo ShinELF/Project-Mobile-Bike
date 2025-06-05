@@ -1,185 +1,276 @@
-@use 'pages/_formLogin.scss';
-@use 'pages/_entretien.scss';
-@use 'pages/evenement.scss';
+@use "pages/_formLogin.scss";
+@use "pages/_entretien.scss";
+@use "pages/evenement.scss";
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Icône burger */
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-icon span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.liLogo {
+    list-style: none;
+}
+
+/* Menu normal sur desktop */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 0 1rem;
+}
+
+/* Media query pour mobile */
+
+  .burger-icon {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .nav-menu li {
+    margin: 2.5rem 0;
+  }
+
+
+/* Animation de l'icône burger */
+.burger-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-icon.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .nav-menu {
+    position: static !important;
+    left: auto !important;
+    flex-direction: row !important;
+    background: transparent !important;
+    padding-inline: 10px;
+    box-shadow: none !important;
+  }
+  
+  .nav-menu li {
+    margin: 0 1rem !important;
+  }
+  
+  .burger-icon {
+    display: none !important;
+  }
 
 @font-face {
-    font-family: CenturyGothic;
-    src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
+font-family: CenturyGothic;
+src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
 }
 
 @font-face {
-    font-family: Calibri;
-    src: url("./../../../Ressources/Font/Calibri/calibri.ttf");
+font-family: Calibri;
+src: url("./../../../Ressources/Font/Calibri/calibri.ttf");
 }
 
 body {
-    font-family: Calibri;
+font-family: Calibri;
 }
 
 main {
-    text-align: justify;
-    padding-left: 8%;
-    padding-right: 8%;
+text-align: justify;
+padding-left: 8%;
+padding-right: 8%;
 }
 
 a {
-    text-decoration: none;
-    color: #006680;
-
+text-decoration: none;
+color: #006680;
 }
 
 header {
-    border-bottom: solid 1px #162d50;
-    height: 70px;
-    font-size: 1em;
-    font-family: CenturyGothic;
-    color: #006680;
-    width: 100%;
-    box-shadow: 0 2px 0 0 #162d5019;
-    background-color: #F7F7F7;
-    padding-top: 1%;
-    margin-bottom: 1%;
+border-bottom: solid 1px #162d50;
+height: 70px;
+font-size: 1em;
+font-family: CenturyGothic;
+color: #006680;
+width: 100%;
+box-shadow: 0 2px 0 0 #162d5019;
+background-color: #f7f7f7;
+padding-top: 1%;
+margin-bottom: 1%;
 }
 
 ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding-left: 1%;
-    
-    & :visited {
-        color: #006680;
-    }
+display: flex;
+align-items: center;
+list-style: none;
+padding-left: 1%;
 
-    & :hover {
-        font-weight: bold;
-        color: #162d50;
-    }
+& :visited {
+    color: #006680;
+}
 
-    & .button:hover {
-        color: #F7F7F7;
-        background-color: #162d50;
-    }
+& :hover {
+    font-weight: bold;
+    color: #162d50;
+}
 
-    & #cart:hover {
-        fill: #162d50;
-    }
+& .button:hover {
+    color: #f7f7f7;
+    background-color: #162d50;
+}
+
+& #cart:hover {
+    fill: #162d50;
+}
 }
 
 .active {
-    font-weight: bold;
+font-weight: bold;
 }
 
 li {
-    padding-right: 2%;
+padding-right: 2%;
 }
 
 .button {
-    border-radius: 10px;
-    background-color: #006680;
-    color: #F7F7F7;
-    font-weight: bold;
-    border: none;
-    padding: 15%;
+border-radius: 10px;
+background-color: #006680;
+color: #f7f7f7;
+font-weight: bold;
+border: none;
+padding: 15%;
 }
 
 #cart {
-    fill: #006680;
+fill: #006680;
 }
 
 #right {
-    margin-left: auto;
-    margin-right: 1%
+margin-left: auto;
+margin-right: 1%;
 }
 
 #logo_txt {
-    fill: #006680;
+fill: #006680;
 }
 
 #logo_img {
-    fill: #162d50;
+fill: #162d50;
 }
 
 * {
-    margin: 0px;
+margin: 0px;
 }
 
 .butNews {
-    background-color: #F7F7F7;
-    position: fixed;
-    top: 30%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 10px 10px 0px;
-    border: solid 1px #162d50;
-    border-left: none;
+background-color: #f7f7f7;
+position: fixed;
+top: 30%;
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 0px 10px 10px 0px;
+border: solid 1px #162d50;
+border-left: none;
 
-    &:hover {
-        background-color: #ACE9D6;
-    }
+&:hover {
+    background-color: #ace9d6;
+}
 
-    &:hover #News {
-        fill: #2CA05A;
-    }
+&:hover #News {
+    fill: #2ca05a;
+}
 }
 
 #News {
-    display: block;
-    fill: #006680;
-
+display: block;
+fill: #006680;
 }
 
 footer {
-    border-top: solid 1px #162d50;
-    height: 70px;
-    font-size: 1em;
-    font-family: CenturyGothic;
-    color: #006680;
-    width: 100%;
-    box-shadow: 0 0 0 2px #162d5019;
-    background-color: #F7F7F7;
-    padding-bottom: 1%;
-    position: relative;
-    bottom: 0%;
-    margin-top:1%;
+border-top: solid 1px #162d50;
+height: 70px;
+font-size: 1em;
+font-family: CenturyGothic;
+color: #006680;
+width: 100%;
+box-shadow: 0 0 0 2px #162d5019;
+background-color: #f7f7f7;
+padding-bottom: 1%;
+position: relative;
+bottom: 0%;
+margin-top: 1%;
 }
 
 p {
-    color: #006680;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+color: #006680;
+margin-bottom: 0.5rem;
+margin-top: 0.5rem;
 }
 
-h1,h2,h3,h4 {
-    color: #162d50;
-    font-family: CenturyGothic;
+h1,
+h2,
+h3,
+h4 {
+color: #162d50;
+font-family: CenturyGothic;
 }
 
 .home {
-    text-align: justify;
-    font-size: 1.3rem;
-    line-height: 1.3;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    &.intro{
-        margin-bottom: 1.5%;
-    }
+text-align: justify;
+font-size: 1.3rem;
+line-height: 1.3;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+&.intro {
+    margin-bottom: 1.5%;
+}
 }
 
 article.base {
-    max-width: 50%;
+max-width: 50%;
 }
-@media screen and (max-width: 768px) {
-    section {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .Avis {
-        top: 0%;
-    }
 }
