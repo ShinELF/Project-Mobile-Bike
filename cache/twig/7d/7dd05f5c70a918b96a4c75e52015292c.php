@@ -55,33 +55,39 @@ class __TwigTemplate_dad2a321d94ea399ffc9a2fe70ba9009 extends Template
     {
         $macros = $this->macros;
         // line 4
-        yield "<section class=\"haute\">
-    <section class=\"hauteChild\">
-        <h2>Salon \"Le Vélorizon</h2>
-        <p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
+        yield "    <section class=\"entretien\">
+        <article>
+            <h3>Article 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+            <iframe width=\"300\" height=\"150\" src=\"https://www.youtube.com/embed/OkSKb6o7_1E\" title=\"L’Atelier Vélo, un atelier mobile pour entretenir votre vélo partout\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>
+        </article>
+
+        <article>
+            <h3>Article 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+            <iframe width=\"300\" height=\"150\" src=\"https://www.youtube.com/embed/PMSpfW9_GwQ\" title=\"Maintenance d&#39;un Vélomobile Quest 🔧\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>
+        </article>
+
+        <article>
+            <h3>Article 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
+
+        <article>
+            <h3>Article 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
+
+        <article>
+            <h3>Article 5</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
+
+        <article>
+            <h3>Article 6</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
     </section>
-
-    <section class=\"hauteChild\">
-        <img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
-    </section>
-</section>
-
-<section class=\"basse\">
-    <section>
-        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la france\">
-    </section>
-
-    <section class=\"basseReservation\">
-        <p >Selectionnez la ville de votre choix</p>
-    </section>
-
-</section>
-
-
-
-
-
-
 
 ";
         yield from [];
@@ -116,33 +122,39 @@ class __TwigTemplate_dad2a321d94ea399ffc9a2fe70ba9009 extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
-<section class=\"haute\">
-    <section class=\"hauteChild\">
-        <h2>Salon \"Le Vélorizon</h2>
-        <p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
+    <section class=\"entretien\">
+        <article>
+            <h3>Article 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+            <iframe width=\"300\" height=\"150\" src=\"https://www.youtube.com/embed/OkSKb6o7_1E\" title=\"L’Atelier Vélo, un atelier mobile pour entretenir votre vélo partout\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>
+        </article>
+
+        <article>
+            <h3>Article 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+            <iframe width=\"300\" height=\"150\" src=\"https://www.youtube.com/embed/PMSpfW9_GwQ\" title=\"Maintenance d&#39;un Vélomobile Quest 🔧\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>
+        </article>
+
+        <article>
+            <h3>Article 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
+
+        <article>
+            <h3>Article 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
+
+        <article>
+            <h3>Article 5</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
+
+        <article>
+            <h3>Article 6</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore voluptatem numquam distinctio quia nam ab enim, natus quos, debitis mollitia laudantium obcaecati cumque nihil sequi ex minima consectetur sed? Maiores ipsum obcaecati doloribus iste iusto! Facilis sapiente cumque facere.</p>
+        </article>
     </section>
-
-    <section class=\"hauteChild\">
-        <img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
-    </section>
-</section>
-
-<section class=\"basse\">
-    <section>
-        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la france\">
-    </section>
-
-    <section class=\"basseReservation\">
-        <p >Selectionnez la ville de votre choix</p>
-    </section>
-
-</section>
-
-
-
-
-
-
 
 {% endblock %}", "home/entretien.twig", "/home/thang/Documents/diginamic/TP/Project-Mobile-Bike/src/Views/home/entretien.twig");
     }

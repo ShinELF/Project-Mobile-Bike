@@ -48,39 +48,67 @@ body section.login form #inputForm #btnForm {
   border-radius: 10px;
 }
 
-.haute {
-  display: flex;
-  gap: 50px;
-}
-.haute .hauteChild {
-  flex: 1;
-}
-.haute .hauteChild h2 {
-  padding-bottom: 20px;
-}
-.haute .hauteChild p {
-  font-size: 25px;
-}
-.haute .hauteImage {
-  width: 700px;
+section.entretien {
+  display: block;
 }
 
-.basse {
-  display: flex;
-  gap: 50px;
+@media (min-width: 1024px) {
+  section.entretien {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
 }
-.basse .basse {
-  flex: 1;
+section.haute {
+  display: block;
 }
-.basse .basseImage {
-  width: 700px;
-}
-.basse .basseReservation {
-  font-size: 30px;
-  padding-left: 100px;
-  padding-top: 250px;
+section.haute .hauteImage {
+  max-width: 100%;
 }
 
+section.basse {
+  display: block;
+}
+section.basse .basseImage {
+  max-width: 100%;
+}
+section.basse .basseReservation {
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  section.haute {
+    display: flex;
+    gap: 50px;
+  }
+  section.haute .hauteChild {
+    flex-direction: column;
+  }
+  section.haute .hauteChild h2 {
+    padding-bottom: 20px;
+  }
+  section.haute .hauteChild p {
+    font-size: 25px;
+  }
+  section.haute .hauteImage {
+    width: 100%;
+  }
+  section.basse {
+    display: flex;
+    gap: 50px;
+  }
+  section.basse .basse {
+    flex: 1;
+  }
+  section.basse .basseImage {
+    width: 700px;
+  }
+  section.basse .basseReservation {
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 250px;
+  }
+}
 @font-face {
   font-family: CenturyGothic;
   src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
@@ -239,7 +267,7 @@ h1, h2, h3, h4 {
   margin-bottom: 1.5%;
 }
 
-article {
+article.base {
   max-width: 50%;
 }
 

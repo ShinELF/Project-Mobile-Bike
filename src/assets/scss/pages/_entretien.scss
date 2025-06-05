@@ -1,36 +1,12 @@
-.haute {
-    display:flex;
-    gap: 50px;
-    .hauteChild {
-        flex:1;
-        h2 {
-            padding-bottom: 20px;
-        }
-        p {
-            font-size: 25px;
-        }
+
+section.entretien {
+        display:block;
     }
-    .hauteImage {
-        width: 700px;
+
+@media (min-width: 1024px) {
+    section.entretien {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:50px;
     }
 }
-
-.basse {
-    display:flex;
-    gap: 50px;
-
-    .basse {
-        flex:1;
-    }
-    .basseImage {
-        width: 700px;
-    }
-    .basseReservation {
-        font-size: 30px;
-        padding-left: 100px;
-        padding-top: 250px;
-    }
-}
-
-
-
