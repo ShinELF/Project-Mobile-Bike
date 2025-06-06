@@ -50,17 +50,18 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
+\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
 
 \t</head>
 \t<body>
 \t\t<header>
 \t\t\t<nav class=\"navbar\">
-\t\t\t  <div class=\"burger-icon\" id=\"burger\">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-\t\t\t\t<ul >
+\t\t\t\t<div class=\"burger-icon\" id=\"burger\">
+\t\t\t\t\t<span></span>
+\t\t\t\t\t<span></span>
+\t\t\t\t\t<span></span>
+\t\t\t\t</div>
+\t\t\t\t<ul>
 \t\t\t\t\t<li class=\"liLogo\">
 \t\t\t\t\t\t<svg width=\"112\" height=\"50\" viewbox=\"0 0 119.06238 58.208442\" role=\"img\" class=\"logo\">
 \t\t\t\t\t\t\t<title>Mobile Bike</title>
@@ -70,22 +71,22 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t\t\t\t</li>
 
 \t\t\t\t\t";
-        // line 27
+        // line 28
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["links"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
-            // line 28
+            // line 29
             yield "
 \t\t\t\t\t\t<li class=\"nav-menu\" id=\"nav-menu\">
 \t\t\t\t\t\t\t<a href=\"";
-            // line 30
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "path", [], "any", false, false, false, 30), "html", null, true);
+            // line 31
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "path", [], "any", false, false, false, 31), "html", null, true);
             yield "\" class=\"nav-link ";
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["link"], "active", [], "any", false, false, false, 30)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["link"], "active", [], "any", false, false, false, 31)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
                 yield " active";
             }
             yield "\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "title", [], "any", false, false, false, 30), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "title", [], "any", false, false, false, 31), "html", null, true);
             yield "</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t";
@@ -93,7 +94,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['link'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 34
         yield "\t\t\t\t</ul>
 \t\t\t</nav>
 \t\t</header>
@@ -104,15 +105,15 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t</button>
 \t\t<main>
 \t\t\t";
-        // line 42
-        yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
         // line 43
+        yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
+        // line 44
         yield "\t\t</main>
 \t\t<footer>
 \t\t\tContact ©
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t411 Rue André Charles Boulle
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAlès, Occitanie
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t411 Rue André Charles Boulle
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAlès, Occitanie
 
 
 \t\t\t<svg width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" version=\"1.1\" id=\"svg1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">
@@ -139,7 +140,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         yield from [];
     }
 
-    // line 42
+    // line 43
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -170,7 +171,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  143 => 42,  110 => 43,  108 => 42,  97 => 33,  82 => 30,  78 => 28,  74 => 27,  50 => 6,  43 => 1,);
+        return array (  144 => 43,  111 => 44,  109 => 43,  98 => 34,  83 => 31,  79 => 29,  75 => 28,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -182,17 +183,18 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 \t\t<title>{{ title }}</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
+\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
 
 \t</head>
 \t<body>
 \t\t<header>
 \t\t\t<nav class=\"navbar\">
-\t\t\t  <div class=\"burger-icon\" id=\"burger\">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-\t\t\t\t<ul >
+\t\t\t\t<div class=\"burger-icon\" id=\"burger\">
+\t\t\t\t\t<span></span>
+\t\t\t\t\t<span></span>
+\t\t\t\t\t<span></span>
+\t\t\t\t</div>
+\t\t\t\t<ul>
 \t\t\t\t\t<li class=\"liLogo\">
 \t\t\t\t\t\t<svg width=\"112\" height=\"50\" viewbox=\"0 0 119.06238 58.208442\" role=\"img\" class=\"logo\">
 \t\t\t\t\t\t\t<title>Mobile Bike</title>
@@ -220,9 +222,9 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t</main>
 \t\t<footer>
 \t\t\tContact ©
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t411 Rue André Charles Boulle
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAlès, Occitanie
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t411 Rue André Charles Boulle
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAlès, Occitanie
 
 
 \t\t\t<svg width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" version=\"1.1\" id=\"svg1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">

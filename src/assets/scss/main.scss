@@ -29,7 +29,7 @@
     list-style: none;
 }
 
-/* Menu normal sur desktop */
+
 .nav-menu {
   display: flex;
   list-style: none;
@@ -37,17 +37,12 @@
   padding: 0;
 }
 
-.nav-menu li {
-  margin: 0 1rem;
-}
-
-/* Media query pour mobile */
-
   .burger-icon {
     display: flex;
   }
   
   .nav-menu {
+    display: flex;
     position: fixed;
     left: -100%;
     top: 70px;
@@ -59,13 +54,13 @@
     box-shadow: 0 10px 27px rgba(0,0,0,0.05);
   }
   
-  .nav-menu.active {
-    left: 0;
-  }
+
   
   .nav-menu li {
     margin: 2.5rem 0;
   }
+
+
 
 
 /* Animation de l'icône burger */
@@ -85,20 +80,20 @@
 @media screen and (min-width: 1024px) {
 
   .nav-menu {
-    position: static !important;
-    left: auto !important;
-    flex-direction: row !important;
-    background: transparent !important;
+    position: static ;
+    left: auto ;
+    flex-direction: row ;
+    background: transparent ;
     padding-inline: 10px;
-    box-shadow: none !important;
+    box-shadow: none ;
   }
   
   .nav-menu li {
-    margin: 0 1rem !important;
+    margin: 0 1rem ;
   }
   
   .burger-icon {
-    display: none !important;
+    display: none ;
   }
 
 @font-face {
