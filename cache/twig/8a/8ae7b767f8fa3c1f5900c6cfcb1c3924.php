@@ -56,7 +56,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
         $macros = $this->macros;
         // line 4
         yield "\t<section class=\"home index\">
-\t\t<article>
+\t\t<article class=\"base\">
 \t\t\t<h1>Mobile Bike</h1>
 \t\t\t<p>
 \t\t\t\tStructurellement le vélomobile est un tricycle couché caréné.<br>
@@ -67,15 +67,15 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
 \t\t\t<p>
 \t\t\t\tCe mode de déplacement est encore peu répandu en France, c'est seulement dans les années 2000 que le concept a été développé dans les \"pays du vélo\" : La Belgique, les Pays-Bas et l'Allemagne.
 \t\t\t</p>
-\t\t</article>
-\t\t<article>
+\t\t</article class=\"base\">
+\t\t<article class=\"base\">
 \t\t\t<img src=\"./../../../Ressources/Atelier.png\" width=\"400px\">
-\t\t</article>
+\t\t</article class=\"base\">
 \t</section>
 
 \t<section class=\"home\">
-\t<article><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article>
-\t<article>
+\t<article class=\"base\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article class=\"base\">
+\t<article class=\"base\">
 \t\t<h1>Témoignages et avis clients</h1>
 \t\t<p>
 \t\t\t\"Le vélomobile m'a donné l'occasion de faire du sport là où je n'en n'aurais jamais fais avec d'autres moyens et je n'ai pas forcément le temps de faire du sport le reste de la semaine\".<br>
@@ -88,7 +88,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
 \t\t<p>
 \t\t\t\"Le confort est vraiment super, même dans le froid et sous la pluie, grâce entre autre au toit amovible. Ca me fait vraiment beaucoup de bien cet entrainement régulier, c'est bon pour le cardio, ça maintient une bonne forme physique, et c'est très bon pour le moral, et le mental sans compter les économies essence, d'entretien de voiture, et c'est aussi meilleur pour la planète... Donc, que du Bonheur !\".<br>
 \t\t\tStéphanie, 52 ans, Occitanie.
-\t\t</p></article>
+\t\t</p></article class=\"base\">
 \t</section>
 ";
         yield from [];
@@ -124,7 +124,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
 
 {% block content %}
 \t<section class=\"home index\">
-\t\t<article>
+\t\t<article class=\"base\">
 \t\t\t<h1>Mobile Bike</h1>
 \t\t\t<p>
 \t\t\t\tStructurellement le vélomobile est un tricycle couché caréné.<br>
@@ -135,15 +135,15 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
 \t\t\t<p>
 \t\t\t\tCe mode de déplacement est encore peu répandu en France, c'est seulement dans les années 2000 que le concept a été développé dans les \"pays du vélo\" : La Belgique, les Pays-Bas et l'Allemagne.
 \t\t\t</p>
-\t\t</article>
-\t\t<article>
+\t\t</article class=\"base\">
+\t\t<article class=\"base\">
 \t\t\t<img src=\"./../../../Ressources/Atelier.png\" width=\"400px\">
-\t\t</article>
+\t\t</article class=\"base\">
 \t</section>
 
 \t<section class=\"home\">
-\t<article><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article>
-\t<article>
+\t<article class=\"base\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></article class=\"base\">
+\t<article class=\"base\">
 \t\t<h1>Témoignages et avis clients</h1>
 \t\t<p>
 \t\t\t\"Le vélomobile m'a donné l'occasion de faire du sport là où je n'en n'aurais jamais fais avec d'autres moyens et je n'ai pas forcément le temps de faire du sport le reste de la semaine\".<br>
@@ -156,7 +156,7 @@ class __TwigTemplate_f163558e29f6adfdc66355e1f8f8a2f2 extends Template
 \t\t<p>
 \t\t\t\"Le confort est vraiment super, même dans le froid et sous la pluie, grâce entre autre au toit amovible. Ca me fait vraiment beaucoup de bien cet entrainement régulier, c'est bon pour le cardio, ça maintient une bonne forme physique, et c'est très bon pour le moral, et le mental sans compter les économies essence, d'entretien de voiture, et c'est aussi meilleur pour la planète... Donc, que du Bonheur !\".<br>
 \t\t\tStéphanie, 52 ans, Occitanie.
-\t\t</p></article>
+\t\t</p></article class=\"base\">
 \t</section>
 {% endblock %}
 ", "home/index.twig", "C:\\Users\\Alice\\Documents\\01_Diginamic\\Exercices\\PROJET\\Projet-Mobile-Bike\\src\\Views\\home\\index.twig");

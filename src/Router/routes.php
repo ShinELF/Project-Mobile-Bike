@@ -151,4 +151,27 @@ return [
     'titleMenu' => 'Entretien',
     'middlewares' => []
   ],
+    [
+    'path' => '/boutique/add',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'displayAddForm',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => [
+      // new AuthMiddleware(['/boutique/add'])
+    ]
+  ],
+  [
+    'path' => '/boutique/add',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'add',
+    'httpMethod' => 'POST',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => [
+      // new AuthMiddleware(['/users/add']),
+      // new InputCheckerMiddleware(['/boutique/add'])
+    ]
+  ],
 ];

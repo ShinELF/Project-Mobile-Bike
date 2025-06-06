@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<h2>{{ title }}</h2>
+	<form method="post" action="/boutique/add" class="container py-4">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-floating mb-3">
+					<label for="image">Image</label>
+					<input type="text" class="form-control" id="image" name="image" required>
+				</div>
+
+				<div class="form-floating mb-3">
+					<label for="modele">Modèle</label>
+					<input type="text" class="form-control" id="modele" name="modele" required>
+				</div>
+
+				<div class="form-floating mb-3">
+					<label for="price">Prix</label>
+					<input type="text" class="form-control" id="price" name="price" required>
+				</div>
+
+				<div class="form-floating mb-3">
+					<label for="description">Description</label>
+					<input type="text" class="form-control" id="description" name="description">
+				</div>
+
+				<div class="d-grid gap-2 mt-4">
+					<button type="submit" class="btn btn-success">Créer un produit</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+
+{% endblock %}

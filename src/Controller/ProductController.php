@@ -60,8 +60,8 @@ class ProductController extends Controller
     public function displayAddForm(ServerRequestInterface $request): ResponseInterface
     {
 
-        $title =  "Ajout d'un utilisateur";
-        $html = $this->twig->render('users/addForm.twig', [
+        $title =  "Ajout d'un produit";
+        $html = $this->twig->render('shop/addForm.twig', [
             'title' => $title,
             'links' => $this->navService->routesToLinks('/'),
 
@@ -82,21 +82,21 @@ class ProductController extends Controller
         $data = $request->getParsedBody();
 
         // Création de l'entité User
-        $userEntity = new Product();
+        $productEntity = new Product();
 
         // Hydratation de l'utilisation
-        $userEntity->hydrate($data);
+        $productEntity->hydrate($data);
 
 
         // Appel au modèle ou au repository
-        $this->productRepository->save($userEntity);
+        $this->productRepository->save($productEntity);
 
 
 
         // Si tout s'est bien passé, on redirige
         return new Response(
             302,
-            ['Location' => '/users'],
+            ['Location' => '/boutique'],
             ''
         );
     }
