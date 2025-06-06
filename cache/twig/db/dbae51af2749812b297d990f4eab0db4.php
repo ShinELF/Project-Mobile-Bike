@@ -96,6 +96,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 34
         yield "\t\t\t\t</ul>
+
 \t\t\t</nav>
 \t\t</header>
 \t\t<button class=\"butNews\" type=\"button\">
@@ -105,9 +106,9 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t</button>
 \t\t<main>
 \t\t\t";
-        // line 43
-        yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
         // line 44
+        yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
+        // line 45
         yield "\t\t</main>
 \t\t<footer>
 \t\t\tContact ©
@@ -140,7 +141,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         yield from [];
     }
 
-    // line 43
+    // line 44
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -171,7 +172,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  144 => 43,  111 => 44,  109 => 43,  98 => 34,  83 => 31,  79 => 29,  75 => 28,  50 => 6,  43 => 1,);
+        return array (  145 => 44,  112 => 45,  110 => 44,  98 => 34,  83 => 31,  79 => 29,  75 => 28,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -210,6 +211,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t\t\t\t\t</li>
 \t\t\t\t\t{% endfor %}
 \t\t\t\t</ul>
+
 \t\t\t</nav>
 \t\t</header>
 \t\t<button class=\"butNews\" type=\"button\">

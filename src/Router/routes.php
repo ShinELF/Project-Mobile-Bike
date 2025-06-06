@@ -151,6 +151,7 @@ return [
     'titleMenu' => 'Entretien',
     'middlewares' => []
   ],
+
     [
     'path' => '/boutique/add',
     'controller' => ProductController::class,
