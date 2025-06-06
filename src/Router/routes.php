@@ -3,6 +3,7 @@
 use Diginamic\Framework\Controller\HomeController;
 use Diginamic\Framework\Controller\LoginController;
 use Diginamic\Framework\Controller\UserController;
+use Diginamic\Framework\Controller\ProductController;
 use Diginamic\Framework\Middleware\AuthMiddleware;
 use Diginamic\Framework\Middleware\InputCheckerMiddleware;
 
@@ -134,8 +135,8 @@ return [
   ],
   [
     'path' => '/boutique',
-    'controller' => HomeController::class,
-    'controllerMethod' => 'shop',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'findAll',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => 'Boutique en ligne',
