@@ -160,97 +160,153 @@ section.basse .basseReservation {
     padding-top: 250px;
   }
 }
+header {
+  border-bottom: solid 1px #162d50;
+  height: 30px;
+  font-family: CenturyGothic;
+  color: #006680;
+  width: 100%;
+  box-shadow: 0 2px 0 0 rgba(22, 45, 80, 0.0980392157);
+  background-color: #f7f7f7;
+  padding: 10px;
+  display: flex;
+}
+
+.logo {
+  width: 4em;
+  margin-right: 5%;
+}
+.logo #logo_txt {
+  fill: #006680;
+}
+.logo #logo_img {
+  fill: #162d50;
+}
+
+.nav-title {
+  display: none;
+}
+.nav-title.active {
+  display: contents;
+  font-size: 1.5em;
+}
+
 .navbar {
+  display: none;
+}
+.navbar.open {
+  display: contents;
+  position: absolute;
+  top: 49px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+  background-color: #f7f7f7;
+}
+
+.ulnav {
+  flex-direction: column;
 }
 
 /* Icône burger */
 .burger-icon {
-  display: none;
+  margin-right: 2%;
+  display: flex;
   flex-direction: column;
-  cursor: pointer;
+  width: 26px;
 }
 
 .burger-icon span {
   width: 25px;
   height: 3px;
-  background: #333;
+  background: #162d50;
   margin: 3px 0;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
-.liLogo {
-  list-style: none;
-}
-
-/* Menu normal sur desktop */
 .nav-menu {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu li {
-  margin: 0 1rem;
-}
-
-/* Media query pour mobile */
-.burger-icon {
-  display: flex;
-}
-
-.nav-menu {
-  position: fixed;
-  left: -100%;
-  top: 70px;
   flex-direction: column;
-  background: white;
-  width: 100%;
+  list-style: none;
   text-align: center;
-  transition: 0.3s;
-  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-}
-
-.nav-menu.active {
-  left: 0;
-}
-
-.nav-menu li {
-  margin: 2.5rem 0;
 }
 
 /* Animation de l'icône burger */
-.burger-icon.active span:nth-child(2) {
+.burger-icon.open span:nth-child(2) {
   opacity: 0;
 }
 
-.burger-icon.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+.burger-icon.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
 
-.burger-icon.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+.burger-icon.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 @media screen and (min-width: 1024px) {
   .nav-menu {
-    position: static !important;
-    left: auto !important;
-    flex-direction: row !important;
-    background: transparent !important;
+    position: static;
+    left: auto;
+    flex-direction: row;
+    background: transparent;
     padding-inline: 10px;
-    box-shadow: none !important;
+    box-shadow: none;
   }
   .nav-menu li {
-    margin: 0 1rem !important;
+    margin: 0 1rem;
   }
   .burger-icon {
-    display: none !important;
+    display: none;
   }
+  header {
+    border-bottom: solid 1px #162d50;
+    height: 70px;
+    font-size: 1em;
+    font-family: CenturyGothic;
+    color: #006680;
+    width: 100%;
+    box-shadow: 0 2px 0 0 rgba(22, 45, 80, 0.0980392157);
+    background-color: #f7f7f7;
+    padding-top: 1%;
+    margin-bottom: 1%;
+  }
+}
+@font-face {
+  font-family: CenturyGothic;
+  src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
+}
+@font-face {
+  font-family: Calibri;
+  src: url("./../../../Ressources/Font/Calibri/calibri.ttf");
+}
+* {
+  margin: 0px;
+}
+
+body {
+  font-family: Calibri;
+}
+
+main {
+  text-align: justify;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+a {
+  text-decoration: none;
+  color: #006680;
+}
+
+ul {
+  display: flex;
+  padding: 0px;
+}
+
+@media screen and (min-width: 1024px) {
   @font-face {
     font-family: CenturyGothic;
     src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
@@ -270,18 +326,6 @@ section.basse .basseReservation {
   a {
     text-decoration: none;
     color: #006680;
-  }
-  header {
-    border-bottom: solid 1px #162d50;
-    height: 70px;
-    font-size: 1em;
-    font-family: CenturyGothic;
-    color: #006680;
-    width: 100%;
-    box-shadow: 0 2px 0 0 rgba(22, 45, 80, 0.0980392157);
-    background-color: #f7f7f7;
-    padding-top: 1%;
-    margin-bottom: 1%;
   }
   ul {
     display: flex;
