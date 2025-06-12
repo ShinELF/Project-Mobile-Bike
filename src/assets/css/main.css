@@ -170,11 +170,13 @@ header {
   background-color: #f7f7f7;
   padding: 10px;
   display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
 }
 
 .logo {
   width: 4em;
-  margin-right: 5%;
+  margin-right: auto;
 }
 .logo #logo_txt {
   fill: #006680;
@@ -191,6 +193,18 @@ header {
   font-size: 1.5em;
 }
 
+.button-header {
+  background: none;
+  border: none;
+}
+.button-header .svg-header {
+  fill: #006680;
+}
+
+#user {
+  margin-left: auto;
+}
+
 .navbar {
   display: none;
 }
@@ -198,6 +212,7 @@ header {
   display: contents;
   position: absolute;
   top: 49px;
+  left: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -246,21 +261,11 @@ header {
   transform: translateY(-9px) rotate(-45deg);
 }
 
+.butNews {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
-  .nav-menu {
-    position: static;
-    left: auto;
-    flex-direction: row;
-    background: transparent;
-    padding-inline: 10px;
-    box-shadow: none;
-  }
-  .nav-menu li {
-    margin: 0 1rem;
-  }
-  .burger-icon {
-    display: none;
-  }
   header {
     border-bottom: solid 1px #162d50;
     height: 70px;
@@ -272,6 +277,34 @@ header {
     background-color: #f7f7f7;
     padding-top: 1%;
     margin-bottom: 1%;
+    justify-content: baseline;
+  }
+  .logo {
+    width: 7em;
+    margin-right: 0;
+  }
+  .nav-title {
+    display: none;
+  }
+  .nav-title.active {
+    display: none;
+  }
+  .navbar {
+    display: contents;
+  }
+  .ulnav {
+    flex-direction: row;
+    padding: 0%;
+  }
+  .nav-menu {
+    flex-direction: row;
+    padding-inline: 10px;
+  }
+  .nav-menu li {
+    margin: 0 1rem;
+  }
+  .burger-icon {
+    display: none;
   }
 }
 @font-face {
