@@ -51,6 +51,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         yield "</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 \t\t<script src=\"../Ressources/js/base.js\" defer ></script>
+\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
 
 \t</head>
 \t<body>
@@ -71,22 +72,22 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t\t\t\t</li>
 
 \t\t\t\t\t";
-        // line 28
+        // line 29
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["links"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
-            // line 29
+            // line 30
             yield "
 \t\t\t\t\t\t<li class=\"nav-menu\" id=\"nav-menu\">
 \t\t\t\t\t\t\t<a href=\"";
-            // line 31
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "path", [], "any", false, false, false, 31), "html", null, true);
+            // line 32
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "path", [], "any", false, false, false, 32), "html", null, true);
             yield "\" class=\"nav-link ";
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["link"], "active", [], "any", false, false, false, 31)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["link"], "active", [], "any", false, false, false, 32)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
                 yield " active";
             }
             yield "\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "title", [], "any", false, false, false, 31), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "title", [], "any", false, false, false, 32), "html", null, true);
             yield "</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t";
@@ -94,7 +95,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['link'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 35
         yield "\t\t\t\t</ul>
 
 \t\t\t</nav>
@@ -106,9 +107,9 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t</button>
 \t\t<main>
 \t\t\t";
-        // line 44
-        yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
         // line 45
+        yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
+        // line 46
         yield "\t\t</main>
 \t\t<footer>
 \t\t\tContact ©
@@ -141,7 +142,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         yield from [];
     }
 
-    // line 44
+    // line 45
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -172,7 +173,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  145 => 44,  112 => 45,  110 => 44,  98 => 34,  83 => 31,  79 => 29,  75 => 28,  50 => 6,  43 => 1,);
+        return array (  146 => 45,  113 => 46,  111 => 45,  99 => 35,  84 => 32,  80 => 30,  76 => 29,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -185,6 +186,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 \t\t<title>{{ title }}</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 \t\t<script src=\"../Ressources/js/base.js\" defer ></script>
+\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
 
 \t</head>
 \t<body>

@@ -116,12 +116,12 @@ return [
     'middlewares' => []
   ],
   [
-    'path' => '/presentation',
+    'path' => '/presentation/personnalisation',
     'controller' => HomeController::class,
-    'controllerMethod' => 'presentation',
+    'controllerMethod' => 'presentationPersonnalisation',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Présentation',
+    'titleMenu' => 'Présentation Personnalisation',
     'middlewares' => []
   ],
     [
