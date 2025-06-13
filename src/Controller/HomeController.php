@@ -51,12 +51,20 @@ class HomeController extends Controller
       $html
     );
   } //View::baseTemplate("Accueil", $html)
+
       public function presentationPersonnalisation(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/presentationPersonnalisation.twig', [
       'title' => "Présentation Personnalisation",
       'links' => $this->navService->routesToLinks('/presentation/personnalisation'),
+
+      public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
+  {
+
+    $html = $this->twig->render('home/presentationEcologie.twig', [
+      'title' => "Présentation Écologie",
+      'links' => $this->navService->routesToLinks('/presentation/Ecologie'),
       'date' => date(DATE_ATOM, strtotime('now'))
     ]);
     /* $html = View::header($links);
@@ -67,6 +75,7 @@ class HomeController extends Controller
       $html
     );
   } //View::baseTemplate("Accueil", $html)
+
 
       public function event(ServerRequestInterface $request): ResponseInterface
   {
