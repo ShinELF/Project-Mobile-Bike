@@ -1,0 +1,171 @@
+header {
+    border-bottom: solid 1px #162d50;
+    height: 30px;
+    font-family: CenturyGothic;
+    color: #006680;
+    width: 100%;
+    box-shadow: 0 2px 0 0 #162d5019;
+    background-color: #f7f7f7;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.logo {
+    width: 4em;
+    margin-right: auto;
+
+    #logo_txt {
+        fill: #006680;
+    }
+
+    #logo_img {
+        fill: #162d50;
+    }
+}
+
+.nav-title {
+    display: none;
+
+    &.active {
+        display: contents;
+        font-size: 1.5em;
+    }
+}
+
+.button-header {
+    background: none;
+    border: none;
+
+    .svg-header {
+        fill: #006680;
+    }
+}
+
+#user {
+    margin-left: auto;
+}
+
+#cart {
+    margin-right: 20px;
+}
+
+.navbar {
+    display: none;
+
+    &.open {
+        display: contents;
+        position: absolute;
+        top: 49px;
+        left: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 1rem 1rem 1rem;
+        background-color: #f7f7f7;
+    }
+}
+
+.ulnav {
+    flex-direction: column;
+}
+
+/* Icône burger */
+.burger-icon {
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 26px;
+}
+
+.burger-icon span {
+    width: 25px;
+    height: 3px;
+    background: #162d50;
+    margin: 3px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+}
+
+/* Animation de l'icône burger */
+.burger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger-icon.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.butNews {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    header {
+        border-bottom: solid 1px #162d50;
+        height: 70px;
+        font-size: 1em;
+        font-family: CenturyGothic;
+        color: #006680;
+        width: 100%;
+        box-shadow: 0 2px 0 0 #162d5019;
+        background-color: #f7f7f7;
+        margin-bottom: 1%;
+        justify-content: baseline;
+        padding:0%;
+    }
+
+    .logo {
+        width: 7em;
+        margin-right: 0;
+        margin-left: 15px;
+    }
+
+    .nav-title {
+        display: none;
+
+        &.active {
+            display: none;
+        }
+    }
+
+    .navbar {
+        display: contents;
+    }
+
+    .ulnav {
+        flex-direction: row;
+        padding: 0%;
+    }
+
+    .nav-menu {
+
+        flex-direction: row;
+        padding-inline: 10px;
+
+        li {
+            margin: 0 1rem;
+        }
+    }
+
+    .burger-icon {
+        display: none;
+    }
+
+    #cart {
+        margin-right: 15px;
+    }
+}
