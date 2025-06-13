@@ -47,6 +47,10 @@ header {
     margin-left: auto;
 }
 
+#cart {
+    margin-right: 20px;
+}
+
 .navbar {
     display: none;
 
@@ -119,14 +123,15 @@ header {
         width: 100%;
         box-shadow: 0 2px 0 0 #162d5019;
         background-color: #f7f7f7;
-        padding-top: 1%;
         margin-bottom: 1%;
         justify-content: baseline;
+        padding:0%;
     }
 
     .logo {
         width: 7em;
         margin-right: 0;
+        margin-left: 15px;
     }
 
     .nav-title {
@@ -160,4 +165,7 @@ header {
         display: none;
     }
 
+    #cart {
+        margin-right: 15px;
+    }
 }
