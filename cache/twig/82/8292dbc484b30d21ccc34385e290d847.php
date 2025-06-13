@@ -74,8 +74,8 @@ class __TwigTemplate_e8f297d3205e6fe503aa65e9297335c5 extends Template
     <section class=\"basseReservation\">
         <p >Selectionnez la ville de votre choix</p>
     </section>
-
 </section>
+
 ";
         yield from [];
     }
@@ -128,8 +128,8 @@ class __TwigTemplate_e8f297d3205e6fe503aa65e9297335c5 extends Template
     <section class=\"basseReservation\">
         <p >Selectionnez la ville de votre choix</p>
     </section>
-
 </section>
+
 {% endblock %}", "home/evenement.twig", "C:\\Users\\Alice\\Documents\\01_Diginamic\\Exercices\\PROJET\\Projet-Mobile-Bike\\src\\Views\\home\\evenement.twig");
     }
 }
