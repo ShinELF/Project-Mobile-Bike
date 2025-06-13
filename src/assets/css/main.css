@@ -177,17 +177,26 @@ section.mainSection .caroussel li {
 section.mainSection .caroussel img {
   width: 100%;
 }
-section.mainSection .caroussel .carousel-button.prev {
+section.mainSection .caroussel #carousel-button-prev {
   display: none;
 }
-section.mainSection .caroussel .carousel-button.next {
-  display: none;
-}
-section.mainSection span {
+section.mainSection .caroussel #carousel-button-next {
   display: none;
 }
 
-@media (min-width: 900px) {
+span.communiquer {
+  display: none;
+}
+
+span.demarquer {
+  display: none;
+}
+
+span.marquer {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
   section.mainSection {
     display: flex;
   }
@@ -215,12 +224,12 @@ section.mainSection span {
     width: 300px;
     height: 200px;
   }
-  section.mainSection .carousel-track {
+  section.mainSection .caroussel .carousel-track {
     display: grid;
     grid-template-columns: 50px 330px 50px;
     width: 430px;
   }
-  section.mainSection .box1 {
+  section.mainSection .caroussel .box1 {
     grid-column: 1;
     grid-row: 1;
     position: relative;
@@ -231,7 +240,7 @@ section.mainSection span {
     opacity: 30%;
     transform: scale(0.9);
   }
-  section.mainSection .box2 {
+  section.mainSection .caroussel .box2 {
     grid-column: 2;
     grid-row: 1;
     position: relative;
@@ -239,7 +248,7 @@ section.mainSection span {
     height: 200px;
     z-index: 0;
   }
-  section.mainSection .box3 {
+  section.mainSection .caroussel .box3 {
     grid-column: 3;
     grid-row: 1;
     position: relative;
@@ -250,7 +259,7 @@ section.mainSection span {
     opacity: 30%;
     transform: scale(0.9);
   }
-  section.mainSection #carousel-button-prev {
+  section.mainSection .caroussel #carousel-button-prev {
     display: flex;
     position: absolute;
     top: 115px;
@@ -259,7 +268,7 @@ section.mainSection span {
     background: none;
     border: none;
   }
-  section.mainSection #carousel-button-next {
+  section.mainSection .caroussel #carousel-button-next {
     display: flex;
     position: absolute;
     top: 115px;
@@ -268,11 +277,34 @@ section.mainSection span {
     background: none;
     border: none;
   }
+  span.communiquer {
+    display: flex;
+    font-size: 50px;
+    color: #F7F7F7;
+    z-index: -2;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: -15%;
+  }
+  span.demarquer {
+    display: block;
+    font-size: 30px;
+    color: #F7F7F7;
+    z-index: -2;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -12%;
+  }
+  span.marquer {
+    display: block;
+    font-size: 40px;
+    color: #F7F7F7;
+    z-index: -2;
+    position: absolute;
+    margin-left: 55%;
+    margin-top: -10%;
+  }
 }
-span {
-  display: block;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
