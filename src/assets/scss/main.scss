@@ -1,6 +1,7 @@
 @use "pages/_formLogin.scss";
 @use "pages/_entretien.scss";
 @use "pages/_evenement.scss";
+@use "pages/_presentationPersonnalisation.scss";
 @use "pages/_headerfooter.scss";
 
 @font-face {
@@ -196,7 +197,9 @@ ul {
     }
   }
 
+
   article.base {
     max-width: 50%;
   }
 }
+

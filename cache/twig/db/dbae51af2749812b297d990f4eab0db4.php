@@ -50,12 +50,16 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
-\t\t<script src=\"../Ressources/js/base.js\" defer></script>
+
+\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
+\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
+
 
 \t</head>
 
 \t<body>
 \t\t<header>
+
 \t\t\t<div class=\"burger-icon\" id=\"burger\">
 \t\t\t\t<span></span>
 \t\t\t\t<span></span>
@@ -100,7 +104,9 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "path", [], "any", false, false, false, 32), "html", null, true);
             yield "\" class=\"nav-link ";
             if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["link"], "active", [], "any", false, false, false, 32)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+
                 yield "active";
+
             }
             yield "\">";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["link"], "title", [], "any", false, false, false, 32), "html", null, true);
@@ -112,6 +118,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         unset($context['_seq'], $context['_key'], $context['link'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 35
+
         yield "\t\t\t</ul>
 \t\t</nav>
 \t\t<button class=\"button-header\" type=\"button\" id =\"user\">
@@ -131,6 +138,7 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
 Contact ©
 411 Rue André Charles Boulle
 Alès, Occitanie
+
 
 
 <svg width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" version=\"1.1\" id=\"svg1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">
@@ -181,7 +189,9 @@ Alès, Occitanie
      */
     public function getDebugInfo(): array
     {
+
         return array (  129 => 47,  115 => 35,  100 => 32,  97 => 31,  93 => 30,  89 => 28,  75 => 25,  71 => 24,  50 => 6,  43 => 1,);
+
     }
 
     public function getSourceContext(): Source
@@ -193,7 +203,9 @@ Alès, Occitanie
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 \t\t<title>{{ title }}</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
-\t\t<script src=\"../Ressources/js/base.js\" defer></script>
+\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
+\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
+
 
 \t</head>
 
