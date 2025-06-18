@@ -99,15 +99,126 @@ section.login form #inputForm #btnForm {
     border-radius: 10px;
   }
 }
-section.entretien {
-  display: block;
-}
-
 @media (min-width: 1024px) {
-  section.entretien {
+  section.high {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+  }
+  section.highleft {
+    grid-column: 1;
+    padding-right: 80px;
+  }
+  section.highleft article {
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .scroller {
+    height: 415px;
+    overflow-y: scroll;
+    scrollbar-color: #F7F7F7 #006680;
+    scrollbar-width: auto;
+  }
+  section.highright {
+    width: 100%;
+  }
+  section.highright {
+    grid-column: 2;
+  }
+  section.down {
+    margin-top: 30px;
+    margin-inline: 150px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 1fr 1fr;
+    gap: 40px;
+    border: none;
+    background-color: #F7F7F7;
+    padding: 20px;
+    overflow: hidden;
+  }
+  section.down article {
+    border: 1px solid #006680;
+    padding: 10px;
+    width: 300px;
+    height: 250px;
+    margin-inline: 30px;
+  }
+  section.down h2 {
+    position: absolute;
+    margin-bottom: 30px;
+  }
+  section.down .com1 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  section.down .com2 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  section.down .com3 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  section.down .com4 {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  section.down .com5 {
+    grid-column: 5;
+    grid-row: 2;
+  }
+  section.down .com6 {
+    grid-column: 5;
+    grid-row: 2;
+  }
+  section.down .com1 .com2 .com3 .com4 .com5 .com6 {
+    transition: transform 2s ease-in-out;
+  }
+  section.down #index-button-prev {
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+  }
+  section.down #index-button-next {
+    position: absolute;
+    bottom: 120px;
+    right: 50px;
+  }
+  section.down .carousel-dot {
+    display: grid;
+    grid-template-columns: 6;
+    grid-template-rows: 1;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    padding-left: 600px;
+  }
+  section.down .carousel-dot .dot1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  section.down .carousel-dot .dot2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  section.down .carousel-dot .dot3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  section.down .carousel-dot .dot4 {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  section.down .carousel-dot .dot5 {
+    grid-column: 5;
+    grid-row: 1;
+  }
+  section.down .carousel-dot .dot6 {
+    grid-column: 6;
+    grid-row: 1;
   }
 }
 section.haute {
@@ -160,7 +271,6 @@ section.basse .basseReservation {
     padding-top: 250px;
   }
 }
-
 section.mainSection {
   margin-top: 30px;
   margin-right: 35px;
@@ -171,6 +281,7 @@ section.mainSection .texte {
 }
 section.mainSection .caroussel ul {
   list-style: none;
+  display: block;
 }
 section.mainSection .caroussel li {
   margin-bottom: 20px;
@@ -278,8 +389,34 @@ span.marquer {
     background: none;
     border: none;
   }
+  span.communiquer {
+    display: flex;
+    font-size: 50px;
+    color: #F7F7F7;
+    z-index: -2;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: -15%;
+  }
+  span.demarquer {
+    display: block;
+    font-size: 30px;
+    color: #F7F7F7;
+    z-index: -2;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -12%;
+  }
+  span.marquer {
+    display: block;
+    font-size: 40px;
+    color: #F7F7F7;
+    z-index: -2;
+    position: absolute;
+    margin-left: 55%;
+    margin-top: -10%;
+  }
 }
-
 header {
   border-bottom: solid 1px #162d50;
   height: 30px;
@@ -289,7 +426,6 @@ header {
   box-shadow: 0 2px 0 0 rgba(22, 45, 80, 0.0980392157);
   background-color: #f7f7f7;
   padding: 10px;
-
   display: flex;
   justify-content: center;
   margin-bottom: 2%;
@@ -326,7 +462,6 @@ header {
   margin-left: auto;
 }
 
-
 #cart {
   margin-right: 20px;
 }
@@ -339,7 +474,6 @@ header {
   position: absolute;
   top: 49px;
   left: 0px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -347,21 +481,17 @@ header {
   background-color: #f7f7f7;
 }
 
-
 .ulnav {
   flex-direction: column;
 }
 
 /* Icône burger */
-
 .burger-icon {
   margin-right: 2%;
   display: flex;
-
   flex-direction: column;
   width: 26px;
 }
-
 
 .burger-icon span {
   width: 25px;
@@ -442,6 +572,76 @@ header {
     margin-right: 15px;
   }
 }
+.home {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home.intro {
+  margin-bottom: 1.5%;
+}
+
+article.base {
+  max-width: 50%;
+  margin-bottom: 100px;
+}
+
+#carouselContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#carouselContainer .pos1 {
+  grid-column: 1;
+  grid-row: 1;
+  translate: 150px;
+  z-index: -1;
+  opacity: 30%;
+  transform: scale(0.9);
+}
+#carouselContainer .pos2 {
+  grid-column: 2;
+  grid-row: 1;
+  translate: -200px;
+}
+#carouselContainer .pos3 {
+  grid-column: 3;
+  grid-row: 1;
+  translate: -550px;
+  z-index: -1;
+  opacity: 30%;
+  transform: scale(0.9);
+}
+#carouselContainer .pos1, #carouselContainer .pos2, #carouselContainer .pos3 {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+#carouselContainer img {
+  width: 400px;
+  height: 300px;
+  border-radius: 5%;
+}
+
+#index-btn-prev {
+  position: absolute;
+  top: 230px;
+  right: 750px;
+  border: none;
+  background: none;
+  z-index: 1;
+}
+
+#index-btn-next {
+  position: absolute;
+  top: 230px;
+  right: 270px;
+  border: none;
+  background: none;
+  z-index: 1;
+}
+
 @font-face {
   font-family: CenturyGothic;
   src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
@@ -593,17 +793,6 @@ ul {
   h4 {
     color: #162d50;
     font-family: CenturyGothic;
-  }
-  .home {
-    text-align: justify;
-    font-size: 1.3rem;
-    line-height: 1.3;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .home.intro {
-    margin-bottom: 1.5%;
   }
   article.base {
     max-width: 50%;
