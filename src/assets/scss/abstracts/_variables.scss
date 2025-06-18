@@ -1,0 +1,28 @@
+//===========================================
+// Colors
+//===========================================
+
+$color-primary-dark: #162d50;
+$color-primary-light: #006680;
+$color-secondary-dark: #2CA05A;
+$color-secondary-light: #AFE9C6;
+$color-background: #F7F7F7;
+$color-shadow : #162d5019;
+
+//===========================================
+// Fonts
+//===========================================
+
+$font-path: "./../../../Ressources/Font";
+$font-header: CenturyGothic;
+$font-paragraph: Calibri;
+
+@font-face {
+    font-family: CenturyGothic;
+    src: url($font-path + "/Century_Gothic/CenturyGothic.ttf");
+}
+
+@font-face {
+    font-family: Calibri;
+    src: url($font-path + "/Calibri/calibri.ttf");
+}

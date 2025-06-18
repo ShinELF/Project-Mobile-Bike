@@ -1,37 +1,19 @@
-@use "pages/_formLogin.scss";
-@use "pages/_entretien.scss";
-@use "pages/_evenement.scss";
-@use "pages/_presentationPersonnalisation.scss";
-@use "pages/_headerfooter.scss";
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/variables";
+@use "base/icones";
+@use "base/reset";
+@use "base/typography";
+@use "components/buttons";
+@use "components/forms";
+@use "layout/header";
+@use "layout/footer";
+@use "pages/entretien";
+@use "pages/evenement";
+@use "pages/formLogin";
+@use "pages/presentationEcologie";
+@use "pages/presentationPersonnalisation";
 
-@font-face {
-  font-family: CenturyGothic;
-  src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
-}
-
-@font-face {
-  font-family: Calibri;
-  src: url("./../../../Ressources/Font/Calibri/calibri.ttf");
-}
-
-* {
-  margin: 0px;
-}
-
-body {
-  font-family: Calibri;
-}
-
-main {
-  text-align: justify;
-  padding-left: 8%;
-  padding-right: 8%;
-}
-
-a {
-  text-decoration: none;
-  color: #006680;
-}
 
 ul {
   display: flex;
@@ -40,30 +22,6 @@ ul {
 
 @media screen and (min-width: 1024px) {
 
-  @font-face {
-    font-family: CenturyGothic;
-    src: url("./../../../Ressources/Font/Century_Gothic/CenturyGothic.ttf");
-  }
-
-  @font-face {
-    font-family: Calibri;
-    src: url("./../../../Ressources/Font/Calibri/calibri.ttf");
-  }
-
-  body {
-    font-family: Calibri;
-  }
-
-  main {
-    text-align: justify;
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-
-  a {
-    text-decoration: none;
-    color: #006680;
-  }
 
   ul {
     display: flex;
@@ -116,18 +74,6 @@ ul {
     margin-right: 1%;
   }
 
-  #logo_txt {
-    fill: #006680;
-  }
-
-  #logo_img {
-    fill: #162d50;
-  }
-
-  * {
-    margin: 0px;
-  }
-
   .butNews {
     background-color: #f7f7f7;
     position: fixed;
@@ -150,39 +96,11 @@ ul {
     }
   }
 
-  #News {
-    display: block;
-    fill: #006680;
-  }
-
-  footer {
-    border-top: solid 1px #162d50;
-    height: 70px;
-    font-size: 1em;
-    font-family: CenturyGothic;
-    color: #006680;
-    width: 100%;
-    box-shadow: 0 0 0 2px #162d5019;
-    background-color: #f7f7f7;
-    padding-bottom: 1%;
-    position: relative;
-    bottom: 0%;
-    margin-top: 1%;
-  }
-
-  p {
-    color: #006680;
+p{
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: #162d50;
-    font-family: CenturyGothic;
-  }
 
   .home {
     text-align: justify;

@@ -1,0 +1,14 @@
+@use "./../abstracts/variables";
+
+footer {
+    border-top: solid 1px variables.$color-primary-dark;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 0 0 2px variables.$color-shadow;
+    background-color: variables.$color-background;
+    padding-bottom: 1%;
+    position: relative;
+    bottom: 0%;
+    margin-top: 1%;
+    padding : 10px;
+}
