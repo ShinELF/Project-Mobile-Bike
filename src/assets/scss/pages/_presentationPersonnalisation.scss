@@ -7,10 +7,11 @@ section.mainSection {
         text-align: center;
     }
 
-    .caroussel {
-        ul {
-            list-style: none;
-        }
+.caroussel {
+    ul {
+    list-style: none;
+    display:block
+    }
 
         li {
             margin-bottom: 20px;

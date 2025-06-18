@@ -2,11 +2,6 @@
 let nextButton = document.getElementById("carousel-button-next");
 let prevButton = document.getElementById("carousel-button-prev");
 
-let li1 = document.getElementById("box1");
-let li2 = document.getElementById("box2");
-let li3 = document.getElementById("box3");
-
-
 
 nextButton.addEventListener("click", () => {
     const box1 = document.querySelector('.box1');
