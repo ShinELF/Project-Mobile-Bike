@@ -7,6 +7,7 @@ use Diginamic\Framework\Response\ResponseEmitter;
 use Diginamic\Framework\Exception\RouteNotFoundException;
 use Diginamic\Framework\Middleware\MiddlewareHandler;
 use Diginamic\Framework\Middleware\AuthMiddleware;
+use Diginamic\Framework\Middleware\AuthAdminMiddleware;
 use Diginamic\Framework\Middleware\InputSanitizerMiddleware;
 use Diginamic\Framework\Services\NavigationService;
 use GuzzleHttp\Psr7\ServerRequest;
@@ -35,10 +36,17 @@ $router = new Router();
 $authMiddleware = new AuthMiddleware([
   '/profile',
   '/login-post',
-  '/users',
+  // '/users',
   // Ajoutez ici d'autres routes protégées
 ]);
 $router->addMiddleware($authMiddleware);
+
+// // Ajout d'un middleware dáuthentification de l'admin
+// $authAdminMiddlewre = new AuthAdminMiddleware([
+//   '/users'
+// ]);
+// $router->addMiddleware($authAdminMiddleware);
+
 
 // Après le middleware d'authentification
 

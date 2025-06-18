@@ -58,6 +58,16 @@ class HomeController extends Controller
     $html = $this->twig->render('home/presentationPersonnalisation.twig', [
       'title' => "Présentation Personnalisation",
       'links' => $this->navService->routesToLinks('/presentation/personnalisation'),
+      'date' => date(DATE_ATOM, strtotime('now'))
+    ]);
+
+      return new Response(
+        200,
+        ['Content-Type' => 'text/html'],
+        $html
+    );
+  }
+
 
       public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
   {
