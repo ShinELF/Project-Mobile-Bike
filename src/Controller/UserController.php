@@ -186,7 +186,8 @@ class UserController extends Controller
     return new Response(
       400,
       ['Content-Type' => 'text/html'],
-      '<h1>La requête HTTP a été mal forumlée </h1>'
+      '<h1>La requête HTTP a été mal formulée </h1>'
     );
   }
+  
 }

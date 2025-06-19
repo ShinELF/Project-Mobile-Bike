@@ -133,6 +133,15 @@ return [
     'titleMenu' => 'Présentation Écologie',
     'middlewares' => []
   ],
+     [
+    'path' => '/presentation/{id}',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'findOne',
+    'httpMethod' => 'GET',
+    'params' => ['id' => '\d+'],
+    'titleMenu' => 'Présentation des produits',
+    'middlewares' => []
+  ],
     [
     'path' => '/evenement',
     'controller' => HomeController::class,

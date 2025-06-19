@@ -204,4 +204,48 @@ class ProductController extends Controller
             '<h1>La requête HTTP a été mal forumlée </h1>'
         );
     }
+    public function presentationProduits(ServerRequestInterface $request): ResponseInterface
+    {
+
+        $html = $this->twig->render('home/presentationProduits.twig', [
+            'title' => "Présentation des produits",
+            'links' => $this->navService->routesToLinks('/presentation/{id}'),
+            'date' => date(DATE_ATOM, strtotime('now'))
+        ]);
+        /* $html = View::header($links);
+    $html .= "<h1>Page d'accueil</h1>"; */
+        return new Response(
+            200,
+            ['Content-Type' => 'text/html'],
+            $html
+        );
+    }
+    public function findOne(ServerRequestInterface $request, array $routeParams = []): ResponseInterface
+    {
+
+        $title = "Détails vélomobile";
+        // Récupération de l'id qui provient de la requête (le paramètre de la route)
+        $id = $routeParams["id"];
+        if (isset($id)) {
+
+            $product = $this->productRepository->findById($id);
+
+            $html = $this->twig->render('home/presentationProduits.twig', [
+                'title' => $title,
+                'links' => $this->navService->routesToLinks('/presentation/{id}'),
+                'product' => $product
+            ]);
+
+            return new Response(
+                200,
+                ['Content-Type' => 'text/html'],
+                $html
+            );
+        }
+        return new Response(
+            400,
+            ['Content-Type' => 'text/html'],
+            "<h1>Article inconnu</h1>"
+        );
+    }
 }

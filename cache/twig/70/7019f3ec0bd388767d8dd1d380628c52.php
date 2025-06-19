@@ -71,8 +71,8 @@ class __TwigTemplate_30613722bcbc23fd48006270311b461e extends Template
             <p class=\"healthText\">Santé</p>
 
             <!-- separation of the image for an easier css organisation -->
-            <section class=\"imgBike\">
-                <img src=\"./../../../Ressources/veloecologie.jpg\" alt=\"\">
+            <section >
+                <img class=\"imgBike\"src=\"./../../../Ressources/veloecologie.jpg\"  alt=\"\">
             </section>          
         </section>
 
@@ -130,8 +130,8 @@ class __TwigTemplate_30613722bcbc23fd48006270311b461e extends Template
             <p class=\"healthText\">Santé</p>
 
             <!-- separation of the image for an easier css organisation -->
-            <section class=\"imgBike\">
-                <img src=\"./../../../Ressources/veloecologie.jpg\" alt=\"\">
+            <section >
+                <img class=\"imgBike\"src=\"./../../../Ressources/veloecologie.jpg\"  alt=\"\">
             </section>          
         </section>
 
