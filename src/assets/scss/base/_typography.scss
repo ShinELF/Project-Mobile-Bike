@@ -3,6 +3,7 @@
 body {
     font-family: variables.$font-paragraph;
     color: variables.$color-primary-light;
+    text-align: justify;
 }
 
 header {
@@ -30,4 +31,9 @@ h6 {
 
 .nav-title {
     color: variables.$color-primary-light;
+}
+
+p {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }

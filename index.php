@@ -36,7 +36,7 @@ $router = new Router();
 $authMiddleware = new AuthMiddleware([
   '/profile',
   '/login-post',
-  // '/users',
+  '/users',
   // Ajoutez ici d'autres routes protégées
 ]);
 $router->addMiddleware($authMiddleware);

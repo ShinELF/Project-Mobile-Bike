@@ -1,0 +1,28 @@
+    .newsletterButton {
+        display: none;
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        .newsletterButton {
+            background-color: #f7f7f7;
+            position: fixed;
+            top: 20%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0px 10px 10px 0px;
+            border: solid 1px #162d50;
+            border-left: none;
+
+            &:hover {
+                background-color: #ace9d6;
+            }
+
+            &:hover #newsletterIcon {
+                fill: #2ca05a;
+            }
+        }
+    }
