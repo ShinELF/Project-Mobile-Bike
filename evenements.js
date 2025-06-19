@@ -1,3 +1,56 @@
+export default class TestRepresentation {
+  constructor(id, coordinates) {
+    this.id = id;
+    this.coordinates = coordinates;
+    this.parent = document.getElementById("france");
+
+    this.render();
+  }
+  // Créé des éléments du DOM correspondant à nos événement de test de vélomobile
+  render() {
+    // Récupération de la lattitude et de la longitude en faisant du destructuring
+    const [lat, lon] = this.coordinates;
+    console.log(`lat : `, lat);
+
+    // le parent a pour propriété position: relative
+    this.parent.style.position = "relative";
+
+    const img = this.createMarkup("img", "", this.parent, {
+      src: "HTML-CSS/img/roueVelo.png",
+    });
+    // l'enfant a pour proprité position: absolute
+    img.style.position = "absolute";
+    img.style.left = 0;
+    img.style.top = this.getCorrespondinglattidude(lat) - 24 + "px";
+  }
+
+  /**
+   * Crée un élément du dom, lui ajoute du texte, le place comme dernier
+   * enfant de parent et ajoute un attribut en utilisant le paramètre attributes
+   * @param {String} markup_name
+   * @param {String} text
+   * @param {domElement} parent
+   * @param {Object} attributes
+   * @returns domElement
+   */
+  createMarkup(markupname, text, parent, attributes = {}) {
+    const markup = document.createElement(markupname);
+    markup.textContent = text;
+    parent.appendChild(markup);
+    for (let key in attributes) {
+      markup.setAttribute(key, attributes[key]);
+    }
+    return markup;
+  }
+
+  getCorrespondinglattidude(x) {
+    const result = -68.67 * x + 3507.67;
+
+    // Arrondir à 2 décimales pour plus de lisibilité
+    return Math.round(result * 100) / 100;
+  }
+}
+
 const testsVelomobiles = [
   {
     id: "test1",
@@ -40,6 +93,7 @@ const testsVelomobiles = [
       {
         startDate: "2025-10-15T14:30:00",
         endDate: "2025-10-15T15:00:00",
+        startDate: "2025-10-15T11:00:00",
       },
       {
         startDate: "2025-10-15T15:00:00",
@@ -184,6 +238,10 @@ const testsVelomobiles = [
       {
         startDate: "2025-10-15T11:00:00",
         endDate: "2025-10-15T11:30:00",
+      },
+      {
+        startDate: "2025-10-15T09:30:00",
+        endDate: "2025-10-15T10:00:00",
       },
       {
         startDate: "2025-10-15T11:30:00",
@@ -520,3 +578,9 @@ const testsVelomobiles = [
     ],
   },
 ];
+
+// Création des points sur la carte
+const firstPoint = new TestRepresentation(
+  "test1",
+  [43.61006414520113, 3.8773600392301875]
+);

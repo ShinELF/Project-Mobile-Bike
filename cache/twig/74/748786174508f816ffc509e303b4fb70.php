@@ -55,7 +55,10 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
     {
         $macros = $this->macros;
         // line 4
-        yield "<section class=\"haute\">
+        yield "
+<script type=\"module\" src=\"./evenements.js\"></script>
+
+<section class=\"haute\">
     <section class=\"hauteChild\">
         <h2>Salon \"Le Vélorizon</h2>
         <p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
@@ -68,7 +71,7 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
 
 <section class=\"basse\">
     <section>
-        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la france\">
+        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la France\">
     </section>
 
     <section class=\"basseReservation\">
@@ -109,6 +112,9 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
         return new Source("{% extends \"base.twig\" %}
 
 {% block content %}
+
+<script type=\"module\" src=\"./evenements.js\"></script>
+
 <section class=\"haute\">
     <section class=\"hauteChild\">
         <h2>Salon \"Le Vélorizon</h2>
@@ -122,7 +128,7 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
 
 <section class=\"basse\">
     <section>
-        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la france\">
+        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la France\">
     </section>
 
     <section class=\"basseReservation\">
@@ -130,6 +136,6 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
     </section>
 </section>
 
-{% endblock %}", "home/evenement.twig", "/home/alcess/dev/formation/diginamic/Vélomobile/Project-Mobile-Bike/src/Views/home/evenement.twig");
+{% endblock %}", "home/evenement.twig", "/home/alcess/dev/diginamic/Vélomobile/Project-Mobile-Bike/src/Views/home/evenement.twig");
     }
 }
