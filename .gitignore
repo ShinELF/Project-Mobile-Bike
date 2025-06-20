@@ -1,5 +1,5 @@
 /vendor/
 .env
-/src/assets/css/
+src/assets/css/
 /cache/
 src/assets/css/main.css
