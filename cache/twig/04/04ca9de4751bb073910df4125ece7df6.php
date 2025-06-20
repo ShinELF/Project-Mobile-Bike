@@ -57,10 +57,10 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
         // line 4
         yield "\t<section class=\"login\">
 
-\t\t<h2>";
+\t\t<h1>";
         // line 6
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
-        yield "</h2>
+        yield "</h1>
 
 \t\t<form method=\"post\" action=\"/login-post\">
 \t\t\t<div id=\"inputForm\">
@@ -71,6 +71,10 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
 \t\t\t<div id=\"inputForm\">
 \t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
+\t\t\t</div>
+
+\t\t\t<div>
+\t\t\t\t<h3>Pas encore inscrit ? <a href=\"/inscription\">créez vôtre compte ici</a></h3>
 \t\t\t</div>
 
 \t\t\t<div id=\"inputForm\">
@@ -114,7 +118,7 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
 {% block content %}
 \t<section class=\"login\">
 
-\t\t<h2>{{ title }}</h2>
+\t\t<h1>{{ title }}</h1>
 
 \t\t<form method=\"post\" action=\"/login-post\">
 \t\t\t<div id=\"inputForm\">
@@ -125,6 +129,10 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
 \t\t\t<div id=\"inputForm\">
 \t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
+\t\t\t</div>
+
+\t\t\t<div>
+\t\t\t\t<h3>Pas encore inscrit ? <a href=\"/inscription\">créez vôtre compte ici</a></h3>
 \t\t\t</div>
 
 \t\t\t<div id=\"inputForm\">

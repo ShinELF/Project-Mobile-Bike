@@ -31,6 +31,8 @@ $dotenv->load();
 
 $router = new Router();
 
+
+
 // Ajout d'un middleware global d'authentification
 // Avec la liste des routes protégées
 $authMiddleware = new AuthMiddleware([
@@ -41,11 +43,7 @@ $authMiddleware = new AuthMiddleware([
 ]);
 $router->addMiddleware($authMiddleware);
 
-// // Ajout d'un middleware dáuthentification de l'admin
-// $authAdminMiddlewre = new AuthAdminMiddleware([
-//   '/users'
-// ]);
-// $router->addMiddleware($authAdminMiddleware);
+
 
 
 // Après le middleware d'authentification

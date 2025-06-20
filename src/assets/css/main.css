@@ -99,11 +99,45 @@ section.login form #inputForm #btnForm {
     border-radius: 10px;
   }
 }
+section.high article {
+  width: 90%;
+  margin-top: 5%;
+}
+section.high .scroller {
+  height: 415px;
+  overflow-y: scroll;
+  scrollbar-color: #F7F7F7 #006680;
+  scrollbar-width: 20px;
+}
+section.high iframe {
+  width: 100%;
+  margin-top: 10%;
+}
+
+section.down {
+  margin-top: 5%;
+}
+section.down article {
+  margin-top: 5%;
+}
+section.down button {
+  display: none;
+}
+section.down .carousel-dot {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   section.high {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+  }
+  section.high .scroller {
+    height: 415px;
+    overflow-y: scroll;
+    scrollbar-color: #F7F7F7 #006680;
+    scrollbar-width: auto;
   }
   section.highleft {
     grid-column: 1;
@@ -114,21 +148,14 @@ section.login form #inputForm #btnForm {
     padding: 20px;
     margin-bottom: 30px;
   }
-  .scroller {
-    height: 415px;
-    overflow-y: scroll;
-    scrollbar-color: #F7F7F7 #006680;
-    scrollbar-width: auto;
-  }
   section.highright {
     width: 100%;
-  }
-  section.highright {
     grid-column: 2;
   }
   section.down {
+    position: relative;
     margin-top: 30px;
-    margin-inline: 150px;
+    margin-inline: 120px;
     height: 450px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -136,7 +163,8 @@ section.login form #inputForm #btnForm {
     gap: 40px;
     border: none;
     background-color: #F7F7F7;
-    padding: 20px;
+    padding: 30px;
+    padding-inline: 70px;
     overflow: hidden;
   }
   section.down article {
@@ -147,8 +175,11 @@ section.login form #inputForm #btnForm {
     margin-inline: 30px;
   }
   section.down h2 {
+    grid-column: 1;
+    grid-row: 1;
     position: absolute;
     margin-bottom: 30px;
+    border: none;
   }
   section.down .com1 {
     grid-column: 1;
@@ -177,15 +208,20 @@ section.login form #inputForm #btnForm {
   section.down .com1 .com2 .com3 .com4 .com5 .com6 {
     transition: transform 2s ease-in-out;
   }
-  section.down #index-button-prev {
+  section.down #maintenance-button-prev {
     position: absolute;
-    bottom: 120px;
-    left: 50px;
+    top: 40%;
+    border: none;
+    background: none;
+    display: block;
   }
-  section.down #index-button-next {
+  section.down #maintenance-button-next {
     position: absolute;
-    bottom: 120px;
-    right: 50px;
+    top: 40%;
+    right: 5px;
+    border: none;
+    background: none;
+    display: block;
   }
   section.down .carousel-dot {
     display: grid;
@@ -193,7 +229,7 @@ section.login form #inputForm #btnForm {
     grid-template-rows: 1;
     gap: 10px;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     padding-left: 600px;
   }
   section.down .carousel-dot .dot1 {
