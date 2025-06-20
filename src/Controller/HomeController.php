@@ -25,60 +25,52 @@ class HomeController extends Controller
     $html = $this->twig->render('home/index.twig', [
       'title' => "Bienvenue sur notre site web",
       'links' => $this->navService->routesToLinks('/'),
-      'date' => date(DATE_ATOM, strtotime('now'))
     ]);
-    /* $html = View::header($links);
-    $html .= "<h1>Page d'accueil</h1>"; */
+
     return new Response(
       200,
       ['Content-Type' => 'text/html'],
       $html
     );
-  } 
-    public function presentation(ServerRequestInterface $request): ResponseInterface
+  }
+  public function presentation(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/presentation.twig', [
       'title' => "Présentation",
       'links' => $this->navService->routesToLinks('/presentation'),
-      'date' => date(DATE_ATOM, strtotime('now'))
     ]);
-    /* $html = View::header($links);
-    $html .= "<h1>Page d'accueil</h1>"; */
+
     return new Response(
       200,
       ['Content-Type' => 'text/html'],
       $html
     );
-  } //View::baseTemplate("Accueil", $html)
+  }
 
-      public function presentationPersonnalisation(ServerRequestInterface $request): ResponseInterface
+  public function presentationPersonnalisation(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/presentationPersonnalisation.twig', [
       'title' => "Présentation Personnalisation",
       'links' => $this->navService->routesToLinks('/presentation/personnalisation'),
-      'date' => date(DATE_ATOM, strtotime('now'))
     ]);
-
-      return new Response(
-        200,
-        ['Content-Type' => 'text/html'],
-        $html
+    return new Response(
+      200,
+      ['Content-Type' => 'text/html'],
+      $html
     );
   }
 
-
-      public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
+  public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/presentationEcologie.twig', [
       'title' => "Présentation Écologie",
       'links' => $this->navService->routesToLinks('/presentation/Ecologie'),
-      'date' => date(DATE_ATOM, strtotime('now'))
+
     ]);
-    /* $html = View::header($links);
-    $html .= "<h1>Page d'accueil</h1>"; */
+
     return new Response(
       200,
       ['Content-Type' => 'text/html'],
@@ -108,28 +100,23 @@ class HomeController extends Controller
     $html = $this->twig->render('home/evenement.twig', [
       'title' => "Évènements",
       'links' => $this->navService->routesToLinks('/evenement'),
-      'date' => date(DATE_ATOM, strtotime('now'))
     ]);
-    /* $html = View::header($links);
-    $html .= "<h1>Page d'accueil</h1>"; */
+
     return new Response(
       200,
       ['Content-Type' => 'text/html'],
       $html
     );
-  } //View::baseTemplate("Accueil", $html)
-  
- 
-          public function entretien(ServerRequestInterface $request): ResponseInterface
+  }
+
+  public function entretien(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/entretien.twig', [
       'title' => "Entretien",
       'links' => $this->navService->routesToLinks('/entretien'),
-      'date' => date(DATE_ATOM, strtotime('now'))
     ]);
-    /* $html = View::header($links);
-    $html .= "<h1>Page d'accueil</h1>"; */
+
     return new Response(
       200,
       ['Content-Type' => 'text/html'],

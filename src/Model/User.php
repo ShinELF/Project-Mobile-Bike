@@ -8,8 +8,7 @@ class User
   public string $login;
   public string $password; // En production, utiliser un hash
   public string $email;
-  public bool $isAdmin;
-  public ?string $createdAt = null;
+  public ?bool $isadmin = null;
 
   public function hydrate(array $data): void
   {

@@ -64,7 +64,7 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
 
 \t\t<form method=\"post\" action=\"/login-post\">
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Login</label>
 \t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
 \t\t\t</div>
 
@@ -118,7 +118,7 @@ class __TwigTemplate_820dd69cbd695631551945ed856a2a57 extends Template
 
 \t\t<form method=\"post\" action=\"/login-post\">
 \t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Login</label>
 \t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
 \t\t\t</div>
 

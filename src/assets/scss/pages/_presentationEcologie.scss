@@ -1,26 +1,19 @@
-// body {
-//     text-align: center;  
-//     margin-top: 100px;
-// }
-
-header {
-    height:50px;
-}
+@use "./../abstracts/variables";
 
 img {
     margin-top: 50px;
-    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-} 
+    box-shadow:8px 8px 10px 0 variables.$color-shadow;
+}
 
 h2 {
-    color: #006680;
+    color: variables.$color-primary-light;
     font-weight: bold;
 
 }
 
 .btnreadMore {
-    background-color: #006680;
-    color: white;
+    background-color: variables.$color-primary-light;
+    color: variables.$color-background;
     text-decoration: none;
     font-weight: bolder;
     padding: 10px;
@@ -31,7 +24,7 @@ h2 {
 }
 
 .subSection {
-    border-top: 1px solid black;
+    border-top: 1px solid variables.$color-primary-dark;
     margin-top:  200px;
     text-align: left;
     margin-left: 100px;
@@ -45,11 +38,7 @@ h2 {
 
 @media screen and (min-width: 720px) {
     body {
-        // margin:0;
-        // margin-left: 50px;
-        // padding: 0;
-        // width: 100%;
-        // height: 100%;
+
         .mainSection {
             margin-top: 100px;
             display:flex;
@@ -70,7 +59,7 @@ h2 {
         position: absolute;
         z-index: -1;
         left: 200px;
-        color:lightgrey;
+        color:variables.$color-background;
         margin-bottom: 0px;
         opacity: 50%;
         font-weight: bolder;
@@ -80,7 +69,7 @@ h2 {
         position: absolute;
         z-index: -1;
         left: 200px;
-        color:lightgrey;
+        color:variables.$color-background;
         margin-bottom: 250px;
         margin-left: 300px;
         opacity: 50%;
@@ -91,7 +80,7 @@ h2 {
         position: absolute;
         z-index: -1;
         left: 200px;
-        color:lightgrey;
+        color:variables.$color-background;
         margin-top: 300px;
         margin-left: 600px;
         opacity: 50%;
@@ -104,7 +93,7 @@ h2 {
 }
 
 @media screen and (min-width: 1300px) {
-    img{
+    .imgBike{
         width: 500px;
         margin-left: 100px;
         margin-right: 100px;
@@ -120,7 +109,7 @@ h2 {
         position: absolute;
         z-index: -1;
         left: 600px;
-        color:lightgrey;
+        color:variables.$color-background;
         margin-bottom: 0px;
         opacity: 50%;
         font-weight: bolder;
@@ -131,7 +120,7 @@ h2 {
         z-index: -1;
         left: 800px;
         font-size: 50px;
-        color:lightgrey;
+        color:variables.$color-background;
         margin-bottom: 400px;
         margin-left: 300px;
         opacity: 50%;
@@ -142,7 +131,7 @@ h2 {
         position: absolute;
         z-index: -1;
         left: 200px;
-        color:lightgrey;
+        color:variables.$color-background;
         margin-top: 550px;
         margin-left: 1200px;
         opacity: 50%;

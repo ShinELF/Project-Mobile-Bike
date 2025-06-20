@@ -7,7 +7,7 @@ use Diginamic\Framework\Repository\UserRepository;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Psr7\Response;
 
-class AuthMiddleware implements MiddlewareInterface
+class AuthAdminMiddleware implements MiddlewareInterface
 {
   /**
    * @var array Routes qui nécessitent une authentification
@@ -41,12 +41,12 @@ class AuthMiddleware implements MiddlewareInterface
         // Ici, mettre la logique d'authentification
         // Par exemple, vérifier si l'utilisateur est connecté via une session
 
-        if (!$this->isAuthenticated($request)) {
+        if (!$this->isAnAdmin($request)) {
           // Redirection vers la page de connexion ou message d'erreur
           return new Response(
             401,
             ['Content-Type' => 'text/html'],
-            '<h1>401 - Non autorisé</h1><p>Vous devez être connecté pour accéder à cette page.</p>'
+            '<h1>401 - Non autorisé</h1><p>Vous devez être administrateur pour accéder à cette page.</p>'
           );
         }
 
@@ -64,12 +64,12 @@ class AuthMiddleware implements MiddlewareInterface
    * @param ServerRequestInterface $request
    * @return bool
    */
-  private function isAuthenticated(ServerRequestInterface $request)
+  private function isAnAdmin(ServerRequestInterface $request)
   {
-    error_log("DANS isAuthenticated DE AUTHMIDDLEWARE");
+    error_log("DANS isAnAdmin DE AUTHMIDDLEWARE");
 
     // Si l'utilisateur est déjà authentifié via la session
-    if (isset($_SESSION['user_authenticated']) && $_SESSION['user_authenticated'] === true) {
+    if (isset($_SESSION['user_admin']) && $_SESSION['user_admin'] === true) {
       error_log("USER authenticated with session");
       return true;
     }
@@ -78,36 +78,31 @@ class AuthMiddleware implements MiddlewareInterface
     if ($request->getMethod() === 'POST' && $request->getUri()->getPath() === '/login-post') {
       $formData = $request->getParsedBody();
       $login = $formData['login'] ?? '';
-      $password = $formData['password'] ?? '';
+
 
       // Utiliser le repository pour authentifier
       $userRepository = new UserRepository();
-      $user = $userRepository->authenticate($login, $password);
+      $user = $userRepository->isAdmin($login);
 
       if ($user) {
-        // Authentification réussie - stocker dans la session
-
-        $_SESSION['user_authenticated'] = true;
-        $_SESSION['user_id'] = $user->id;
-        $_SESSION['user_login'] = $user->login;
-        $_SESSION['user_admin'] = $user->isadmin;
+        // Authentification réussie 
         return true;
       }
     }
 
-    return false;
-  }
+    // return false;
+  }}
 
-  /**
-   * Exemple de méthode pour valider un token JWT
-   * 
-   * @param string $token
-   * @return bool
-   */
-  private function validateToken(string $token): bool
-  {
-    // Logique de validation de token
-    // À implémenter selon votre besoin (JWT, OAuth, etc.)
-    return false;
-  }
-}
+//   /**
+//    * Exemple de méthode pour valider un token JWT
+//    * 
+//    * @param string $token
+//    * @return bool
+//    */
+//   private function validateToken(string $token): bool
+//   {
+//     // Logique de validation de token
+//     // À implémenter selon votre besoin (JWT, OAuth, etc.)
+//     return false;
+//   }
+// }

@@ -1,0 +1,121 @@
+@use "./../abstracts/variables";
+@use "./../abstracts/mixins";
+
+//============================================
+//                   Logo
+//============================================
+
+#logo {
+    width: 4em;
+    margin-right: auto;
+
+    #logo_txt {
+        fill: variables.$color-primary-light;
+    }
+
+    #logo_img {
+        fill: variables.$color-primary-dark;
+    }
+}
+
+//========================================
+//              Cart & User
+//========================================
+
+.svg-header {
+    @include mixins.icon;
+}
+
+//========================================
+//              Burger menu
+//========================================
+
+.burger-icon {
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 26px;
+}
+
+.burger-icon span {
+    width: 25px;
+    height: 3px;
+    background: variables.$color-primary-dark;
+    margin: 3px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.burger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger-icon.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+//========================================
+//              Social media
+//========================================
+#youtube {
+    @include mixins.social-media-size;
+}
+
+#facebook {
+    @include mixins.social-media-size;
+}
+
+.outerCircle {
+    @include mixins.social-media-outer-circle;
+}
+
+.innerCircle {
+    @include mixins.social-media-inner-circle;
+}
+
+.socialLogo {
+    @include mixins.social-media-logo;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    //============================================
+    //                   Logo
+    //============================================
+    #logo {
+        width: 7em;
+        margin-right: 0;
+        margin-left: 15px;
+    }
+
+    //========================================
+    //                Cart & User
+    //========================================
+
+    //========================================
+    //              Newsletter
+    //========================================
+
+    #newsletterIcon {
+        display: block;
+        @include mixins.icon;
+    }
+
+    //========================================
+    //              Burger menu
+    //========================================
+
+    .burger-icon {
+        display: none;
+    }
+
+    //========================================
+    //              Social media
+    //========================================
+
+}

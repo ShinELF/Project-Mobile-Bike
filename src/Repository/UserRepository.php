@@ -32,7 +32,16 @@ class UserRepository extends AbstractRepository
    */
 
 
+    public function isAdmin(string $login): ?User
+   {
+    $user = $this->findByLogin($login);
 
+    if ($user->isadmin === true) {
+      return $user;
+    }
+
+    return null;
+  }
 
   /**
    * Authentifier un utilisateur

@@ -5,6 +5,7 @@ use Diginamic\Framework\Controller\LoginController;
 use Diginamic\Framework\Controller\UserController;
 use Diginamic\Framework\Controller\ProductController;
 use Diginamic\Framework\Middleware\AuthMiddleware;
+use Diginamic\Framework\Middleware\AuthAdminMiddleware;
 use Diginamic\Framework\Middleware\InputCheckerMiddleware;
 
 /**
@@ -62,7 +63,7 @@ return [
     'params' => [],
     'titleMenu' => 'Gestion des utilisateurs',
     'middlewares' => [
-      // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
+      new AuthAdminMiddleware(['/users'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
     ]
   ],
   [

@@ -115,10 +115,10 @@ class __TwigTemplate_e303ca37e5c746c99decaf9c4981162c extends Template
             yield "</li>
 
 \t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t<span class=\"fw-bold\">Date de création :</span>
+\t\t\t\t\t\t\t\t<span class=\"fw-bold\">Admin :</span>
 \t\t\t\t\t\t\t\t";
             // line 39
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "createdAt", [], "any", false, false, false, 39), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "isadmin", [], "any", false, false, false, 39), "html", null, true);
             yield "</li>
 
 \t\t\t\t\t\t</ul>
@@ -199,8 +199,8 @@ class __TwigTemplate_e303ca37e5c746c99decaf9c4981162c extends Template
 \t\t\t\t\t\t\t\t{{ user.email}}</li>
 
 \t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t<span class=\"fw-bold\">Date de création :</span>
-\t\t\t\t\t\t\t\t{{ user.createdAt}}</li>
+\t\t\t\t\t\t\t\t<span class=\"fw-bold\">Admin :</span>
+\t\t\t\t\t\t\t\t{{ user.isadmin}}</li>
 
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
