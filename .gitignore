@@ -1,3 +1,4 @@
 /vendor/
 .env
 src/asset/css/
+src/assets/css/main.css
