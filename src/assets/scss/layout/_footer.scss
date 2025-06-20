@@ -1,10 +1,10 @@
 @use "./../abstracts/variables";
+@use "./../abstracts/mixins";
 
 footer {
-    border-top: solid 1px variables.$color-primary-dark;
+    @include mixins.border(top);
     height: 70px;
     width: 100%;
-    box-shadow: 0 0 0 2px variables.$color-shadow;
     background-color: variables.$color-background;
     padding-bottom: 1%;
     position: relative;

@@ -34,3 +34,17 @@
     display: inline;
     fill: variables.$color-primary-light;
 }
+
+//======================
+//       Border
+//======================
+
+@mixin border($direction) {
+    border-#{$direction} : solid 1px variables.$color-primary-dark;
+    @if $direction == "top" {
+        box-shadow: 0 0 0 2px variables.$color-shadow;
+    }
+    @else if $direction == "bottom" {
+        box-shadow: 0 2px 0 0  variables.$color-shadow;
+    }
+}

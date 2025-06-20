@@ -51,9 +51,9 @@ class __TwigTemplate_83eaed8aac3e0603e2f52d57db98f2e1 extends Template
         yield "</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 
-\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/entretien.js\" defer ></script>
+\t\t<script src=\"../../js/base.js\" defer ></script>
+\t\t<script src=\"../../js/presentationPersonnalisation.js\" defer ></script>
+\t\t<script src=\"../../js/entretien.js\" defer ></script>
 
 
 \t</head>
@@ -126,9 +126,9 @@ class __TwigTemplate_83eaed8aac3e0603e2f52d57db98f2e1 extends Template
 \t\t<title>{{ title }}</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 
-\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/entretien.js\" defer ></script>
+\t\t<script src=\"../../js/base.js\" defer ></script>
+\t\t<script src=\"../../js/presentationPersonnalisation.js\" defer ></script>
+\t\t<script src=\"../../js/entretien.js\" defer ></script>
 
 
 \t</head>
