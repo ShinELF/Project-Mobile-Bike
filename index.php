@@ -41,13 +41,6 @@ $authMiddleware = new AuthMiddleware([
 ]);
 $router->addMiddleware($authMiddleware);
 
-// // Ajout d'un middleware dáuthentification de l'admin
-// $authAdminMiddlewre = new AuthAdminMiddleware([
-//   '/users'
-// ]);
-// $router->addMiddleware($authAdminMiddleware);
-
-
 // Après le middleware d'authentification
 
 // Ajout d'un middleware global pour la sécurisation des entrées

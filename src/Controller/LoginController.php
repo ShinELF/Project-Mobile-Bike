@@ -19,7 +19,7 @@ class LoginController extends Controller
   }
   public function index(ServerRequestInterface $request): ResponseInterface
   {
-    $title = "Formulaire d'identification";
+    $title = "Connexion";
 
     $html = $this->twig->render('login/formLogin.twig', [
       'title' => $title,

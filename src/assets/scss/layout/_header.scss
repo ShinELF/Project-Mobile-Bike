@@ -18,16 +18,16 @@ ul {
     padding-left: 1%;
 
     & :visited {
-        color: #006680;
+        color: variables.$color-primary-light;
     }
 
     & :hover {
         font-weight: bold;
-        color: #162d50;
+        color: variables.$color-primary-dark;
     }
 
     & #cart:hover {
-        fill: #162d50;
+        fill: variables.$color-primary-dark;
     }
 }
 

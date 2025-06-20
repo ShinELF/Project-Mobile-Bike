@@ -90,6 +90,7 @@ class AuthMiddleware implements MiddlewareInterface
         $_SESSION['user_authenticated'] = true;
         $_SESSION['user_id'] = $user->id;
         $_SESSION['user_login'] = $user->login;
+        $_SESSION['user_admin'] = $user->isadmin;
         return true;
       }
     }

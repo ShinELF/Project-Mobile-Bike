@@ -41,12 +41,12 @@ class AuthAdminMiddleware implements MiddlewareInterface
         // Ici, mettre la logique d'authentification
         // Par exemple, vérifier si l'utilisateur est connecté via une session
 
-        if (!$this->isAuthenticated($request)) {
+        if (!$this->isAnAdmin($request)) {
           // Redirection vers la page de connexion ou message d'erreur
           return new Response(
             401,
             ['Content-Type' => 'text/html'],
-            '<h1>401 - Non autorisé</h1><p>Vous devez être connecté pour accéder à cette page.</p>'
+            '<h1>401 - Non autorisé</h1><p>Vous devez être administrateur pour accéder à cette page.</p>'
           );
         }
 
@@ -64,25 +64,25 @@ class AuthAdminMiddleware implements MiddlewareInterface
    * @param ServerRequestInterface $request
    * @return bool
    */
-  private function isAuthenticated(ServerRequestInterface $request)
+  private function isAnAdmin(ServerRequestInterface $request)
   {
-    // error_log("DANS isAuthenticated DE AUTHMIDDLEWARE");
+    error_log("DANS isAnAdmin DE AUTHMIDDLEWARE");
 
-    // // Si l'utilisateur est déjà authentifié via la session
-    // if (isset($_SESSION['user_authenticated']) && $_SESSION['user_authenticated'] === true) {
-    //   error_log("USER authenticated with session");
-    //   return true;
-    // }
+    // Si l'utilisateur est déjà authentifié via la session
+    if (isset($_SESSION['user_admin']) && $_SESSION['user_admin'] === true) {
+      error_log("USER authenticated with session");
+      return true;
+    }
 
-    // // Si la requête est une soumission de formulaire de connexion
-    // if ($request->getMethod() === 'POST' && $request->getUri()->getPath() === '/login-post') {
-    //   $formData = $request->getParsedBody();
-    //   $login = $formData['login'] ?? '';
-    //   $password = $formData['password'] ?? '';
+    // Si la requête est une soumission de formulaire de connexion
+    if ($request->getMethod() === 'POST' && $request->getUri()->getPath() === '/login-post') {
+      $formData = $request->getParsedBody();
+      $login = $formData['login'] ?? '';
+
 
       // Utiliser le repository pour authentifier
       $userRepository = new UserRepository();
-      $user = $userRepository->isAdmin($isAdmin);
+      $user = $userRepository->isAdmin($login);
 
       if ($user) {
         // Authentification réussie 
@@ -91,7 +91,7 @@ class AuthAdminMiddleware implements MiddlewareInterface
     }
 
     // return false;
-  }
+  }}
 
 //   /**
 //    * Exemple de méthode pour valider un token JWT

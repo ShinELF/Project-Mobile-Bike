@@ -32,14 +32,15 @@ class UserRepository extends AbstractRepository
    */
 
 
-    public function isAdmin(string $isAdmin): mixed
-  {
-    $stmt = $this->db->prepare("SELECT isadmin FROM {$this->table} WHERE isadmin = :isadmin LIMIT 1");
-    $stmt->execute(['isadmin' => $isAdmin]);
+    public function isAdmin(string $login): ?User
+   {
+    $user = $this->findByLogin($login);
 
-    $isAdmin = $stmt->fetchColumn();
-    return $isAdmin;
-  
+    if ($user->isadmin === true) {
+      return $user;
+    }
+
+    return null;
   }
 
   /**

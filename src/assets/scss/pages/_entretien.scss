@@ -1,29 +1,30 @@
-
+@use "./../abstracts/variables";
 
 
 @media (min-width: 1024px) {
     section.high {
-        
+
         display: grid;
-        grid-template-columns: repeat(2, 1fr);  
-        gap: 50px;     
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
     }
 
     section.highleft {
         grid-column: 1;
         padding-right: 80px;
+
         article {
-            border: 1px solid black;
+            border: 1px solid variables.$color-primary-dark;
             padding: 20px;
             margin-bottom: 30px;
         }
     }
 
     .scroller {
-        
+
         height: 415px;
         overflow-y: scroll;
-        scrollbar-color: #F7F7F7 #006680;
+        scrollbar-color: variables.$color-background variables.$color-primary-light;
         scrollbar-width: auto;
     }
 
@@ -40,18 +41,18 @@
         margin-top: 30px;
         // margin-inline: 150px;
         height: 400px;
-        display:grid;
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 40px 1fr 1fr;
         gap: 40px;
-        border:none;
-        background-color: #F7F7F7;
+        border: none;
+        background-color: variables.$color-background;
         padding: 20px;
         overflow: hidden;
-        
-        
+
+
         article {
-            border: 1px solid #006680;
+            border: 1px solid variables.$color-primary-light;
             padding: 10px;
             height: 250px;
 
@@ -120,26 +121,32 @@
             position: absolute;
             bottom: 0;
             padding-left: 600px;
+
             .dot1 {
                 grid-column: 1;
                 grid-row: 1;
             }
+
             .dot2 {
                 grid-column: 2;
                 grid-row: 1;
             }
+
             .dot3 {
                 grid-column: 3;
                 grid-row: 1;
             }
+
             .dot4 {
                 grid-column: 4;
                 grid-row: 1;
             }
+
             .dot5 {
                 grid-column: 5;
                 grid-row: 1;
             }
+
             .dot6 {
                 grid-column: 6;
                 grid-row: 1;
