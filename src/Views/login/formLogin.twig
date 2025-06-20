@@ -3,7 +3,7 @@
 {% block content %}
 	<section class="login">
 
-		<h2>{{ title }}</h2>
+		<h1>{{ title }}</h1>
 
 		<form method="post" action="/login-post">
 			<div id="inputForm">
@@ -14,6 +14,10 @@
 			<div id="inputForm">
 				<label for="password" id="passwordLabel">Votre mot de passe</label>
 				<input type="password" id="password" name="password" required>
+			</div>
+
+			<div>
+				<h3>Pas encore inscrit ? <a href="/inscription">créez vôtre compte ici</a></h3>
 			</div>
 
 			<div id="inputForm">

@@ -31,6 +31,8 @@ $dotenv->load();
 
 $router = new Router();
 
+
+
 // Ajout d'un middleware global d'authentification
 // Avec la liste des routes protégées
 $authMiddleware = new AuthMiddleware([

@@ -1,12 +1,51 @@
-@use "./../abstracts/variables";
+@use "./../abstracts/variables";section.high {
 
+    article {
+        width: 90%;
+        margin-top: 5%;
+
+    }
+    .scroller {
+        height: 415px;
+        overflow-y: scroll;
+        scrollbar-color: #F7F7F7 #006680;
+        scrollbar-width: 20px;
+    }
+    iframe {
+        width: 100%;
+        margin-top: 10%;
+    }
+}
+
+section.down {
+    margin-top: 5%;
+
+    article {
+        margin-top: 5%;
+    }
+
+    button {
+        display:none;
+    }
+
+    .carousel-dot{
+        display:none;
+    }
+}
 
 @media (min-width: 1024px) {
     section.high {
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);  
         gap: 50px;
+
+        .scroller {
+            height: 415px;
+            overflow-y: scroll;
+            scrollbar-color: #F7F7F7 #006680;
+            scrollbar-width: auto;
+        }
     }
 
     section.highleft {
@@ -31,15 +70,13 @@
 
     section.highright {
         width: 100%;
-    }
-
-    section.highright {
         grid-column: 2;
     }
 
     section.down {
+        position: relative;
         margin-top: 30px;
-        // margin-inline: 150px;
+        // margin-inline: 120px;
         height: 400px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -47,7 +84,8 @@
         gap: 40px;
         border: none;
         background-color: variables.$color-background;
-        padding: 20px;
+        padding: 30px;
+        padding-inline: 70px;
         overflow: hidden;
 
 
@@ -59,8 +97,11 @@
         }
 
         h2 {
+            grid-column: 1;
+            grid-row: 1;
             position: absolute;
             margin-bottom: 30px;
+            border:none;
         }
 
         .com1 {
@@ -101,17 +142,23 @@
             transition: transform 2s ease-in-out;
         }
 
-        #index-button-prev {
+        #maintenance-button-prev {
             position: absolute;
-            bottom: 120px;
-            left: 50px;
+            top: 40%;
+            border: none;
+            background: none;
+            display: block;
         }
 
-        #index-button-next {
+        #maintenance-button-next {
             position: absolute;
-            bottom: 120px;
-            right: 50px;
+            top: 40%;
+            right: 5px;
+            border: none;
+            background: none;
+            display: block;
         }
+
 
         .carousel-dot {
             display: grid;
@@ -119,7 +166,7 @@
             grid-template-rows: 1;
             gap: 10px;
             position: absolute;
-            bottom: 0;
+            bottom: 20px;
             padding-left: 600px;
 
             .dot1 {
@@ -154,5 +201,6 @@
         }
 
     }
+
 
 }

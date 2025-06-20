@@ -76,10 +76,25 @@ class HomeController extends Controller
       ['Content-Type' => 'text/html'],
       $html
     );
-  }
+  } //View::baseTemplate("presentationEcologie", $html)
 
+    public function pageAdministration(ServerRequestInterface $request): ResponseInterface
+    {
 
-  public function event(ServerRequestInterface $request): ResponseInterface
+        $html = $this->twig->render('home/administration.twig', [
+            'title' => "Administration",
+            'links' => $this->navService->routesToLinks('/administration'),
+            'date' => date(DATE_ATOM, strtotime('now'))
+        ]);
+        /* $html = View::header($links);
+        $html .= "<h1>Page d'accueil</h1>"; */
+        return new Response(
+            200,
+            ['Content-Type' => 'text/html'],
+            $html
+        );
+    }
+      public function event(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/evenement.twig', [
@@ -107,5 +122,22 @@ class HomeController extends Controller
       ['Content-Type' => 'text/html'],
       $html
     );
-  }
+  } //View::baseTemplate("Accueil", $html)
+
+    public function pageInscription(ServerRequestInterface $request): ResponseInterface
+    {
+
+        $html = $this->twig->render('home/inscription.twig', [
+            'title' => "Inscription",
+            'links' => $this->navService->routesToLinks('/inscription'),
+            'date' => date(DATE_ATOM, strtotime('now'))
+        ]);
+        /* $html = View::header($links);
+        $html .= "<h1>Page d'accueil</h1>"; */
+        return new Response(
+            200,
+            ['Content-Type' => 'text/html'],
+            $html
+        );
+    }
 }

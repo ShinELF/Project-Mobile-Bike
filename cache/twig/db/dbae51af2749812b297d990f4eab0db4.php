@@ -51,9 +51,9 @@ class __TwigTemplate_84c62891fef6f8573c1f2cd0da8a84ad extends Template
         yield "</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 
-\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/entretien.js\" defer ></script>
+\t\t<script src=\"../../js/base.js\" defer ></script>
+\t\t<script src=\"../../js/presentationPersonnalisation.js\" defer ></script>
+\t\t<script src=\"../../js/entretien.js\" defer ></script>
 
 
 \t</head>
@@ -199,9 +199,9 @@ Alès, Occitanie
 \t\t<title>{{ title }}</title>
 \t\t<link rel=\"stylesheet\" href=\"/src/assets/css/main.css\">
 
-\t\t<script src=\"../Ressources/js/base.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/presentationPersonnalisation.js\" defer ></script>
-\t\t<script src=\"../Ressources/js/entretien.js\" defer ></script>
+\t\t<script src=\"../../js/base.js\" defer ></script>
+\t\t<script src=\"../../js/presentationPersonnalisation.js\" defer ></script>
+\t\t<script src=\"../../js/entretien.js\" defer ></script>
 
 
 \t</head>

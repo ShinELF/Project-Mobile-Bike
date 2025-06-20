@@ -185,4 +185,24 @@ return [
       // new InputCheckerMiddleware(['/boutique/add'])
     ]
   ],
+    [
+        'path' => '/administration',
+        'controller' => HomeController::class,
+        'controllerMethod' => 'pageAdministration',
+        'httpMethod' => 'GET',
+        'params' => [],
+        'titleMenu' => 'Administration',
+        'middlewares' => [
+        ]
+    ],
+    [
+        'path' => '/inscription',
+        'controller' => HomeController::class,
+        'controllerMethod' => 'pageInscription',
+        'httpMethod' => 'GET',
+        'params' => [],
+        'titleMenu' => '',
+        'middlewares' => [
+        ]
+    ],
 ];
