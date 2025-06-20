@@ -34,8 +34,8 @@ class HomeController extends Controller
       ['Content-Type' => 'text/html'],
       $html
     );
-  } 
-    public function presentation(ServerRequestInterface $request): ResponseInterface
+  }
+  public function presentation(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/presentation.twig', [
@@ -51,7 +51,7 @@ class HomeController extends Controller
       $html
     );
   } //View::baseTemplate("Accueil", $html)
-      public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
+  public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/presentationEcologie.twig', [
@@ -68,7 +68,7 @@ class HomeController extends Controller
     );
   }
 
-      public function event(ServerRequestInterface $request): ResponseInterface
+  public function event(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/evenement.twig', [
@@ -84,8 +84,8 @@ class HomeController extends Controller
       $html
     );
   } //View::baseTemplate("Accueil", $html)
- 
-          public function entretien(ServerRequestInterface $request): ResponseInterface
+
+  public function entretien(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/entretien.twig', [
@@ -100,5 +100,14 @@ class HomeController extends Controller
       ['Content-Type' => 'text/html'],
       $html
     );
-  } //View::baseTemplate("Accueil", $html)
+  }
+  //View::baseTemplate("Accueil", $html)
+
+
+  // $html = $this->twig->render('home/evenement.twig', [
+  //   'title' => $title,
+  //   'links' => $this->navService->routesToLinks('/'),
+  //   'token' => $token,
+
+  // ]);
 }

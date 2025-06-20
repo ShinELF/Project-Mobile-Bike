@@ -56,28 +56,46 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
         $macros = $this->macros;
         // line 4
         yield "
-<script type=\"module\" src=\"./evenements.js\"></script>
+\t<script type=\"module\" src=\"./evenement.js\"></script>
+\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 
-<section class=\"haute\">
-    <section class=\"hauteChild\">
-        <h2>Salon \"Le Vélorizon</h2>
-        <p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
-    </section>
+\t<section class=\"haute\">
+\t\t<section class=\"hauteChild\">
+\t\t\t<h2>Salon \"Le Vélorizon</h2>
+\t\t\t<p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
+\t\t</section>
 
-    <section class=\"hauteChild\">
-        <img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
-    </section>
-</section>
+\t\t<section class=\"hauteChild\">
+\t\t\t<img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
+\t\t</section>
+\t</section>
 
-<section class=\"basse\">
-    <section>
-        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la France\">
-    </section>
+\t<section class=\"basse\">
+\t\t<section>
+\t\t\t<img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la France\">
+            <img class=\"test1\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test2\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test3\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test4\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test5\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test6\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test7\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test8\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test9\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test10\" src=\"Ressources/roueVelo.png\" alt=\"\">
 
-    <section class=\"basseReservation\">
-        <p >Selectionnez la ville de votre choix</p>
-    </section>
-</section>
+\t\t</section>
+
+    ";
+        // line 38
+        yield "
+\t\t<section class=\"basseReservation\">
+\t\t\t<p>Selectionnez la ville de votre choix</p>
+\t\t</section>
+
+\t\t
+\t</section>
+
 
 ";
         yield from [];
@@ -104,7 +122,7 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  58 => 4,  51 => 3,  40 => 1,);
+        return array (  91 => 38,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -113,29 +131,49 @@ class __TwigTemplate_266ae5cc1c323bbf20c4b43fe1cc13bc extends Template
 
 {% block content %}
 
-<script type=\"module\" src=\"./evenements.js\"></script>
+\t<script type=\"module\" src=\"./evenement.js\"></script>
+\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 
-<section class=\"haute\">
-    <section class=\"hauteChild\">
-        <h2>Salon \"Le Vélorizon</h2>
-        <p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
-    </section>
+\t<section class=\"haute\">
+\t\t<section class=\"hauteChild\">
+\t\t\t<h2>Salon \"Le Vélorizon</h2>
+\t\t\t<p>Venez découvrir et essayer nos vélomobiles lors de nos salons Vélorizons.  Nous organisons dix salons par an, aux quatres coins de la France pour vous permettre de découvrir notre univers.  Des passionnés se rassemblent lors de ces salons et n'hésiteront pas à partager leurs expériences avec eux.</p>
+\t\t</section>
 
-    <section class=\"hauteChild\">
-        <img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
-    </section>
-</section>
+\t\t<section class=\"hauteChild\">
+\t\t\t<img class=\"hauteImage\" src=\"Ressources/evenement.jpg\" alt=\"plusieurs vélos mobiles sur une pelouse\">
+\t\t</section>
+\t</section>
 
-<section class=\"basse\">
-    <section>
-        <img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la France\">
-    </section>
+\t<section class=\"basse\">
+\t\t<section>
+\t\t\t<img class=\"basseImage\" src=\"Ressources/france.png\" alt=\"image de la France\">
+            <img class=\"test1\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test2\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test3\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test4\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test5\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test6\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test7\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test8\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test9\" src=\"Ressources/roueVelo.png\" alt=\"\">
+            <img class=\"test10\" src=\"Ressources/roueVelo.png\" alt=\"\">
 
-    <section class=\"basseReservation\">
-        <p >Selectionnez la ville de votre choix</p>
-    </section>
-</section>
+\t\t</section>
 
-{% endblock %}", "home/evenement.twig", "/home/alcess/dev/diginamic/Vélomobile/Project-Mobile-Bike/src/Views/home/evenement.twig");
+    {# <section class=\"icone\">
+\t\t\t<img class=\"iconeImage\" src=\"Ressources/roueVelo.png\" alt=\"\">
+\t\t</section> #}
+
+\t\t<section class=\"basseReservation\">
+\t\t\t<p>Selectionnez la ville de votre choix</p>
+\t\t</section>
+
+\t\t
+\t</section>
+
+
+{% endblock %}
+", "home/evenement.twig", "/home/alcess/dev/diginamic/Vélomobile/Project-Mobile-Bike/src/Views/home/evenement.twig");
     }
 }

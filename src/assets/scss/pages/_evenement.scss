@@ -1,51 +1,123 @@
-    section.haute {
-    display: block;
+section.haute {
+  display: block;
+  .hauteImage {
+    max-width: 100%;
+  }
+}
+section.basse {
+  display: block;
+  .basseImage {
+    max-width: 100%;
+  }
+  .basseReservation {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.haute {
+    display: flex;
+    gap: 50px;
+    .hauteChild {
+      flex-direction: column;
+      h2 {
+        padding-bottom: 20px;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
     .hauteImage {
-        max-width: 100%;
+      width: 100%;
     }
+  }
+
+  section.basse {
+    display: flex;
+    gap: 50px;
+
+    .basse {
+      flex: 1;
+      position: relative;
     }
-    section.basse {
-    display: block;
     .basseImage {
-        max-width: 100%;
+      width: 700px;
+      object-fit: cover;
     }
     .basseReservation {
-        padding: 0;
+      font-size: 30px;
+      padding-left: 100px;
+      padding-top: 250px;
     }
+    .test1 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 270px;
+      top: 530px;
     }
-
-    @media (min-width: 1024px) {
-    section.haute {
-        display: flex;
-        gap: 50px;
-        .hauteChild {
-        flex-direction: column;
-        h2 {
-            padding-bottom: 20px;
-        }
-        p {
-            font-size: 25px;
-        }
-        }
-        .hauteImage {
-        width: 100%;
-        }
+    .test2 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 457px;
+      top: 380px;
     }
-
-    section.basse {
-        display: flex;
-        gap: 50px;
-
-        .basse {
-        flex: 1;
-        }
-        .basseImage {
-        width: 700px;
-        }
-        .basseReservation {
-        font-size: 30px;
-        padding-left: 100px;
-        padding-top: 250px;
-        }
+    .test3 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 475px;
+      top: 520px;
     }
+    .test4 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 700px;
+      top: 530px;
     }
+    .test5 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 565px;
+      top: 720px;
+    }
+    .test6 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 485px;
+      top: 715px;
+    }
+    .test7 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 327px;
+      top: 782px;
+    }
+    .test8 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 440px;
+      top: 870px;
+    }
+    .test9 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 552px;
+      top: 875px;
+    }
+    .test10 {
+      position: absolute;
+      width: 2%;
+      display: flex;
+      margin-left: 707px;
+      top: 850px;
+    }
+  }
+}

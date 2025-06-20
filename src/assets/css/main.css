@@ -150,14 +150,86 @@ section.basse .basseReservation {
   }
   section.basse .basse {
     flex: 1;
+    position: relative;
   }
   section.basse .basseImage {
     width: 700px;
+    object-fit: cover;
   }
   section.basse .basseReservation {
     font-size: 30px;
     padding-left: 100px;
     padding-top: 250px;
+  }
+  section.basse .test1 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 270px;
+    top: 530px;
+  }
+  section.basse .test2 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 457px;
+    top: 380px;
+  }
+  section.basse .test3 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 475px;
+    top: 520px;
+  }
+  section.basse .test4 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 700px;
+    top: 530px;
+  }
+  section.basse .test5 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 565px;
+    top: 720px;
+  }
+  section.basse .test6 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 485px;
+    top: 715px;
+  }
+  section.basse .test7 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 327px;
+    top: 782px;
+  }
+  section.basse .test8 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 440px;
+    top: 870px;
+  }
+  section.basse .test9 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 552px;
+    top: 875px;
+  }
+  section.basse .test10 {
+    position: absolute;
+    width: 2%;
+    display: flex;
+    margin-left: 707px;
+    top: 850px;
   }
 }
 header {
