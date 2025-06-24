@@ -3,26 +3,26 @@
 {% block content %}
 	<section class="login">
 
-		<h1>{{ title }}</h1>
-
 		<form method="post" action="/login-post">
-			<div id="inputForm">
+
+			<h1 class="formTitle">{{ title }}</h1>
+
+			<div class="inputArea">
 				<label id="loginLabel" for="login">Login</label>
 				<input type="text" id="login" name="login" required>
-			</div>
 
-			<div id="inputForm">
-				<label for="password" id="passwordLabel">Votre mot de passe</label>
+				<label for="password" id="passwordLabel">Mot de passe</label>
 				<input type="password" id="password" name="password" required>
 			</div>
 
-			<div>
-				<h3>Pas encore inscrit ? <a href="/inscription">créez vôtre compte ici</a></h3>
+			<button type="submit" class="buttonForm">Connexion</button>
+
+			<div class="formParagraph">
+				<p>Vous n'avez pas encore de compte ?
+					<a href="/inscription">Créez un compte</a>
+				</p>
 			</div>
 
-			<div id="inputForm">
-				<button type="submit" id="btnForm">Connexion</button>
-			</div>
 		</form>
 
 	</section>

@@ -205,4 +205,26 @@ return [
         'middlewares' => [
         ]
     ],
+        [
+        'path' => '/inscription',
+        'controller' => UserController::class,
+        'controllerMethod' => 'add',
+        'httpMethod' => 'POST',
+        'params' => [],
+        'titleMenu' => '',
+        'middlewares' => [
+              new InputCheckerMiddleware(['/inscription'])
+        ]
+    ],
+            [
+        'path' => '/inscriptionReussie',
+        'controller' => HomeController::class,
+        'controllerMethod' => 'subsciptionSuccess',
+        'httpMethod' => 'GET',
+        'params' => [],
+        'titleMenu' => '',
+        'middlewares' => [
+
+        ]
+    ],
 ];

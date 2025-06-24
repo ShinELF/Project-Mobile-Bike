@@ -79,12 +79,15 @@ class UserController extends Controller
 
 
     // Si tout s'est bien passé, on redirige
-    return new Response(
-      302,
-      ['Location' => '/users'],
-      ''
-    );
+      return new Response(
+        302,
+        ['Location' => '/inscriptionReussie'],
+        ''
+      );
   }
+
+
+
   public function delete(ServerRequestInterface $request, array $routeParams = []): ResponseInterface
   {
     // Récupération de l'id qui provient de la requête (le paramètre de la route)

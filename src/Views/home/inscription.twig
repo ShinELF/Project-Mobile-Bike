@@ -3,59 +3,31 @@
 {% block content %}
 	<section class="login">
 
-		<h1>{{ title }}</h1>
 
-		<form method="post" action="/users/add'">
-			<div class="creationForm">
-				<label id="loginLabel" for="login">Votre login</label>
+
+		<form method="post" action="/inscription">
+
+			<h1>{{ title }}</h1>
+
+			<div class="inputArea">
+				<label id="loginLabel" for="login">login</label>
 				<input type="text" id="login" name="login" required>
-			</div>
+			
 
-			<div class="creationForm">
-				<label for="password" id="passwordLabel">Votre mot de passe</label>
+			
+				<label for="password" id="passwordLabel">mot de passe</label>
 				<input type="password" id="password" name="password" required>
-			</div>
+			
 
-			<div class="creationForm">
-				<label for="email" id="emailLabel">Votre email</label>
+			
+				<label for="email" id="emailLabel">email</label>
 				<input type="email" id="email" name="email" required>
 			</div>
 
-			<div class="creationForm">
-				<label for="name" id="nameLabel">Votre nom</label>
-				<input type="text" id="name" name="name" required>
-			</div>
 
-			<div class="creationForm">
-				<label for="surname" id="surnameLabel">Votre prénom</label>
-				<input type="text" id="surname" name="surname" required>
-			</div>
-
-			<div class="creationForm">
-				<label for="phone" id="phoneLabel">Votre téléphone</label>
-				<input type="tel" id="phone" name="phone" required>
-			</div>
-
-			<div class="creationForm">
-				<label for="adress" id="adressLabel">Votre adresse</label>
-				<input type="text" id="adress" name="adress" required>
-			</div>
-
-			<div class="creationForm">
-				<label for="zipcode" id="zipcodeLabel">Votre code postal</label>
-				<input type="text" id="zipcode" name="zipcode" required>
-			</div>
-
-			<div class="creationForm">
-				<label for="city" id="cityLabel">Votre ville</label>
-				<input type="text" id="city" name="city" required>
-			</div>
-
-
-
-			<div class="creationForm">
-				<button type="submit" id="btnForm">Inscription</button>
-			</div>
+			
+				<button type="submit" class="buttonForm">Inscription</button>
+			
 		</form>
 
 	</section>

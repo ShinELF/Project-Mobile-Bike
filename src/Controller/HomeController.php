@@ -130,7 +130,6 @@ class HomeController extends Controller
         $html = $this->twig->render('home/inscription.twig', [
             'title' => "Inscription",
             'links' => $this->navService->routesToLinks('/inscription'),
-            'date' => date(DATE_ATOM, strtotime('now'))
         ]);
         /* $html = View::header($links);
         $html .= "<h1>Page d'accueil</h1>"; */
@@ -139,5 +138,24 @@ class HomeController extends Controller
             ['Content-Type' => 'text/html'],
             $html
         );
+
     }
+      public function subsciptionSuccess(ServerRequestInterface $request): ResponseInterface
+  {
+
+    $title =  "Ajout d'un utilisateur";
+    $html = $this->twig->render('home/inscriptionReussie.twig', [
+      'title' => $title,
+      'links' => $this->navService->routesToLinks('/'),
+
+    ]);
+
+
+
+    return new Response(
+      200,
+      ['Content-Type' => 'text/html'],
+      $html
+    );
+  }
 }
