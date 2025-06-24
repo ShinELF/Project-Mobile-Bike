@@ -1,16 +1,20 @@
-@use "./../abstracts/variables";section.high {
+@use "./../abstracts/variables";
+
+section.high {
 
     article {
         width: 90%;
         margin-top: 5%;
 
     }
+
     .scroller {
         height: 415px;
         overflow-y: scroll;
         scrollbar-color: #F7F7F7 #006680;
         scrollbar-width: 20px;
     }
+
     iframe {
         width: 100%;
         margin-top: 10%;
@@ -25,11 +29,11 @@ section.down {
     }
 
     button {
-        display:none;
+        display: none;
     }
 
-    .carousel-dot{
-        display:none;
+    .carousel-dot {
+        display: none;
     }
 }
 
@@ -37,7 +41,7 @@ section.down {
     section.high {
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);  
+        grid-template-columns: repeat(2, 1fr);
         gap: 50px;
 
         .scroller {
@@ -101,7 +105,7 @@ section.down {
             grid-row: 1;
             position: absolute;
             margin-bottom: 30px;
-            border:none;
+            border: none;
         }
 
         .com1 {
