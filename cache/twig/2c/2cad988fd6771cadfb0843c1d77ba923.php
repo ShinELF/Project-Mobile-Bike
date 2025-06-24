@@ -57,62 +57,34 @@ class __TwigTemplate_e7334a90d78189e417e304f3e6efce5e extends Template
         // line 4
         yield "\t<section class=\"login\">
 
-\t\t<h1>";
-        // line 6
+
+
+\t\t<form method=\"post\" action=\"/inscription\">
+
+\t\t\t<h1>";
+        // line 10
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</h1>
 
-\t\t<form method=\"post\" action=\"/users/add'\">
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
+\t\t\t<div class=\"inputArea\">
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">login</label>
 \t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
-\t\t\t</div>
+\t\t\t
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
+\t\t\t
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
-\t\t\t</div>
+\t\t\t
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"email\" id=\"emailLabel\">Votre email</label>
+\t\t\t
+\t\t\t\t<label for=\"email\" id=\"emailLabel\">email</label>
 \t\t\t\t<input type=\"email\" id=\"email\" name=\"email\" required>
 \t\t\t</div>
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"name\" id=\"nameLabel\">Votre nom</label>
-\t\t\t\t<input type=\"text\" id=\"name\" name=\"name\" required>
-\t\t\t</div>
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"surname\" id=\"surnameLabel\">Votre prénom</label>
-\t\t\t\t<input type=\"text\" id=\"surname\" name=\"surname\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"phone\" id=\"phoneLabel\">Votre téléphone</label>
-\t\t\t\t<input type=\"tel\" id=\"phone\" name=\"phone\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"adress\" id=\"adressLabel\">Votre adresse</label>
-\t\t\t\t<input type=\"text\" id=\"adress\" name=\"adress\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"zipcode\" id=\"zipcodeLabel\">Votre code postal</label>
-\t\t\t\t<input type=\"text\" id=\"zipcode\" name=\"zipcode\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"city\" id=\"cityLabel\">Votre ville</label>
-\t\t\t\t<input type=\"text\" id=\"city\" name=\"city\" required>
-\t\t\t</div>
-
-
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<button type=\"submit\" id=\"btnForm\">Inscription</button>
-\t\t\t</div>
+\t\t\t
+\t\t\t\t<button type=\"submit\" class=\"buttonForm\">Inscription</button>
+\t\t\t
 \t\t</form>
 
 \t</section>
@@ -141,7 +113,7 @@ class __TwigTemplate_e7334a90d78189e417e304f3e6efce5e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  62 => 6,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  66 => 10,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -151,59 +123,31 @@ class __TwigTemplate_e7334a90d78189e417e304f3e6efce5e extends Template
 {% block content %}
 \t<section class=\"login\">
 
-\t\t<h1>{{ title }}</h1>
 
-\t\t<form method=\"post\" action=\"/users/add'\">
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
+
+\t\t<form method=\"post\" action=\"/inscription\">
+
+\t\t\t<h1>{{ title }}</h1>
+
+\t\t\t<div class=\"inputArea\">
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">login</label>
 \t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
-\t\t\t</div>
+\t\t\t
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
+\t\t\t
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
-\t\t\t</div>
+\t\t\t
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"email\" id=\"emailLabel\">Votre email</label>
+\t\t\t
+\t\t\t\t<label for=\"email\" id=\"emailLabel\">email</label>
 \t\t\t\t<input type=\"email\" id=\"email\" name=\"email\" required>
 \t\t\t</div>
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"name\" id=\"nameLabel\">Votre nom</label>
-\t\t\t\t<input type=\"text\" id=\"name\" name=\"name\" required>
-\t\t\t</div>
 
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"surname\" id=\"surnameLabel\">Votre prénom</label>
-\t\t\t\t<input type=\"text\" id=\"surname\" name=\"surname\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"phone\" id=\"phoneLabel\">Votre téléphone</label>
-\t\t\t\t<input type=\"tel\" id=\"phone\" name=\"phone\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"adress\" id=\"adressLabel\">Votre adresse</label>
-\t\t\t\t<input type=\"text\" id=\"adress\" name=\"adress\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"zipcode\" id=\"zipcodeLabel\">Votre code postal</label>
-\t\t\t\t<input type=\"text\" id=\"zipcode\" name=\"zipcode\" required>
-\t\t\t</div>
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<label for=\"city\" id=\"cityLabel\">Votre ville</label>
-\t\t\t\t<input type=\"text\" id=\"city\" name=\"city\" required>
-\t\t\t</div>
-
-
-
-\t\t\t<div class=\"creationForm\">
-\t\t\t\t<button type=\"submit\" id=\"btnForm\">Inscription</button>
-\t\t\t</div>
+\t\t\t
+\t\t\t\t<button type=\"submit\" class=\"buttonForm\">Inscription</button>
+\t\t\t
 \t\t</form>
 
 \t</section>

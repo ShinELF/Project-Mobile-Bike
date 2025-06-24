@@ -4,6 +4,15 @@
         display: none;
     }
 
+.buttonForm {
+        margin-top: 10%;
+        border: 1px solid variables.$color-primary-light;
+        border-radius: 5px;
+        padding: 2%;
+        font-size: 1.5em;
+
+}
+
     @media screen and (min-width: 1024px) {
 
         .newsletterButton {

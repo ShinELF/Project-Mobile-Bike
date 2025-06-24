@@ -57,29 +57,29 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
         // line 4
         yield "\t<section class=\"login\">
 
-\t\t<h1>";
-        // line 6
+\t\t<form method=\"post\" action=\"/login-post\">
+
+\t\t\t<h1 class=\"formTitle\">";
+        // line 8
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
         yield "</h1>
 
-\t\t<form method=\"post\" action=\"/login-post\">
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
+\t\t\t<div class=\"inputArea\">
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Login</label>
 \t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
-\t\t\t</div>
 
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
 \t\t\t</div>
 
-\t\t\t<div>
-\t\t\t\t<h3>Pas encore inscrit ? <a href=\"/inscription\">créez vôtre compte ici</a></h3>
+\t\t\t<button type=\"submit\" class=\"buttonForm\">Connexion</button>
+
+\t\t\t<div class=\"formParagraph\">
+\t\t\t\t<p>Vous n'avez pas encore de compte ?
+\t\t\t\t\t<a href=\"/inscription\">Créez un compte</a>
+\t\t\t\t</p>
 \t\t\t</div>
 
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
-\t\t\t</div>
 \t\t</form>
 
 \t</section>
@@ -108,7 +108,7 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  62 => 6,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  64 => 8,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -118,26 +118,26 @@ class __TwigTemplate_a11769ac1662a5d7347bdbcabf537716 extends Template
 {% block content %}
 \t<section class=\"login\">
 
-\t\t<h1>{{ title }}</h1>
-
 \t\t<form method=\"post\" action=\"/login-post\">
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label id=\"loginLabel\" for=\"login\">Votre login</label>
-\t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
-\t\t\t</div>
 
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Votre mot de passe</label>
+\t\t\t<h1 class=\"formTitle\">{{ title }}</h1>
+
+\t\t\t<div class=\"inputArea\">
+\t\t\t\t<label id=\"loginLabel\" for=\"login\">Login</label>
+\t\t\t\t<input type=\"text\" id=\"login\" name=\"login\" required>
+
+\t\t\t\t<label for=\"password\" id=\"passwordLabel\">Mot de passe</label>
 \t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" required>
 \t\t\t</div>
 
-\t\t\t<div>
-\t\t\t\t<h3>Pas encore inscrit ? <a href=\"/inscription\">créez vôtre compte ici</a></h3>
+\t\t\t<button type=\"submit\" class=\"buttonForm\">Connexion</button>
+
+\t\t\t<div class=\"formParagraph\">
+\t\t\t\t<p>Vous n'avez pas encore de compte ?
+\t\t\t\t\t<a href=\"/inscription\">Créez un compte</a>
+\t\t\t\t</p>
 \t\t\t</div>
 
-\t\t\t<div id=\"inputForm\">
-\t\t\t\t<button type=\"submit\" id=\"btnForm\">Connexion</button>
-\t\t\t</div>
 \t\t</form>
 
 \t</section>

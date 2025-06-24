@@ -85,8 +85,8 @@ class UserRepository extends AbstractRepository
     } else {
       // Création
       $stmt = $this->db->prepare("
-                INSERT INTO {$this->table} (login, password, email, created_at) 
-                VALUES (:login, :password, :email, NOW())
+                INSERT INTO {$this->table} (login, password, email) 
+                VALUES (:login, :password, :email)
             ");
 
       $result = $stmt->execute([

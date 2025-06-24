@@ -114,12 +114,6 @@ class __TwigTemplate_250ec921950445cee6bb3a91fd1a1fa8 extends Template
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 35), "html", null, true);
             yield "</li>
 
-\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t<span class=\"fw-bold\">Date de création :</span>
-\t\t\t\t\t\t\t\t";
-            // line 39
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "createdAt", [], "any", false, false, false, 39), "html", null, true);
-            yield "</li>
 
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
@@ -130,7 +124,7 @@ class __TwigTemplate_250ec921950445cee6bb3a91fd1a1fa8 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['user'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
+        // line 43
         yield "\t</div>
 ";
         yield from [];
@@ -157,7 +151,7 @@ class __TwigTemplate_250ec921950445cee6bb3a91fd1a1fa8 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  134 => 46,  121 => 39,  114 => 35,  107 => 31,  100 => 27,  91 => 21,  86 => 19,  82 => 18,  75 => 13,  71 => 12,  62 => 6,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  128 => 43,  114 => 35,  107 => 31,  100 => 27,  91 => 21,  86 => 19,  82 => 18,  75 => 13,  71 => 12,  62 => 6,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -198,9 +192,6 @@ class __TwigTemplate_250ec921950445cee6bb3a91fd1a1fa8 extends Template
 \t\t\t\t\t\t\t\t<span class=\"fw-bold\">Email :</span>
 \t\t\t\t\t\t\t\t{{ user.email}}</li>
 
-\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t<span class=\"fw-bold\">Date de création :</span>
-\t\t\t\t\t\t\t\t{{ user.createdAt}}</li>
 
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>

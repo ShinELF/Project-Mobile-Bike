@@ -63,151 +63,47 @@ class __TwigTemplate_c219c9ff8e31a860057f4e42e5cc477d extends Template
 \t\t\t<li>Prix</li>
 \t\t</ul>
 \t</section>
-
 \t<section>
 \t\t<section>
 \t\t\t<p>100 Article(s)</p>
 \t\t\t<p>trier par : Popularité
 \t\t\t</p>
-
 \t\t</section>
 \t\t<section>
 \t\t\t";
-        // line 21
+        // line 19
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["product"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["prod"]) {
-            // line 22
+            // line 20
             yield "\t\t\t\t<article>
 \t\t\t\t\t<a href=\"\"><img src=\"";
-            // line 23
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prod"], "image", [], "any", false, false, false, 23), "html", null, true);
+            // line 21
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prod"], "image", [], "any", false, false, false, 21), "html", null, true);
             yield "\" alt=\"\">
 \t\t\t\t\t\t<h3>
 \t\t\t\t\t\t\t";
-            // line 25
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prod"], "modele", [], "any", false, false, false, 25), "html", null, true);
+            // line 23
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prod"], "modele", [], "any", false, false, false, 23), "html", null, true);
             yield "
 \t\t\t\t\t\t</h3>
 \t\t\t\t\t\t<p>
 \t\t\t\t\t\t\tA partir de
 \t\t\t\t\t\t\t";
-            // line 29
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prod"], "price", [], "any", false, false, false, 29), "html", null, true);
+            // line 27
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prod"], "price", [], "any", false, false, false, 27), "html", null, true);
             yield "
 \t\t\t\t\t\t\t€ (TVA compris)
 \t\t\t\t\t\t</p>
 \t\t\t\t\t</a>
 \t\t\t\t</article>
-
 \t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['prod'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
-        yield "\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9S.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA W9S
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 13,255.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK7.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tMILAN GT MK7
-
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 11,629.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 7.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA 7
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 11,846.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK 4 MORE.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tBÜLK 4 MORE
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 6,970.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK MK1.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tBÜLK MK1
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 10,596.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK URBAN.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tBÜLK URBAN
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 10,596.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA W9
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 12,933.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA M9.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA M9
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 12,933.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 9.2.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA 9.2
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 12,933.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK8.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tMILAN GT MK8
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 11,629.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t</section>
+        // line 33
+        yield "\t\t</section>
 \t</section>
 ";
         yield from [];
@@ -234,7 +130,7 @@ class __TwigTemplate_c219c9ff8e31a860057f4e42e5cc477d extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  109 => 36,  96 => 29,  89 => 25,  84 => 23,  81 => 22,  77 => 21,  58 => 4,  51 => 3,  40 => 1,);
+        return array (  106 => 33,  94 => 27,  87 => 23,  82 => 21,  79 => 20,  75 => 19,  58 => 4,  51 => 3,  40 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -250,13 +146,11 @@ class __TwigTemplate_c219c9ff8e31a860057f4e42e5cc477d extends Template
 \t\t\t<li>Prix</li>
 \t\t</ul>
 \t</section>
-
 \t<section>
 \t\t<section>
 \t\t\t<p>100 Article(s)</p>
 \t\t\t<p>trier par : Popularité
 \t\t\t</p>
-
 \t\t</section>
 \t\t<section>
 \t\t\t{% for prod in product %}
@@ -272,109 +166,7 @@ class __TwigTemplate_c219c9ff8e31a860057f4e42e5cc477d extends Template
 \t\t\t\t\t\t</p>
 \t\t\t\t\t</a>
 \t\t\t\t</article>
-
 \t\t\t{% endfor %}
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9S.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA W9S
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 13,255.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK7.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tMILAN GT MK7
-
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 11,629.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 7.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA 7
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 11,846.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK 4 MORE.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tBÜLK 4 MORE
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 6,970.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK MK1.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tBÜLK MK1
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 10,596.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/BULK URBAN.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tBÜLK URBAN
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 10,596.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA W9.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA W9
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 12,933.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA M9.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA M9
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 12,933.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/ALPHA 9.2.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tALPHA 9.2
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 12,933.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
-\t\t\t<article>
-\t\t\t\t<a href=\"\"><img src=\"./../../../Ressources/assets/img/MILAN GT MK8.png\" alt=\"\">
-\t\t\t\t\t<h3>
-\t\t\t\t\t\tMILAN GT MK8
-\t\t\t\t\t</h3>
-\t\t\t\t\t<p>
-\t\t\t\t\t\tA partir de 11,629.00 € (TVA compris)
-\t\t\t\t\t</p>
-\t\t\t\t</a>
-\t\t\t</article>
 \t\t</section>
 \t</section>
 {% endblock %}
