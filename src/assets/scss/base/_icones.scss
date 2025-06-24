@@ -61,24 +61,25 @@
 //========================================
 //              Social media
 //========================================
-#youtube {
-    @include mixins.social-media-size;
-}
-
+#youtube,
 #facebook {
-    @include mixins.social-media-size;
+    width: 48px;
+    height: 48px;
 }
 
 .outerCircle {
-    @include mixins.social-media-outer-circle;
+    fill: variables.$color-primary-dark;
 }
 
 .innerCircle {
-    @include mixins.social-media-inner-circle;
+    fill: variables.$color-background;
+    stroke: variables.$color-primary-dark;
+    stroke-width: 0.1;
 }
 
 .socialLogo {
-    @include mixins.social-media-logo;
+    display: inline;
+    fill: variables.$color-primary-light;
 }
 
 
@@ -89,8 +90,10 @@
     //============================================
     #logo {
         width: 7em;
-        margin-right: 0;
-        margin-left: 15px;
+        margin: {
+            right: 0;
+            left: 15px;
+        }
     }
 
     //========================================

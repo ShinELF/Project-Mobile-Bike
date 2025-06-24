@@ -2,33 +2,7 @@
 @use "./../abstracts/mixins";
 
 header {
-@include mixins.border(bottom);
-    height: 30px;
-    width: 100%;
-    background-color: variables.$color-background;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2%;
-}
-
-ul {
-    display: flex;
-    align-items: center;
-    padding-left: 1%;
-
-    & :visited {
-        color: variables.$color-primary-light;
-    }
-
-    & :hover {
-        font-weight: bold;
-        color: variables.$color-primary-dark;
-    }
-
-    & #cart:hover {
-        fill: variables.$color-primary-dark;
-    }
+@include mixins.banner(bottom);
 }
 
 .nav-title {
@@ -64,10 +38,6 @@ ul {
     }
 }
 
-.ulnav {
-    flex-direction: column;
-}
-
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -80,11 +50,6 @@ ul {
 
 @media screen and (min-width: 1024px) {
 
-    header {
-        height: 70px;
-        padding: 0%;
-        margin-bottom: 1%;
-    }
 
     .nav-title {
         &.active {
@@ -94,11 +59,6 @@ ul {
 
     .navbar {
         display: contents;
-    }
-
-    .ulnav {
-        flex-direction: row;
-        padding: 0%;
     }
 
     .nav-menu {

@@ -10,41 +10,33 @@
     fill: variables.$color-primary-light;
 }
 
-@mixin social-media-size {
-    width: 48px;
-    height: 48px;
-}
-
-@mixin social-media-outer-circle {
-    fill: variables.$color-primary-dark;
-}
-
-@mixin social-media-inner-circle {
-    fill: variables.$color-background;
-    stroke-width: 0.1;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: none;
-    stroke: variables.$color-primary-dark;
-    stroke-opacity: 1;
-    stroke-dashoffset: 0
-}
-
-@mixin social-media-logo {
-    display: inline;
-    fill: variables.$color-primary-light;
-}
-
 //======================
-//       Border
+//       Banner
 //======================
 
-@mixin border($direction) {
-    border-#{$direction} : solid 1px variables.$color-primary-dark;
-    @if $direction == "top" {
+@mixin banner($direction) {
+    border-#{$direction}: solid 1px variables.$color-primary-dark;
+
+    @if $direction =="top" {
         box-shadow: 0 0 0 2px variables.$color-shadow;
     }
-    @else if $direction == "bottom" {
-        box-shadow: 0 2px 0 0  variables.$color-shadow;
+
+    @else if $direction =="bottom" {
+        box-shadow: 0 2px 0 0 variables.$color-shadow;
+    }
+
+    width: 100%;
+    height: 30px;
+    background-color: variables.$color-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-#{$direction}: 2%;
+    padding: 1%;
+
+    @media screen and (min-width: 1024px) {
+        height: 70px;
+        padding: 0%;
+        margin-#{$direction}: 1%;
     }
 }

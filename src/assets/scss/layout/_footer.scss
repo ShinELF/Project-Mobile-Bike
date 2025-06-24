@@ -2,14 +2,9 @@
 @use "./../abstracts/mixins";
 
 footer {
-    @include mixins.border(top);
-    height: 70px;
-    width: 100%;
-    background-color: variables.$color-background;
-    padding-bottom: 1%;
     position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    margin-top: 1%;
+    @include mixins.banner(top);
 }
