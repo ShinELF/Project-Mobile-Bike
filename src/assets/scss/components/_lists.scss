@@ -1,0 +1,26 @@
+@use "./../abstracts/variables";
+
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0%;
+
+    & :visited {
+        color: variables.$color-primary-light;
+    }
+
+    & :hover {
+        font-weight: bold;
+        color: variables.$color-primary-dark;
+    }
+}
+
+.ulNavigation {
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+    }
+}

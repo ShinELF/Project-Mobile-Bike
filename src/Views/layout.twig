@@ -14,7 +14,7 @@
 			<h1 class="nav-title {% if link.active %}active{% endif %}">{{ link.title }}</h1>
 		{% endfor %}
 		<nav class="navbar" id="navbar">
-			<ul class="ulnav">
+			<ul class="ulNavigation">
 				{% for link in links %}
 					<li class="nav-menu">
 						<a href="{{ link.path }}" class="nav-link {% if link.active %}active{% endif %}">{{ link.title }}</a>
