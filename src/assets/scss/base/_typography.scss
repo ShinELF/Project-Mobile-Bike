@@ -17,6 +17,7 @@ footer {
 
 a {
     text-decoration: none;
+    color: variables.$color-primary-light;
 }
 
 h1,
@@ -38,37 +39,3 @@ p {
     margin-top: 0.5rem;
 }
 
-ul {
-    display: flex;
-    align-items: center;
-    padding-left: 1%;
-
-    & :visited {
-        color: variables.$color-primary-light;
-    }
-
-    & :hover {
-        font-weight: bold;
-        color: variables.$color-primary-dark;
-    }
-
-    & #cart:hover {
-        fill: variables.$color-primary-dark;
-    }
-}
-
-// .ulnav {
-//     flex-direction: column;
-// }
-
-// .caroussel {
-//     ul {
-//     display:block
-//     }
-// }
-// @media screen and (min-width: 1024px) {    
-//     .ulnav {
-//         flex-direction: row;
-//         padding: 0%;
-//     }
-// }
