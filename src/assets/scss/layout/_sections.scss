@@ -1,0 +1,9 @@
+@use "./../abstracts/variables";
+@use "./../abstracts/mixins";
+
+aside {
+    width: 50%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+}

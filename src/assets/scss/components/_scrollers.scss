@@ -1,0 +1,13 @@
+@use "./../abstracts/variables";
+
+.scroller {
+        height: 415px;
+        overflow-y: scroll;
+        scrollbar-color: variables.$color-primary-light variables.$color-background;
+        scrollbar-width: 20px;
+
+        @media screen and (min-width: 1024px) {
+            scrollbar-width: auto;
+        }
+
+    }

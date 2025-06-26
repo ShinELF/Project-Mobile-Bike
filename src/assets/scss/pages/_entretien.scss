@@ -1,81 +1,63 @@
-@use "./../abstracts/variables";
+// @use "./../abstracts/variables";
 
-section.high {
+// section.high {
 
-    article {
-        width: 90%;
-        margin-top: 5%;
+//     article {
+//         width: 90%;
+//         margin-top: 5%;
 
-    }
-
-    .scroller {
-        height: 415px;
-        overflow-y: scroll;
-        scrollbar-color: #F7F7F7 #006680;
-        scrollbar-width: 20px;
-    }
-
-    iframe {
-        width: 100%;
-        margin-top: 10%;
-    }
-}
-
-section.down {
-    margin-top: 5%;
-
-    article {
-        margin-top: 5%;
-    }
-
-    button {
-        display: none;
-    }
-
-    .carousel-dot {
-        display: none;
-    }
-}
-
-@media (min-width: 1024px) {
-    section.high {
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
-
-        .scroller {
-            height: 415px;
-            overflow-y: scroll;
-            scrollbar-color: #F7F7F7 #006680;
-            scrollbar-width: auto;
-        }
-    }
-
-    section.highleft {
-        grid-column: 1;
-        padding-right: 80px;
-
-        article {
-            border: 1px solid variables.$color-primary-dark;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-    }
-
-    .scroller {
-
-        height: 415px;
-        overflow-y: scroll;
-        scrollbar-color: variables.$color-background variables.$color-primary-light;
-        scrollbar-width: auto;
-    }
+//     }
 
 
-    section.highright {
-        width: 100%;
-        grid-column: 2;
-    }
+
+//     iframe {
+//         width: 100%;
+//         margin-top: 10%;
+//     }
+// }
+
+// section.down {
+//     margin-top: 5%;
+
+//     article {
+//         margin-top: 5%;
+//     }
+
+//     button {
+//         display: none;
+//     }
+
+//     .carousel-dot {
+//         display: none;
+//     }
+// }
+
+// @media (min-width: 1024px) {
+//     section.high {
+
+//         display: grid;
+//         grid-template-columns: repeat(2, 1fr);
+//         gap: 50px;
+//     }
+
+//     section.highleft {
+//         grid-column: 1;
+//         padding-right: 80px;
+
+//         article {
+//             border: 1px solid variables.$color-primary-dark;
+//             padding: 20px;
+//             margin-bottom: 30px;
+//         }
+//     }
 
 
-}
+
+
+//     section.highright {
+//         width: 100%;
+//         grid-column: 2;
+//     }
+
+
+// }

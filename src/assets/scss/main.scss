@@ -7,9 +7,11 @@
 @use "components/buttons";
 @use "components/carrousel";
 @use "components/forms";
-@use "components/lists";
+@use "components/scrollers";
 @use "layout/header";
 @use "layout/footer";
+@use "layout/lists";
+@use "layout/sections";
 @use "pages/entretien";
 @use "pages/evenement";
 @use "pages/index";
