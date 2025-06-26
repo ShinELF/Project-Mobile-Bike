@@ -1,6 +1,6 @@
 @use "./../abstracts/variables";
 
-.newsletterButton {
+.newsletter-button {
     display: none;
 
     @media screen and (min-width: 1024px) {
@@ -20,13 +20,13 @@
             background-color: variables.$color-secondary-light;
         }
 
-        &:hover #newsletterIcon {
+        &:hover #newsletter-icon {
             fill: variables.$color-secondary-dark;
         }
     }
 }
 
-.buttonForm {
+.button-form {
     margin-top: 7%;
     border: 1px solid variables.$color-primary-dark;
     border-radius: 5px;
@@ -66,7 +66,7 @@
 }
 
 
-.btnreadMore {
+.button-read-more {
     background-color: variables.$color-primary-light;
     color: variables.$color-background;
     text-decoration: none;

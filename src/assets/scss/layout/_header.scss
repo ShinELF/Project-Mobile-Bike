@@ -22,7 +22,7 @@ header {
     margin-right: 20px;
 }
 
-.navbar {
+.nav-bar {
     display: none;
 
     &.open {
@@ -57,7 +57,7 @@ header {
         }
     }
 
-    .navbar {
+    .nav-bar {
         display: contents;
     }
 

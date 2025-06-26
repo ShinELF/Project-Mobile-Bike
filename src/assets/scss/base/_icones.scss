@@ -17,11 +17,11 @@
         }
     }
 
-    #logo_txt {
+    #logo-txt {
         fill: variables.$color-primary-light;
     }
 
-    #logo_img {
+    #logo-img {
         fill: variables.$color-primary-dark;
     }
 }
@@ -36,7 +36,7 @@
 //========================================
 //                Newsletter
 //========================================
-#newsletterIcon {
+#newsletter-icon {
     display: block;
     @include mixins.icon;
 }
@@ -85,17 +85,17 @@
     height: 48px;
 }
 
-.outerCircle {
+.outer-circle {
     fill: variables.$color-primary-dark;
 }
 
-.innerCircle {
+.inner-circle {
     fill: variables.$color-background;
     stroke: variables.$color-primary-dark;
     stroke-width: 0.1;
 }
 
-.socialLogo {
+.social-logo {
     display: inline;
     fill: variables.$color-primary-light;
 }
@@ -103,7 +103,7 @@
 //============================================
 //                  Carousels
 //============================================
-.buttonCarousel {
+.button-carousel {
     width: 100%;
     max-width: 70px;
     height: 100%;

@@ -3,7 +3,7 @@
 //=======================================
 //              Carousel - image
 //=======================================
-#carouselContainer,
+#carousel-container,
 .carousel-track-container {
 
     display: grid;
@@ -54,7 +54,7 @@
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-img.carouselImage {
+img.carousel-cmage {
     width: 100%;
     height: 100%;
     border-radius: 20px;
