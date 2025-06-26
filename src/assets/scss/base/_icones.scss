@@ -4,10 +4,18 @@
 //============================================
 //                   Logo
 //============================================
-
 #logo {
     width: 4em;
     margin-right: auto;
+
+    @media screen and (min-width: 1024px) {
+        width: 7em;
+
+        margin: {
+            right: 0;
+            left: 15px;
+        }
+    }
 
     #logo_txt {
         fill: variables.$color-primary-light;
@@ -21,20 +29,30 @@
 //========================================
 //              Cart & User
 //========================================
-
 .svg-header {
+    @include mixins.icon;
+}
+
+//========================================
+//                Newsletter
+//========================================
+#newsletterIcon {
+    display: block;
     @include mixins.icon;
 }
 
 //========================================
 //              Burger menu
 //========================================
-
 .burger-icon {
     margin-right: 2%;
     display: flex;
     flex-direction: column;
     width: 26px;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
 }
 
 .burger-icon span {
@@ -82,43 +100,11 @@
     fill: variables.$color-primary-light;
 }
 
-
-@media screen and (min-width: 1024px) {
-
-    //============================================
-    //                   Logo
-    //============================================
-    #logo {
-        width: 7em;
-        margin: {
-            right: 0;
-            left: 15px;
-        }
-    }
-
-    //========================================
-    //                Cart & User
-    //========================================
-
-    //========================================
-    //              Newsletter
-    //========================================
-
-    #newsletterIcon {
-        display: block;
-        @include mixins.icon;
-    }
-
-    //========================================
-    //              Burger menu
-    //========================================
-
-    .burger-icon {
-        display: none;
-    }
-
-    //========================================
-    //              Social media
-    //========================================
-
+//============================================
+//                  Carousels
+//============================================
+.buttonCarousel {
+    width: 100%;
+    max-width: 70px;
+    height: 100%;
 }
