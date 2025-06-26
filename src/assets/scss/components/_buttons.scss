@@ -2,27 +2,8 @@
 
 .newsletterButton {
     display: none;
-}
-
-.buttonForm {
-    margin-top: 10%;
-    border: 1px solid variables.$color-primary-light;
-    border-radius: 5px;
-    padding: 2%;
-    font-size: 1.5em;
-}
-
-#carousel-button-prev {
-    display: none;
-}
-
-#carousel-button-next {
-    display: none;
-}
-
-@media screen and (min-width: 1024px) {
-    .newsletterButton {
-        background-color: variables.$color-background;
+      @media screen and (min-width: 1024px) {
+         background-color: variables.$color-background;
         position: fixed;
         top: 20%;
         width: 40px;
@@ -36,13 +17,39 @@
 
         &:hover {
             background-color: variables.$color-secondary-light;
-        }
+                  }
 
         &:hover #newsletterIcon {
             fill: variables.$color-secondary-dark;
         }
     }
+}
 
+.buttonForm {
+    margin-top: 7%;
+    border: 1px solid variables.$color-primary-dark;
+    border-radius: 5px;
+    padding: 2%;
+    font-size: 1.2em;
+    background-color: variables.$color-shadow;
+    color: variables.$color-primary-dark;
+
+    &:hover {
+        border: 1px solid variables.$color-primary-dark;
+        background-color: variables.$color-primary-light;
+        color: variables.$color-background;
+}
+
+#carousel-button-prev {
+    display: none;
+}
+
+#carousel-button-next {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+      
     #carousel-button-prev {
         display: flex;
         position: absolute;
@@ -97,5 +104,6 @@
         border: none;
         background: none;
         display: block;
+
     }
 }

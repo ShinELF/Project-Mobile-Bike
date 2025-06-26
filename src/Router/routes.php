@@ -192,7 +192,8 @@ return [
         'httpMethod' => 'GET',
         'params' => [],
         'titleMenu' => 'Administration',
-        'middlewares' => [
+        'middlewares' => [ new AuthMiddleware(['/administration']),
+          new AuthAdminMiddleware(['/administration'])
         ]
     ],
     [
