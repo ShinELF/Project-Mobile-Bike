@@ -163,18 +163,18 @@ return [
   ],
 
     [
-    'path' => '/boutique/add',
+    'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'displayAddForm',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => '',
     'middlewares' => [
-      // new AuthMiddleware(['/boutique/add'])
+      // new AuthMiddleware(['/administration/add'])
     ]
   ],
   [
-    'path' => '/boutique/add',
+    'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'add',
     'httpMethod' => 'POST',
@@ -182,7 +182,7 @@ return [
     'titleMenu' => '',
     'middlewares' => [
       // new AuthMiddleware(['/users/add']),
-      // new InputCheckerMiddleware(['/boutique/add'])
+      // new InputCheckerMiddleware(['/administration/add'])
     ]
   ],
     [
