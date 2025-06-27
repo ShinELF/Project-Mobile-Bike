@@ -1,5 +1,5 @@
 const burger = document.getElementById("burger");
-const navMenu = document.getElementById("navbar");
+const navMenu = document.getElementById("nav-bar");
 
 burger.addEventListener("click", () => {
 burger.classList.toggle("open");
@@ -26,8 +26,8 @@ if (window.innerWidth >= 1024) {
 
 // Targetting the different position of the carousel and the buttons
 
-const prevBtn = document.getElementById("index-btn-prev");
-const nextBtn = document.getElementById("index-btn-next");
+const prevBtn = document.getElementById("index-button-prev");
+const nextBtn = document.getElementById("index-button-next");
 
 // change the position on button click
 prevBtn.addEventListener("click", () => {
