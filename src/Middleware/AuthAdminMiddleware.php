@@ -59,7 +59,7 @@ class AuthAdminMiddleware implements MiddlewareInterface
   }
 
   /**
-   * Vérifie si l'utilisateur est authentifié
+   * Vérifie si l'utilisateur est authentifié et administrateur
    * 
    * @param ServerRequestInterface $request
    * @return bool
@@ -92,17 +92,3 @@ class AuthAdminMiddleware implements MiddlewareInterface
 
     // return false;
   }}
-
-//   /**
-//    * Exemple de méthode pour valider un token JWT
-//    * 
-//    * @param string $token
-//    * @return bool
-//    */
-//   private function validateToken(string $token): bool
-//   {
-//     // Logique de validation de token
-//     // À implémenter selon votre besoin (JWT, OAuth, etc.)
-//     return false;
-//   }
-// }

@@ -57,7 +57,7 @@ class LoginController extends Controller
     // Si tout s'est bien passé, on redirige
     return new Response(
       302,
-      ['Location' => '/users'],
+      ['Location' => '/'],
       ''
     );
   }

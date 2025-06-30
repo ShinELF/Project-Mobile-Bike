@@ -48,11 +48,11 @@ class HomeController extends Controller
     );
   }
 
-  public function presentationPersonnalisation(ServerRequestInterface $request): ResponseInterface
+  public function Personnalisation(ServerRequestInterface $request): ResponseInterface
   {
 
-    $html = $this->twig->render('home/presentationPersonnalisation.twig', [
-      'title' => "Présentation Personnalisation",
+    $html = $this->twig->render('presentation/personnalisation.twig', [
+      'title' => "Personnalisation",
       'links' => $this->navService->routesToLinks('/presentation/personnalisation'),
     ]);
     return new Response(
@@ -62,12 +62,12 @@ class HomeController extends Controller
     );
   }
 
-  public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
+  public function Ecologie(ServerRequestInterface $request): ResponseInterface
   {
 
-    $html = $this->twig->render('home/presentationEcologie.twig', [
-      'title' => "Présentation Écologie",
-      'links' => $this->navService->routesToLinks('/presentation/Ecologie'),
+    $html = $this->twig->render('presentation/ecologie.twig', [
+      'title' => "Écologie",
+      'links' => $this->navService->routesToLinks('/presentation/ecologie'),
 
     ]);
 

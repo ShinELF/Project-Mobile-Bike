@@ -119,19 +119,19 @@ return [
   [
     'path' => '/presentation/personnalisation',
     'controller' => HomeController::class,
-    'controllerMethod' => 'presentationPersonnalisation',
+    'controllerMethod' => 'personnalisation',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Présentation Personnalisation',
+    'titleMenu' => 'Personnalisation',
     'middlewares' => []
   ],
    [
-    'path' => '/presentation/Ecologie',
+    'path' => '/presentation/ecologie',
     'controller' => HomeController::class,
-    'controllerMethod' => 'presentationEcologie',
+    'controllerMethod' => 'ecologie',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Présentation Écologie',
+    'titleMenu' => 'Écologie',
     'middlewares' => []
   ],
     [
@@ -192,8 +192,7 @@ return [
         'httpMethod' => 'GET',
         'params' => [],
         'titleMenu' => 'Administration',
-        'middlewares' => [ new AuthMiddleware(['/administration']),
-          new AuthAdminMiddleware(['/administration'])
+        'middlewares' => [ new AuthAdminMiddleware(['/administration'])
         ]
     ],
     [
