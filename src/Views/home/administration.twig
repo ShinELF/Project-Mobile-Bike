@@ -1,23 +1,78 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<script src="../../js/administration.js" defer ></script>
+	<script src="../../js/administration.js" defer></script>
+	<script src="../../js/addForm.js" defer></script>
 
-<section class="admin-navigation">
-    <h1>Page d'administration</h1>
-    <a href="">Produits</a>
-    <a href="">Utilisateurs</a>
-</section>
+	{# making the page act like a background #}
+	<section id="background" class="product-displayed">
+		
+		<div class="produits">
+			<h2>Produits</h2>
 
-<section class="product">
+			<div id="boutique-container">
+							{% for prod in product %}
+				<article>
+					<a href=""><img src="./../../../Ressources/assets/img/{{prod.image}}" alt="">
+						<h3>
+							{{prod.modele}}
+						</h3>
+						<p>
+							A partir de
+							{{prod.price}}
+							€ (TVA compris)
+						</p>
+					</a>
+				</article>
+			{% endfor %}
+			</div>
 
-		<button type="button" class="button-form" id="add-button" >Ajout d'un produit </button>
+						<button type="button" class="button-form" id="add-button">Ajout d'un produit
+			</button>
 
-</section>
+		</div>
 
-<section class="users">
-    <h2>Utilisateurs</h2>
-</section>
+
+
+
+	</section>
+
+	{# container for the form window #}
+	<div id="add-form" class="form-hidden">
+		<form method="post" action="/administration/add">
+			<div>
+				<div>
+					<div>
+						<label for="image">Image</label>
+						<input type="file" id="image" name="image" placeholder="Ajouter une image" required>
+						{# container for the image preview #}
+						<div class="image-preview"></div>
+					</div>
+
+					<div>
+						<label for="modele">Modèle</label>
+						<input type="text" id="modele" name="modele" required>
+					</div>
+
+					<div>
+						<label for="price">Prix</label>
+						<input type="text" id="price" name="price" required>
+					</div>
+
+					<div>
+						<label for="description">Description</label>
+						<input type="text" id="description" name="description">
+					</div>
+
+
+					<button type="submit" class="button-form">Créer un produit</button>
+					
+                    <button type="button" class="button-form" id="close-button">Fermer
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
 
 
 {% endblock %}
