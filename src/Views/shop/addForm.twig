@@ -1,33 +1,37 @@
 {% extends "base.twig" %}
 
 {% block content %}
+
+	<script src="../../js/addForm.js" defer></script>
+
 	<h2>{{ title }}</h2>
-	<form method="post" action="/boutique/add" class="container py-4">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-floating mb-3">
+	<form method="post" action="/administration/add">
+		<div>
+			<div>
+				<div>
 					<label for="image">Image</label>
-					<input type="text" class="form-control" id="image" name="image" required>
+					<input type="file" id="image" name="image" placeholder="Ajouter une image" required>
+					<div></div>
 				</div>
 
-				<div class="form-floating mb-3">
+				<div>
 					<label for="modele">Modèle</label>
-					<input type="text" class="form-control" id="modele" name="modele" required>
+					<input type="text" id="modele" name="modele" required>
 				</div>
 
-				<div class="form-floating mb-3">
+				<div>
 					<label for="price">Prix</label>
-					<input type="text" class="form-control" id="price" name="price" required>
+					<input type="text" id="price" name="price" required>
 				</div>
 
-				<div class="form-floating mb-3">
+				<div>
 					<label for="description">Description</label>
-					<input type="text" class="form-control" id="description" name="description">
+					<input type="text" id="description" name="description">
 				</div>
 
-				<div class="d-grid gap-2 mt-4">
-					<button type="submit" class="btn btn-success">Créer un produit</button>
-				</div>
+
+				<button type="submit" class="button-form">Créer un produit</button>
+
 			</div>
 		</div>
 	</form>

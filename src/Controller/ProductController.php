@@ -96,7 +96,7 @@ class ProductController extends Controller
         // Si tout s'est bien passé, on redirige
         return new Response(
             302,
-            ['Location' => '/boutique'],
+            ['Location' => '/administration'],
             ''
         );
     }
@@ -138,12 +138,12 @@ class ProductController extends Controller
             $formData = $request->getParsedBody();
 
             // Création d'une instance de User avec la bonne id
-            $user = new Product();
-            $user->hydrate($formData);
-            $user->id = $id;
+            $product = new Product();
+            $product->hydrate($formData);
+            $product->id = $id;
 
             // Modification de la base de données via le modèle donc via le repository
-            if (!$this->productRepository->save($user)) {
+            if (!$this->productRepository->save($product)) {
                 return new Response(
                     418,
                     ['Content-Type' => 'text/html'],

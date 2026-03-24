@@ -49,7 +49,15 @@ class AuthMiddleware implements MiddlewareInterface
             '<h1>401 - Non autorisé</h1><p>Vous devez être connecté pour accéder à cette page.</p>'
           );
         }
-
+        break;
+        if (!$this->isAnAdmin($request)) {
+          // Redirection vers la page de connexion ou message d'erreur
+          return new Response(
+            401,
+            ['Content-Type' => 'text/html'],
+            '<h1>401 - Non autorisé</h1><p>Vous devez être administrateur pour accéder à cette page.</p>'
+          );
+        }
         break;
       }
     }
@@ -64,7 +72,7 @@ class AuthMiddleware implements MiddlewareInterface
    * @param ServerRequestInterface $request
    * @return bool
    */
-  private function isAuthenticated(ServerRequestInterface $request): bool
+  private function isAuthenticated(ServerRequestInterface $request)
   {
     error_log("DANS isAuthenticated DE AUTHMIDDLEWARE");
 
@@ -90,23 +98,37 @@ class AuthMiddleware implements MiddlewareInterface
         $_SESSION['user_authenticated'] = true;
         $_SESSION['user_id'] = $user->id;
         $_SESSION['user_login'] = $user->login;
+        $_SESSION['user_admin'] = $user->isadmin;
         return true;
       }
     }
 
     return false;
   }
-
-  /**
-   * Exemple de méthode pour valider un token JWT
-   * 
-   * @param string $token
-   * @return bool
-   */
-  private function validateToken(string $token): bool
+  private function isAnAdmin(ServerRequestInterface $request)
   {
-    // Logique de validation de token
-    // À implémenter selon votre besoin (JWT, OAuth, etc.)
-    return false;
+    error_log("DANS isAnAdmin DE AUTHMIDDLEWARE");
+
+    // Si l'utilisateur est déjà authentifié via la session
+    if (isset($_SESSION['user_admin']) && $_SESSION['user_admin'] === true) {
+      error_log("USER authenticated with session");
+      return true;
+    }
+
+    // Si la requête est une soumission de formulaire de connexion
+    if ($request->getMethod() === 'POST' && $request->getUri()->getPath() === '/login-post') {
+      $formData = $request->getParsedBody();
+      $login = $formData['login'] ?? '';
+
+
+      // Utiliser le repository pour authentifier
+      $userRepository = new UserRepository();
+      $user = $userRepository->isAdmin($login);
+
+      if ($user) {
+        // Authentification réussie 
+        return true;
+      }
+    }
   }
 }

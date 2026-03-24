@@ -1,0 +1,75 @@
+@use "./../abstracts/variables";
+
+.newsletter-button {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+        background-color: variables.$color-background;
+        position: fixed;
+        top: 20%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 10px 10px 0px;
+        border: solid 1px variables.$color-primary-dark;
+        border-left: none;
+
+        &:hover {
+            background-color: variables.$color-secondary-light;
+        }
+
+        &:hover #newsletter-icon {
+            fill: variables.$color-secondary-dark;
+        }
+    }
+}
+
+.button-form {
+    margin-top: 7%;
+    border: 1px solid variables.$color-primary-dark;
+    border-radius: 5px;
+    padding: 2%;
+    font-size: 1.2em;
+    background-color: variables.$color-shadow;
+    color: variables.$color-primary-dark;
+
+    &:hover {
+        border: 1px solid variables.$color-primary-dark;
+        background-color: variables.$color-primary-light;
+        color: variables.$color-background;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+
+
+    #maintenance-button-prev {
+        position: absolute;
+        top: 40%;
+        border: none;
+        background: none;
+        display: block;
+    }
+
+    #maintenance-button-next {
+        position: absolute;
+        top: 40%;
+        right: 5px;
+        border: none;
+        background: none;
+        display: block;
+
+    }
+}
+
+
+.button-read-more {
+    background-color: variables.$color-primary-light;
+    color: variables.$color-background;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 10px;
+}

@@ -1,0 +1,132 @@
+// @use "./../abstracts/variables";
+
+// // img {
+// //     margin-top: 50px;
+// //     box-shadow:8px 8px 10px 0 variables.$color-shadow;
+// // }
+// .co2Text,.printText,.healthText {
+//     display: none;
+// }
+
+// .subSection {
+//     border-top: 1px solid variables.$color-primary-dark;
+//     margin-top:  200px;
+//     text-align: left;
+//     margin-left: 100px;
+//     margin-right: 200px;
+//     h3 {
+//         font-style: italic;
+//         font-weight: bold;
+
+//     }
+// }
+
+// @media screen and (min-width: 720px) {
+//     body {
+
+//         .mainSection {
+//             margin-top: 100px;
+//             display:flex;
+//             align-items: center;
+//         }
+//         .imgBike{
+//             width: 50%;
+//             margin-left: 100px;
+//             margin-right: 100px;
+//         }
+//         .texte{
+//             width: 50%;
+//             text-align: left;
+//         }
+//     }
+//     .co2Text {
+//         font-size: 250px;
+//         position: absolute;
+//         z-index: -1;
+//         left: 200px;
+//         color:variables.$color-background;
+//         margin-bottom: 0px;
+//         opacity: 50%;
+//         font-weight: bolder;
+//     }
+//     .printText {
+//         font-size: 35px;
+//         position: absolute;
+//         z-index: -1;
+//         left: 200px;
+//         color:variables.$color-background;
+//         margin-bottom: 250px;
+//         margin-left: 300px;
+//         opacity: 50%;
+//         font-weight: bolder;
+//     }
+//     .healthText {
+//         font-size: 35px;
+//         position: absolute;
+//         z-index: -1;
+//         left: 200px;
+//         color:variables.$color-background;
+//         margin-top: 300px;
+//         margin-left: 600px;
+//         opacity: 50%;
+//         font-weight: bolder;
+//     }
+//     .co2Text,.printText,.healthText {
+//         display: block;
+//     }
+
+// }
+
+// @media screen and (min-width: 1300px) {
+//     .imgBike{
+//         width: 500px;
+//         margin-left: 100px;
+//         margin-right: 100px;
+//     }
+//     .texte{
+//         width: 100%;
+//         text-align: left;
+//         font-size: 25px;
+//         margin-left: 100px;
+//     }
+//     .co2Text {
+//         font-size: 250px;
+//         position: absolute;
+//         z-index: -1;
+//         left: 600px;
+//         color:variables.$color-background;
+//         margin-bottom: 0px;
+//         opacity: 50%;
+//         font-weight: bolder;
+//     }
+//     .printText {
+//         font-size: 35px;
+//         position: absolute;
+//         z-index: -1;
+//         left: 800px;
+//         font-size: 50px;
+//         color:variables.$color-background;
+//         margin-bottom: 400px;
+//         margin-left: 300px;
+//         opacity: 50%;
+//         font-weight: bolder;
+//     }
+//     .healthText {
+//         font-size: 35px;
+//         position: absolute;
+//         z-index: -1;
+//         left: 200px;
+//         color:variables.$color-background;
+//         margin-top: 550px;
+//         margin-left: 1200px;
+//         opacity: 50%;
+//         font-weight: bolder;
+//     }
+//     .co2Text,.printText,.healthText {
+//         display: block;
+//     }
+//     .subSection {
+//         margin-top: 140px;
+//         font-size: 20px;
+//     }
+// }

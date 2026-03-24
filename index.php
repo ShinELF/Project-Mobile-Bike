@@ -7,6 +7,7 @@ use Diginamic\Framework\Response\ResponseEmitter;
 use Diginamic\Framework\Exception\RouteNotFoundException;
 use Diginamic\Framework\Middleware\MiddlewareHandler;
 use Diginamic\Framework\Middleware\AuthMiddleware;
+use Diginamic\Framework\Middleware\AuthAdminMiddleware;
 use Diginamic\Framework\Middleware\InputSanitizerMiddleware;
 use Diginamic\Framework\Services\NavigationService;
 use GuzzleHttp\Psr7\ServerRequest;
@@ -30,12 +31,13 @@ $dotenv->load();
 
 $router = new Router();
 
+
+
 // Ajout d'un middleware global d'authentification
 // Avec la liste des routes protégées
 $authMiddleware = new AuthMiddleware([
   '/profile',
-  '/login-post',
-  '/users',
+  '/login-post'
   // Ajoutez ici d'autres routes protégées
 ]);
 $router->addMiddleware($authMiddleware);

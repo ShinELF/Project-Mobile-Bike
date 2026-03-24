@@ -1,0 +1,42 @@
+@use "variables";
+
+//=================================
+//             Svg
+//=================================
+
+@mixin icon {
+    width: 25px;
+    height: 25px;
+    fill: variables.$color-primary-light;
+}
+
+//======================
+//       Banner
+//======================
+
+@mixin banner($direction) {
+    border-#{$direction}: solid 1px variables.$color-primary-dark;
+
+    @if $direction =="top" {
+        box-shadow: 0 0 0 2px variables.$color-shadow;
+    }
+
+    @else if $direction =="bottom" {
+        box-shadow: 0 2px 0 0 variables.$color-shadow;
+    }
+
+    width: 100%;
+    height: 30px;
+    background-color: variables.$color-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-#{$direction}: 2%;
+    padding: 1%;
+
+    @media screen and (min-width: 1024px) {
+        height: 70px;
+        padding: 0%;
+        margin-#{$direction}: 1%;
+    }
+}

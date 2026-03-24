@@ -1,0 +1,81 @@
+@use "./../abstracts/variables";
+@use "./../abstracts/mixins";
+
+header {
+@include mixins.banner(bottom);
+}
+
+.nav-title {
+    display: none;
+
+    &.active {
+        display: contents;
+        font-size: 1.5em;
+    }
+}
+
+#user {
+    margin-left: auto;
+}
+
+#cart {
+    margin-right: 20px;
+}
+
+.nav-bar {
+    display: none;
+
+    &.open {
+        display: contents;
+        position: absolute;
+        top: 49px;
+        left: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 1rem 1rem 1rem;
+        background-color: variables.$color-background;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.butNews {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+
+    .nav-title {
+        &.active {
+            display: none;
+        }
+    }
+
+    .nav-bar {
+        display: contents;
+    }
+
+    .nav-menu {
+
+        flex-direction: row;
+        padding-inline: 10px;
+
+        li {
+            margin: 0 1rem;
+        }
+    }
+
+    #cart {
+        margin-right: 15px;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+}

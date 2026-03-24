@@ -1,27 +1,30 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<section class="home index">
-		<article class="base">
-			<h1>Mobile Bike</h1>
-			<p>
-				Structurellement le vélomobile est un tricycle couché caréné.<br>
-			</p>
-			<p>
-				Ce véhicule à pédales permet de se déplacer à l'abri du froid et de la pluie, il offre également un volume utile pour le transport de bagages.
-			</p>
-			<p>
-				Ce mode de déplacement est encore peu répandu en France, c'est seulement dans les années 2000 que le concept a été développé dans les "pays du vélo" : La Belgique, les Pays-Bas et l'Allemagne.
-			</p>
-		</article class="base">
-		<article class="base">
-			<img src="./../../../Ressources/Atelier.png" width="400px">
-		</article class="base">
-	</section>
+		<script src="../../js/base.js" defer ></script>
+	<aside>
 
-	<section class="home">
-	<article class="base"><iframe width="560" height="315" src="https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></article class="base">
-	<article class="base">
+		<div id="carousel-container">
+
+			<button id="index-button-prev">
+
+				<svg viewbox="0 0 120 120" class="button-carousel">
+					<circle style="display:inline;opacity:0.646602;fill:#cccccc;fill-opacity:0.9;stroke:none;stroke-opacity:1" id="path89-0" cx="-1768" cy="-399" r="38" transform="translate(1828,459)"/>
+					<path style="display:inline;fill:#000000" d="m 1762.6478,381.06252 c 0.4681,0.20941 12.1492,11.78429 13.1304,13.011 1.1976,1.49739 1.7397,3.03243 1.7397,4.92645 0,1.89354 -0.5417,3.42797 -1.7392,4.92646 -0.3208,0.40141 -3.3381,3.47362 -6.7051,6.82712 -6.6713,6.64469 -6.4259,6.44413 -7.7654,6.34724 -0.8279,-0.0599 -1.4147,-0.40334 -1.9163,-1.12153 -0.292,-0.41812 -0.3325,-0.58989 -0.3325,-1.40927 0,-0.83731 0.037,-0.98681 0.3625,-1.45626 0.1994,-0.28773 3.065,-3.19401 6.368,-6.4584 6.4016,-6.32684 6.5891,-6.54476 6.5891,-7.65536 0,-1.10717 -0.1883,-1.32594 -6.5883,-7.65333 -3.3043,-3.26678 -6.1706,-6.1745 -6.3696,-6.46159 -0.3244,-0.46814 -0.3617,-0.61825 -0.3617,-1.4551 0,-0.81938 0.04,-0.99114 0.3325,-1.40927 0.5359,-0.76737 1.0914,-1.07263 2.0262,-1.11348 0.5347,-0.0234 0.9465,0.0287 1.2297,0.15532 z" id="path1" transform="rotate(180,914,229.5)"/>
+				</svg>
+			</button>
+
+			<img class="pos1 carousel-image" id="img-left" src="./../../../Ressources/Community.png">
+			<img class="pos2 carousel-image" id="img-middle" src="./../../../Ressources/Atelier.png">
+			<img class="pos3 carousel-image" id="img-right" src="./../../../Ressources/p1010925.jpg">
+
+			<button id="index-button-next">
+				<svg viewbox="0 0 120 120" class="button-carousel">
+					<circle style="display:inline;opacity:0.646602;fill:#cccccc;fill-opacity:0.9;stroke:none;stroke-opacity:1" id="path89-0" cx="-1768" cy="-399" r="38" transform="rotate(180,-854,-169.5)"/>
+					<path style="fill:#000000" d="m 54.647779,42.062519 c 0.468144,0.209415 12.149223,11.784288 13.130387,13.011002 1.197659,1.49739 1.739747,3.032425 1.739747,4.926452 0,1.893536 -0.541723,3.427964 -1.73926,4.926452 -0.320796,0.401415 -3.338054,3.473621 -6.705019,6.827125 -6.671361,6.644691 -6.425982,6.444125 -7.765424,6.347239 -0.827892,-0.05989 -1.414736,-0.403339 -1.916296,-1.121526 -0.292009,-0.418128 -0.332539,-0.58989 -0.332539,-1.409269 0,-0.837314 0.03722,-0.986813 0.362547,-1.456261 0.199401,-0.287736 3.064972,-3.194015 6.367936,-6.4584 6.401619,-6.326846 6.589184,-6.54476 6.589184,-7.65536 0,-1.107175 -0.18833,-1.325946 -6.588374,-7.653329 -3.304299,-3.266784 -6.170598,-6.174503 -6.369554,-6.461596 -0.324422,-0.468141 -0.361739,-0.618248 -0.361739,-1.455095 0,-0.819379 0.04053,-0.991142 0.332539,-1.40927 0.535907,-0.767368 1.091381,-1.072631 2.026152,-1.11348 0.534693,-0.02337 0.946566,0.02866 1.229713,0.155316 z" id="path1"/>
+				</svg>
+			</button>
+		</div>
 		<h1>Témoignages et avis clients</h1>
 		<p>
 			"Le vélomobile m'a donné l'occasion de faire du sport là où je n'en n'aurais jamais fais avec d'autres moyens et je n'ai pas forcément le temps de faire du sport le reste de la semaine".<br>
@@ -34,6 +37,22 @@
 		<p>
 			"Le confort est vraiment super, même dans le froid et sous la pluie, grâce entre autre au toit amovible. Ca me fait vraiment beaucoup de bien cet entrainement régulier, c'est bon pour le cardio, ça maintient une bonne forme physique, et c'est très bon pour le moral, et le mental sans compter les économies essence, d'entretien de voiture, et c'est aussi meilleur pour la planète... Donc, que du Bonheur !".<br>
 			Stéphanie, 52 ans, Occitanie.
-		</p></article class="base">
+		</p>
+	</aside>
+	<section>
+		<h1>Mobile Bike</h1>
+		<p>
+			Structurellement le vélomobile est un tricycle couché caréné.<br>
+		</p>
+		<p>
+			Ce véhicule à pédales permet de se déplacer à l'abri du froid et de la pluie, il offre également un volume utile pour le transport de bagages.
+		</p>
+		<p>
+			Ce mode de déplacement est encore peu répandu en France, c'est seulement dans les années 2000 que le concept a été développé dans les "pays du vélo" : La Belgique, les Pays-Bas et l'Allemagne.
+		</p>
+	</section>
+
+	<section>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/54ZU4SMxhCc?si=GMzauJWiYxUeW-6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	</section>
 {% endblock %}

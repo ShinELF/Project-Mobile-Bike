@@ -1,0 +1,30 @@
+@use "./../abstracts/variables";
+
+//======================================
+// For all pages and media size
+//======================================
+
+* {
+    margin: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+main {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+iframe {
+    max-width: 100%;
+    margin-block: 10px;
+}

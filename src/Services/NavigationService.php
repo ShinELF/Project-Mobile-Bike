@@ -2,6 +2,7 @@
 
 namespace Diginamic\Framework\Services;
 
+use Diginamic\Framework\Middleware\AuthAdminMiddleware;
 use Diginamic\Framework\Middleware\AuthMiddleware;
 
 class NavigationService
@@ -24,11 +25,13 @@ class NavigationService
   {
     // Utilisateur authentifié 
     $isAuthenticated = isset($_SESSION['user_authenticated']) && $_SESSION['user_authenticated'];
+    $isAdmin = isset($_SESSION['user_admin']) && $_SESSION['user_admin'];
 
     $links = [];
     foreach ($this->routes as $route) {
       $hasAuthMiddleware = in_array($route['path'], AuthMiddleware::$globaProtectedRoutes);
-      if ($route["titleMenu"] && (!$hasAuthMiddleware || $isAuthenticated)) {
+      $hasAuthAdminMiddleware = in_array($route['path'], AuthAdminMiddleware::$globaProtectedRoutes);
+      if ($route["titleMenu"] && (!$hasAuthMiddleware || $isAuthenticated) && (!$hasAuthAdminMiddleware || $isAdmin)) {
         $links[] = [
           "title" => $route["titleMenu"],
           "path" => $route['path'],

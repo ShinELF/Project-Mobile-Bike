@@ -1,5 +1,6 @@
 /vendor/
 .env
-/css/
+src/assets/css/
 /cache/
 src/assets/css/main.css
+.idea
