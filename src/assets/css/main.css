@@ -1,10 +1,9 @@
-/* Error: expected "}".
- *     ,
- * 273 | }
- *     |  ^
- *     '
- *   src\assets\scss\pages\_presentationEcologie.scss 273:2  @use
- *   src\assets\scss\main.scss 18:1                          root stylesheet */
+/* Error: expected "{".
+ *    ,
+ * 22 | @use "pages/_formLogin.scss";
+ *    |                             ^
+ *    '
+ *   src\assets\scss\main.scss 22:29  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 273 \2502  }\a     \2502   ^\a     \2575 \a   src\\assets\\scss\\pages\\_presentationEcologie.scss 273:2  @use\a   src\\assets\\scss\\main.scss 18:1                          root stylesheet';
+  content: 'Error: expected "{".\a    \2577 \a 22 \2502  @use "pages/_formLogin.scss";\d\a    \2502                              ^\a    \2575 \a   src\\assets\\scss\\main.scss 22:29  root stylesheet';
 }
