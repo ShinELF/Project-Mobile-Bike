@@ -1,3 +1,23 @@
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/variables";
+@use "base/icones";
+@use "base/reset";
+@use "base/typography";
+@use "components/buttons";
+@use "components/carrousel";
+@use "components/forms";
+@use "components/scrollers";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/lists";
+@use "layout/sections";
+@use "pages/entretien";
+@use "pages/evenement";
+@use "pages/index";
+@use "pages/presentationEcologie";
+@use "pages/presentationPersonnalisation";
+
 @use "pages/_formLogin.scss";
 @use "pages/_entretien.scss";
 @use "pages/_evenement.scss";

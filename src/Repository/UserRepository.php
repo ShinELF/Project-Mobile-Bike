@@ -26,6 +26,23 @@ class UserRepository extends AbstractRepository
     return $user ?: null;
   }
 
+
+  /**
+   * Is the user an admin 
+   */
+
+
+    public function isAdmin(string $login): ?User
+   {
+    $user = $this->findByLogin($login);
+
+    if ($user->isadmin === true) {
+      return $user;
+    }
+
+    return null;
+  }
+
   /**
    * Authentifier un utilisateur
    */
@@ -68,8 +85,8 @@ class UserRepository extends AbstractRepository
     } else {
       // Création
       $stmt = $this->db->prepare("
-                INSERT INTO {$this->table} (login, password, email, created_at) 
-                VALUES (:login, :password, :email, NOW())
+                INSERT INTO {$this->table} (login, password, email) 
+                VALUES (:login, :password, :email)
             ");
 
       $result = $stmt->execute([

@@ -9,18 +9,16 @@
 			<li>Prix</li>
 		</ul>
 	</section>
-
 	<section>
 		<section>
 			<p>100 Article(s)</p>
 			<p>trier par : Popularité
 			</p>
-
 		</section>
 		<section>
 			{% for prod in product %}
 				<article>
-					<a href=""><img src="{{prod.image}}" alt="">
+					<a href=""><img src="./../../../Ressources/assets/img/{{prod.image}}" alt="">
 						<h3>
 							{{prod.modele}}
 						</h3>
@@ -31,7 +29,7 @@
 						</p>
 					</a>
 				</article>
-
 			{% endfor %}
-
+		</section>
+	</section>
 {% endblock %}

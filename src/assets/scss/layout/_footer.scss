@@ -1,0 +1,10 @@
+@use "./../abstracts/variables";
+@use "./../abstracts/mixins";
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include mixins.banner(top);
+}

@@ -5,6 +5,7 @@ use Diginamic\Framework\Controller\LoginController;
 use Diginamic\Framework\Controller\UserController;
 use Diginamic\Framework\Controller\ProductController;
 use Diginamic\Framework\Middleware\AuthMiddleware;
+use Diginamic\Framework\Middleware\AuthAdminMiddleware;
 use Diginamic\Framework\Middleware\InputCheckerMiddleware;
 
 /**
@@ -62,7 +63,7 @@ return [
     'params' => [],
     'titleMenu' => 'Gestion des utilisateurs',
     'middlewares' => [
-      // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
+      new AuthAdminMiddleware(['/users'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
     ]
   ],
   [
@@ -116,21 +117,21 @@ return [
     'middlewares' => []
   ],
   [
-    'path' => '/presentation',
+    'path' => '/presentation/personnalisation',
     'controller' => HomeController::class,
-    'controllerMethod' => 'presentation',
+    'controllerMethod' => 'personnalisation',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Présentation',
+    'titleMenu' => 'Personnalisation',
     'middlewares' => []
   ],
    [
-    'path' => '/presentation/Ecologie',
+    'path' => '/presentation/ecologie',
     'controller' => HomeController::class,
-    'controllerMethod' => 'presentationEcologie',
+    'controllerMethod' => 'ecologie',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Présentation Écologie',
+    'titleMenu' => 'Écologie',
     'middlewares' => []
   ],
      [
@@ -169,19 +170,20 @@ return [
     'titleMenu' => 'Entretien',
     'middlewares' => []
   ],
+
     [
-    'path' => '/boutique/add',
+    'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'displayAddForm',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => '',
     'middlewares' => [
-      // new AuthMiddleware(['/boutique/add'])
+      // new AuthMiddleware(['/administration/add'])
     ]
   ],
   [
-    'path' => '/boutique/add',
+    'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'add',
     'httpMethod' => 'POST',
@@ -189,7 +191,49 @@ return [
     'titleMenu' => '',
     'middlewares' => [
       // new AuthMiddleware(['/users/add']),
-      // new InputCheckerMiddleware(['/boutique/add'])
+      // new InputCheckerMiddleware(['/administration/add'])
     ]
   ],
+    [
+        'path' => '/administration',
+        'controller' => HomeController::class,
+        'controllerMethod' => 'pageAdministration',
+        'httpMethod' => 'GET',
+        'params' => [],
+        'titleMenu' => 'Administration',
+        'middlewares' => [ new AuthAdminMiddleware(['/administration'])
+        ]
+    ],
+    [
+        'path' => '/inscription',
+        'controller' => HomeController::class,
+        'controllerMethod' => 'pageInscription',
+        'httpMethod' => 'GET',
+        'params' => [],
+        'titleMenu' => '',
+        'middlewares' => [
+        ]
+    ],
+        [
+        'path' => '/inscription',
+        'controller' => UserController::class,
+        'controllerMethod' => 'add',
+        'httpMethod' => 'POST',
+        'params' => [],
+        'titleMenu' => '',
+        'middlewares' => [
+              new InputCheckerMiddleware(['/inscription'])
+        ]
+    ],
+            [
+        'path' => '/inscriptionReussie',
+        'controller' => HomeController::class,
+        'controllerMethod' => 'subsciptionSuccess',
+        'httpMethod' => 'GET',
+        'params' => [],
+        'titleMenu' => '',
+        'middlewares' => [
+
+        ]
+    ],
 ];
