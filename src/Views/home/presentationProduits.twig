@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    <h1>{{ product.modele }}</h1>
+    
+    <section class="velomobile-details">
+    <article>
+        <img src="{{ product.image }}" alt="">
+            <h2>Prix : {{ product.price }} €</h2>
+        </article>
+        <article class="description">
+            <h2>Description</h2>
+            <p>{{ product.description }}</p>
+        </article>
+    
+    </section>
+    
+{% endblock %}
