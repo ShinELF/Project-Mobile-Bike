@@ -1,0 +1,30 @@
+@use "./../abstracts/variables";
+
+#background {
+    height: 70%;
+}
+
+.form-hidden {
+    display:none;
+}
+.product-displayed {
+    display:block;
+
+}
+
+.form-displayed {
+    display:block;
+    margin-inline: 15%;
+}
+
+.product-hidden {
+    display: none;
+    background:variables.$color-shadow;
+}
+
+#boutique-container {
+    border: 1px solid variables.$color-secondary-dark;
+    height: 700px;
+    margin-top: 5%;
+}
+

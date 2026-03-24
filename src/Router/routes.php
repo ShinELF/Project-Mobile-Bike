@@ -1,5 +1,6 @@
 <?php
 
+use Diginamic\Framework\Controller\AdministrationController;
 use Diginamic\Framework\Controller\HomeController;
 use Diginamic\Framework\Controller\LoginController;
 use Diginamic\Framework\Controller\UserController;
@@ -207,7 +208,7 @@ return [
   ],
     [
         'path' => '/administration',
-        'controller' => HomeController::class,
+        'controller' => AdministrationController::class,
         'controllerMethod' => 'pageAdministration',
         'httpMethod' => 'GET',
         'params' => [],
@@ -260,6 +261,17 @@ return [
         'middlewares' => [ new AuthAdminMiddleware(['/administration'])
         ]
     ],
+    //     [
+    //     'path' => '/administration',
+    //     'controller' => AdministrationController::class,
+    //     'controllerMethod' => 'pageAdministration',
+    //     'httpMethod' => 'GET',
+    //     'params' => [],
+    //     'titleMenu' => 'Administration',
+    //     'middlewares' => [ new AuthMiddleware(['/administration']),
+    //       new AuthAdminMiddleware(['/administration'])
+    //     ]
+    // ],
     [
         'path' => '/inscription',
         'controller' => HomeController::class,
