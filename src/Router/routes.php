@@ -7,7 +7,6 @@ use Diginamic\Framework\Controller\UserController;
 use Diginamic\Framework\Controller\ProductController;
 use Diginamic\Framework\Middleware\AuthMiddleware;
 use Diginamic\Framework\Middleware\AuthAdminMiddleware;
-use Diginamic\Framework\Middleware\AuthAdminMiddleware;
 use Diginamic\Framework\Middleware\InputCheckerMiddleware;
 
 /**
@@ -66,7 +65,6 @@ return [
     'titleMenu' => 'Gestion des utilisateurs',
     'middlewares' => [
       new AuthAdminMiddleware(['/users'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
-      new AuthAdminMiddleware(['/users'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
     ]
   ],
   [
@@ -121,21 +119,16 @@ return [
   ],
   [
     'path' => '/presentation/personnalisation',
-    'path' => '/presentation/personnalisation',
     'controller' => HomeController::class,
-    'controllerMethod' => 'personnalisation',
     'controllerMethod' => 'personnalisation',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Personnalisation',
     'titleMenu' => 'Personnalisation',
     'middlewares' => []
   ],
    [
     'path' => '/presentation/ecologie',
-    'path' => '/presentation/ecologie',
     'controller' => HomeController::class,
-    'controllerMethod' => 'ecologie',
     'controllerMethod' => 'ecologie',
     'httpMethod' => 'GET',
     'params' => [],
@@ -143,7 +136,7 @@ return [
     'middlewares' => []
   ],
      [
-    'path' => '/presentation/{id}',
+    'path' => '/presentation',
     'controller' => ProductController::class,
     'controllerMethod' => 'findOne',
     'httpMethod' => 'GET',
@@ -182,19 +175,15 @@ return [
 
     [
     'path' => '/administration/add',
-    'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'displayAddForm',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => '',
     'middlewares' => [
-      // new AuthMiddleware(['/administration/add'])
-      // new AuthMiddleware(['/administration/add'])
     ]
   ],
   [
-    'path' => '/administration/add',
     'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'add',
@@ -202,7 +191,6 @@ return [
     'params' => [],
     'titleMenu' => '',
     'middlewares' => [
-      // new AuthMiddleware(['/users/add']),
       // new InputCheckerMiddleware(['/administration/add'])
     ]
   ],
@@ -216,72 +204,16 @@ return [
         'middlewares' => [ new AuthAdminMiddleware(['/administration'])
         ]
     ],
-    [
-        'path' => '/inscription',
-        'controller' => HomeController::class,
-        'controllerMethod' => 'pageInscription',
-        'httpMethod' => 'GET',
-        'params' => [],
-        'titleMenu' => '',
-        'middlewares' => [
-        ]
-    ],
-        [
-        'path' => '/inscription',
-        'controller' => UserController::class,
-        'controllerMethod' => 'add',
-        'httpMethod' => 'POST',
-        'params' => [],
-        'titleMenu' => '',
-        'middlewares' => [
-              new InputCheckerMiddleware(['/inscription'])
-        ]
-    ],
-            [
-        'path' => '/inscriptionReussie',
-        'controller' => HomeController::class,
-        'controllerMethod' => 'subsciptionSuccess',
-        'httpMethod' => 'GET',
-        'params' => [],
-        'titleMenu' => '',
-        'middlewares' => [
-
-        ]
-    ],
-      // new InputCheckerMiddleware(['/administration/add'])
-    ]
-  ],
-    [
-        'path' => '/administration',
-        'controller' => HomeController::class,
-        'controllerMethod' => 'pageAdministration',
-        'httpMethod' => 'GET',
-        'params' => [],
-        'titleMenu' => 'Administration',
-        'middlewares' => [ new AuthAdminMiddleware(['/administration'])
-        ]
-    ],
-    //     [
-    //     'path' => '/administration',
-    //     'controller' => AdministrationController::class,
-    //     'controllerMethod' => 'pageAdministration',
+    // [
+    //     'path' => '/inscription',
+    //     'controller' => HomeController::class,
+    //     'controllerMethod' => 'pageInscription',
     //     'httpMethod' => 'GET',
     //     'params' => [],
-    //     'titleMenu' => 'Administration',
-    //     'middlewares' => [ new AuthMiddleware(['/administration']),
-    //       new AuthAdminMiddleware(['/administration'])
+    //     'titleMenu' => '',
+    //     'middlewares' => [
     //     ]
     // ],
-    [
-        'path' => '/inscription',
-        'controller' => HomeController::class,
-        'controllerMethod' => 'pageInscription',
-        'httpMethod' => 'GET',
-        'params' => [],
-        'titleMenu' => '',
-        'middlewares' => [
-        ]
-    ],
         [
         'path' => '/inscription',
         'controller' => UserController::class,
