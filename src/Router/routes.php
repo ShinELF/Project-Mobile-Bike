@@ -136,7 +136,7 @@ return [
     'middlewares' => []
   ],
      [
-    'path' => '/presentation',
+    'path' => '/presentation/{id}',
     'controller' => ProductController::class,
     'controllerMethod' => 'findOne',
     'httpMethod' => 'GET',
@@ -236,4 +236,5 @@ return [
 
         ]
     ],
+
 ];

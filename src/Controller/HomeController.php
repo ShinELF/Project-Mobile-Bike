@@ -34,12 +34,12 @@ class HomeController extends Controller
       $html
     );
   }
-  public function presentation(ServerRequestInterface $request): ResponseInterface
+  public function personnalisation(ServerRequestInterface $request): ResponseInterface
   {
 
-    $html = $this->twig->render('home/presentation.twig', [
-      'title' => "Présentation",
-      'links' => $this->navService->routesToLinks('/presentation'),
+    $html = $this->twig->render('presentation/personnalisation.twig', [
+      'title' => "Personnalisation",
+      'links' => $this->navService->routesToLinks('/personnalisation'),
     ]);
 
 

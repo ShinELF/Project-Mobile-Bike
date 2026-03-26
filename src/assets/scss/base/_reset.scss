@@ -1,8 +1,8 @@
 @use "./../abstracts/variables";
 
-//======================================
-// For all pages and media size
-//======================================
+//===========================================
+//      For all pages and media size
+//===========================================
 
 * {
     margin: 0px;
@@ -15,6 +15,7 @@ body {
 }
 
 main {
+    text-align: justify;
     padding-left: 8%;
     padding-right: 8%;
 }
@@ -27,4 +28,13 @@ button {
 iframe {
     max-width: 100%;
     margin-block: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
