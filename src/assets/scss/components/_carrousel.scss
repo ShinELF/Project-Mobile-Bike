@@ -1,8 +1,8 @@
 @use "./../abstracts/variables";
 
-//=======================================
+//===========================================
 //              Carousel - image
-//=======================================
+//===========================================
 #carousel-container,
 .carousel-track-container {
 
@@ -63,9 +63,9 @@ img.carousel-image {
     }
 }
 
-//=======================================
+//===========================================
 //              Carousel - comments
-//=======================================
+//===========================================
 section.down {
     position: relative;
     margin-top: 30px;
@@ -75,14 +75,14 @@ section.down {
     grid-template-rows: 40px 1fr 1fr;
     gap: 40px;
     border: none;
-    background-color: variables.$color-background;
+    background-color: variables.$color-neutral-05;
     padding: 30px;
     padding-inline: 70px;
     overflow: hidden;
 
 
     article {
-        border: 1px solid variables.$color-primary-light;
+        border: 1px solid variables.$color-primary-20;
         padding: 10px;
         height: 250px;
 

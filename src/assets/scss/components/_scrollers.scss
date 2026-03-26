@@ -3,7 +3,7 @@
 .scroller {
         height: 415px;
         overflow-y: scroll;
-        scrollbar-color: variables.$color-primary-light variables.$color-background;
+        scrollbar-color: variables.$color-neutral-50 variables.$color-neutral-05;
         scrollbar-width: 20px;
 
         @media screen and (min-width: 1024px) {

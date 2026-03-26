@@ -10,7 +10,7 @@
 @mixin body($size) {
     font-family: "DM Sans";
     font-weight: variables.$regular;
-    font-width: 0%;
+    letter-spacing: 0%;
     font-style: normal;
 
     @if $size =="small" {
@@ -34,7 +34,7 @@
 @mixin header($size) {
     font-family: 'DM Sans';
     font-weight: variables.$semibold;
-    font-width: -2%;
+    letter-spacing: -2%;
     font-style: normal;
 
     @if $size =="small" {
@@ -62,7 +62,7 @@
 @mixin display($size) {
     font-family: Genos;
     font-weight: variables.$regular;
-    font-width: -2.5%;
+    letter-spacing: -2.5%;
     font-style: normal;
 
     @if $size =="small" {
@@ -87,7 +87,7 @@
     font-family: Genos;
     font-weight: variables.$regular;
     font-style: italic;
-    font-width: -6.5%;
+    letter-spacing: -6.5%;
 
     @if $size =="xsmall" {
         font-size: 28px;
@@ -129,10 +129,23 @@
 //                  Svg
 //===========================================
 
-@mixin icon {
-    width: 25px;
-    height: 25px;
-    fill: variables.$color-primary-light;
+@mixin icon($size) {
+    fill: variables.$color-primary-70;
+
+    @if $size ==16 {
+        width: 16px;
+        height: 16px;
+    }
+
+    @else if $size ==24 {
+        width: 24px;
+        height: 24px;
+    }
+
+    @else if $size ==32 {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 //===========================================
@@ -140,19 +153,19 @@
 //===========================================
 
 @mixin banner($direction) {
-    border-#{$direction}: solid 1px variables.$color-primary-dark;
+    border-#{$direction}: solid 1px variables.$color-primary-70;
 
     @if $direction =="top" {
-        box-shadow: 0 0 0 2px variables.$color-shadow;
+        box-shadow: 0 -5px 5px -6px variables.$color-primary-70;
     }
 
     @else if $direction =="bottom" {
-        box-shadow: 0 2px 0 0 variables.$color-shadow;
+        box-shadow: 0 5px 5px -6px variables.$color-primary-70;
     }
 
     width: 100%;
     height: 56px;
-    background-color: variables.$color-background;
+    background-color: variables.$color-white;
     display: flex;
     justify-content: center;
     align-items: center;
