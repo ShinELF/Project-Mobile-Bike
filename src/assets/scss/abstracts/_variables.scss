@@ -1,28 +1,48 @@
 //===========================================
-// Colors
+//                  Fonts
 //===========================================
 
-$color-primary-dark: #162d50;
-$color-primary-light: #006680;
-$color-secondary-dark: #2CA05A;
-$color-secondary-light: #AFE9C6;
-$color-background: #F7F7F7;
-$color-shadow : #162d5019;
+$regular : 400;
+$semibold : 600;
 
 //===========================================
-// Fonts
+//                  Colors
 //===========================================
 
-$font-path: "./../../../Ressources/Font";
-$font-header: CenturyGothic;
-$font-paragraph: Calibri;
+//  Primary
+//-------------------------------------------
 
-@font-face {
-    font-family: CenturyGothic;
-    src: url($font-path + "/Century_Gothic/CenturyGothic.ttf");
-}
+$color-primary-05: #EFF8ED;
+$color-primary-10: #DEF1DA;
+$color-primary-20: #BDE2B6;
+$color-primary-30: #9CD491;
+$color-primary-40: #7BC66C;
+$color-primary-50: #5AB847;
+$color-primary-60: #489339;
+$color-primary-70: #366E2B;
+$color-primary-80: #24491D;
+$color-primary-90: #12250E;
 
-@font-face {
-    font-family: Calibri;
-    src: url($font-path + "/Calibri/calibri.ttf");
-}
+//  Neutral
+//-------------------------------------------
+
+$color-neutral-05: #F2F3F1;
+$color-neutral-10: #E5E7E4;
+$color-neutral-20: #CACFC9;
+$color-neutral-30: #B0B7AE;
+$color-neutral-40: #969F93;
+$color-neutral-50: #7B8778;
+$color-neutral-60: #636C60;
+$color-neutral-70: #4A5148;
+$color-neutral-80: #313630;
+$color-neutral-90: #191B18;
+
+
+//  Semantic
+//-------------------------------------------
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-danger: #BC4749;
+$color-warning: #EAC435;
+$color-info: #258EA6;

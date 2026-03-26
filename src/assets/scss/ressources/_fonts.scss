@@ -1,0 +1,15 @@
+$font-path: "./../../../Ressources/Font";
+
+@font-face {
+    font-family: 'DM Sans';
+    src:
+        url($font-path + "/DM_Sans/DMSans-VariableFont_opsz,wght.ttf"),
+        url($font-path + "/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: Genos;
+    src:
+        url($font-path + "/Genos/Genos-VariableFont_wght.ttf"),
+        url($font-path + "/Genos/Genos-Italic-VariableFont_wght.ttf");
+}

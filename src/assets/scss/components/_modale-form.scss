@@ -19,11 +19,11 @@
 
 .product-hidden {
     display: none;
-    background:variables.$color-shadow;
+    background:variables.$color-neutral-50;
 }
 
 #boutique-container {
-    border: 1px solid variables.$color-secondary-dark;
+    border: 1px solid variables.$color-neutral-70;
     height: 700px;
     margin-top: 5%;
 }

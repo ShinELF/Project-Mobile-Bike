@@ -2,7 +2,7 @@
 @use "./../abstracts/mixins";
 
 header {
-@include mixins.banner(bottom);
+    @include mixins.banner(bottom);
 }
 
 .nav-title {
@@ -18,9 +18,9 @@ header {
     margin-left: auto;
 }
 
-#cart {
-    margin-right: 20px;
-}
+// #cart {
+//     margin-right: 20px;
+// }
 
 .nav-bar {
     display: none;
@@ -34,7 +34,7 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 0rem 1rem 1rem 1rem;
-        background-color: variables.$color-background;
+        background-color: variables.$color-neutral-05;
     }
 }
 
@@ -71,9 +71,9 @@ header {
         }
     }
 
-    #cart {
-        margin-right: 15px;
-    }
+    // #cart {
+    //     margin-right: 15px;
+    // }
 
     .active {
         font-weight: bold;
