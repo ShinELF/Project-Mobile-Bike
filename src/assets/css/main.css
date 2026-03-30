@@ -7,21 +7,20 @@
   src: url("./../../../Ressources/Font/Genos/Genos-VariableFont_wght.ttf"), url("./../../../Ressources/Font/Genos/Genos-Italic-VariableFont_wght.ttf");
 }
 #logo {
-  width: 4em;
-  margin-right: auto;
+  display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   #logo {
-    width: 7em;
-    margin-right: 0;
-    margin-left: 15px;
+    display: block;
+    width: 4em;
+    margin-left: 24px;
   }
 }
-#logo #logo-txt {
-  fill: #5AB847;
+#logo #logo-ext {
+  fill: #000000;
 }
-#logo #logo-img {
-  fill: #366E2B;
+#logo #logo-int {
+  fill: #489339;
 }
 
 .svg-header {
@@ -180,6 +179,23 @@ h4 {
   font-size: 20px;
   line-height: 130%;
   color: #000000;
+}
+
+a {
+  font-family: "DM Sans";
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000000;
+}
+a:hover {
+  color: #489339;
+}
+a.active {
+  color: #5AB847;
+  font-weight: bold;
 }
 
 .newsletter-button {
@@ -501,6 +517,23 @@ header {
   }
 }
 
+.logo-text {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .logo-text {
+    display: contents;
+    font-family: Genos;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -6.5%;
+    font-size: 36px;
+    line-height: 20px;
+    text-align: start;
+    color: #000000;
+  }
+}
+
 .nav-title {
   display: none;
 }
@@ -552,9 +585,6 @@ header {
   .nav-menu li {
     margin: 0 1rem;
   }
-  .active {
-    font-weight: bold;
-  }
 }
 footer {
   position: relative;
@@ -584,20 +614,6 @@ ul {
   list-style: none;
   display: flex;
   align-items: center;
-}
-ul :visited {
-  color: #5AB847;
-}
-ul :hover {
-  font-weight: bold;
-  color: #366E2B;
-}
-ul .button:hover {
-  color: #f7f7f7;
-  background-color: #162d50;
-}
-ul #cart:hover {
-  fill: #162d50;
 }
 
 .ul-navigation {

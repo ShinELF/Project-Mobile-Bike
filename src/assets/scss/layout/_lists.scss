@@ -5,24 +5,6 @@ ul {
     list-style: none;
     display: flex;
     align-items: center;
-
-    & :visited {
-        color: variables.$color-primary-50;
-    }
-
-    & :hover {
-        font-weight: bold;
-        color: variables.$color-primary-70;
-    }
-
-    & .button:hover {
-        color: #f7f7f7;
-        background-color: #162d50;
-    }
-
-    & #cart:hover {
-        fill: #162d50;
-    }
 }
 
 .ul-navigation {
