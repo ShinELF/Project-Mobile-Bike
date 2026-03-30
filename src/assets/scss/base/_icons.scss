@@ -1,6 +1,11 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
+
+svg {
+    @include mixins.icon(24);
+}
+
 //===========================================
 //                   Logo
 //===========================================
@@ -10,6 +15,7 @@
     @media screen and (min-width: 768px) {
         display: block;
         width: 4em;
+        height: 4em;
         margin-left: 24px;
     }
 
@@ -20,21 +26,6 @@
     #logo-int {
         fill: variables.$color-primary-60;
     }
-}
-
-//===========================================
-//              Cart & User
-//===========================================
-.svg-header {
-    @include mixins.icon(24);
-}
-
-//===========================================
-//                Newsletter
-//===========================================
-#newsletter-icon {
-    display: block;
-    @include mixins.icon(24);
 }
 
 //===========================================

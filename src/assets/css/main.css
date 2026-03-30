@@ -6,6 +6,12 @@
   font-family: Genos;
   src: url("./../../../Ressources/Font/Genos/Genos-VariableFont_wght.ttf"), url("./../../../Ressources/Font/Genos/Genos-Italic-VariableFont_wght.ttf");
 }
+svg {
+  fill: #214E1A;
+  width: 24px;
+  height: 24px;
+}
+
 #logo {
   display: none;
 }
@@ -13,6 +19,7 @@
   #logo {
     display: block;
     width: 4em;
+    height: 4em;
     margin-left: 24px;
   }
 }
@@ -21,19 +28,6 @@
 }
 #logo #logo-int {
   fill: #2D6525;
-}
-
-.svg-header {
-  fill: #214E1A;
-  width: 24px;
-  height: 24px;
-}
-
-#newsletter-icon {
-  display: block;
-  fill: #214E1A;
-  width: 24px;
-  height: 24px;
 }
 
 .burger-icon {
