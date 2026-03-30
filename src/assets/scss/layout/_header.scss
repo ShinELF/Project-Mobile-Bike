@@ -5,6 +5,15 @@ header {
     @include mixins.banner(bottom);
 }
 
+.logo-text {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: contents;
+        @include mixins.logo(small, horizontal);
+    }
+}
+
 .nav-title {
     display: none;
 
