@@ -1,9 +1,7 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
-header {
-    @include mixins.banner(bottom);
-}
+
 
 .logo-text {
     display: none;

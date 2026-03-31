@@ -2,9 +2,7 @@
 @use "./../abstracts/mixins";
 
 
-svg {
-    @include mixins.icon(24);
-}
+
 
 //===========================================
 //                   Logo
