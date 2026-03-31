@@ -7,7 +7,7 @@
   src: url("./../../../Ressources/Font/Genos/Genos-VariableFont_wght.ttf"), url("./../../../Ressources/Font/Genos/Genos-Italic-VariableFont_wght.ttf");
 }
 svg {
-  fill: #214E1A;
+  fill: #2D6525;
   width: 24px;
   height: 24px;
 }
@@ -45,7 +45,7 @@ svg {
 .burger-icon span {
   width: 25px;
   height: 3px;
-  background: #214E1A;
+  background: #2D6525;
   margin: 3px 0;
   border-radius: 5px;
   transition: 0.3s;
@@ -188,7 +188,7 @@ a:hover {
   color: #2D6525;
 }
 a.active {
-  color: #3B8131;
+  color: #2D6525;
   font-weight: bold;
 }
 
@@ -482,7 +482,7 @@ input:target {
 .scroller {
   height: 415px;
   overflow-y: scroll;
-  scrollbar-color: #748B7D #F1F3F2;
+  scrollbar-color: #5D6F64 #F1F3F2;
   scrollbar-width: 20px;
 }
 @media screen and (min-width: 1024px) {
