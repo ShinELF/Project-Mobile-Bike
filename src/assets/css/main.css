@@ -591,10 +591,6 @@ section.down .carousel-dot .dot6 {
   text-align: center;
 }
 
-.butNews {
-  display: none;
-}
-
 @media screen and (min-width: 1024px) {
   .nav-title.active {
     display: none;

@@ -1,8 +1,6 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
-
-
 .logo-text {
     display: none;
 
@@ -24,10 +22,6 @@
 #user {
     margin-left: auto;
 }
-
-// #cart {
-//     margin-right: 20px;
-// }
 
 .nav-bar {
     display: none;
@@ -51,12 +45,7 @@
     text-align: center;
 }
 
-.butNews {
-    display: none;
-}
-
 @media screen and (min-width: 1024px) {
-
 
     .nav-title {
         &.active {
@@ -77,12 +66,4 @@
             margin: 0 1rem;
         }
     }
-
-    // #cart {
-    //     margin-right: 15px;
-    // }
-
-    // .active {
-    //     font-weight: variables.$semibold;
-    // }
 }
