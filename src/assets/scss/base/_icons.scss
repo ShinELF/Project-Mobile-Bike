@@ -9,6 +9,10 @@ svg {
 //===========================================
 //                   Logo
 //===========================================
+.div-logo {
+    display:flex;
+    align-items: center;
+}
 #logo {
     display: none;
 
@@ -16,7 +20,6 @@ svg {
         display: block;
         width: 4em;
         height: 4em;
-        margin-left: 24px;
     }
 
     #logo-ext {
