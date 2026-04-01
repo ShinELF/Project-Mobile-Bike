@@ -1,23 +1,6 @@
-@use "./../abstracts/variables";
-
-//===========================================
-//      For all pages and media size
-//===========================================
-
 * {
     margin: 0px;
-}
-
-body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-
-main {
-    text-align: justify;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding: 0px;
 }
 
 button {
@@ -25,16 +8,10 @@ button {
     border: none;
 }
 
-iframe {
-    max-width: 100%;
-    margin-block: 10px;
-}
-
 a {
     text-decoration: none;
 }
 
-p {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+ul {
+    list-style: none;
 }

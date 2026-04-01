@@ -130,7 +130,7 @@
 //===========================================
 
 @mixin icon($size) {
-    fill: variables.$color-primary-70;
+    fill: variables.$color-primary-60;
 
     @if $size ==16 {
         width: 16px;
@@ -163,18 +163,12 @@
         box-shadow: 0 5px 5px -6px variables.$color-primary-70;
     }
 
-    width: 100%;
-    height: 56px;
+    width: auto;
+    height: fit-content;
     background-color: variables.$color-white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-#{$direction}: 2%;
-    padding: 1%;
-
-    @media screen and (min-width: 1024px) {
-        height: 70px;
-        padding: 0%;
-        margin-#{$direction}: 1%;
-    }
+    margin-#{$direction}: 8px;
+    padding: 8px;
 }

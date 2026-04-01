@@ -1,8 +1,13 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
-header {
-    @include mixins.banner(bottom);
+.logo-text {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: contents;
+        @include mixins.logo(small, horizontal);
+    }
 }
 
 .nav-title {
@@ -17,10 +22,6 @@ header {
 #user {
     margin-left: auto;
 }
-
-// #cart {
-//     margin-right: 20px;
-// }
 
 .nav-bar {
     display: none;
@@ -44,12 +45,7 @@ header {
     text-align: center;
 }
 
-.butNews {
-    display: none;
-}
-
 @media screen and (min-width: 1024px) {
-
 
     .nav-title {
         &.active {
@@ -69,13 +65,5 @@ header {
         li {
             margin: 0 1rem;
         }
-    }
-
-    // #cart {
-    //     margin-right: 15px;
-    // }
-
-    .active {
-        font-weight: bold;
     }
 }

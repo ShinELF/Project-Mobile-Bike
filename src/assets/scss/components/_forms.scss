@@ -1,45 +1,11 @@
-@use "./../abstracts/variables";
-
-
 section.login {
     @media screen and (min-width: 1024px) {
         padding-inline: 30%;
     }
 }
 
-form {
-    display: flex;
-    padding: 5%;
-    background-color: variables.$color-neutral-05;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-
-}
-
 .input-area {
     width: 100%;
-}
-
-label {
-    display: block;
-    color: variables.$color-primary-70;
-    font-size: 1.2em;
-    margin-top: 3%;
-    margin-left: 2%;
-}
-
-input {
-    display: block;
-    background-color: variables.$color-neutral-10;
-    border-radius: 10px;
-    border: 1px solid variables.$color-neutral-70;
-    width: 90%;
-    padding: 2%;
-
-    &:target {
-        border: 1px solid variables.$color-neutral-70;
-    }
 }
 
 .form-paragraph {

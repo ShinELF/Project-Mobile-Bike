@@ -1,44 +1,28 @@
 @use "./../abstracts/variables";
-@use "./../abstracts/mixins";
 
 //===========================================
 //                   Logo
 //===========================================
+.div-logo {
+    display:flex;
+    align-items: center;
+}
 #logo {
-    width: 4em;
-    margin-right: auto;
+    display: none;
 
-    @media screen and (min-width: 1024px) {
-        width: 7em;
-
-        margin: {
-            right: 0;
-            left: 15px;
-        }
+    @media screen and (min-width: 768px) {
+        display: block;
+        width: 4em;
+        height: 4em;
     }
 
-    #logo-txt {
-        fill: variables.$color-primary-50;
+    #logo-ext {
+        fill: variables.$color-black;
     }
 
-    #logo-img {
-        fill: variables.$color-primary-70;
+    #logo-int {
+        fill: variables.$color-primary-60;
     }
-}
-
-//===========================================
-//              Cart & User
-//===========================================
-.svg-header {
-    @include mixins.icon(24);
-}
-
-//===========================================
-//                Newsletter
-//===========================================
-#newsletter-icon {
-    display: block;
-    @include mixins.icon(24);
 }
 
 //===========================================
@@ -58,7 +42,7 @@
 .burger-icon span {
     width: 25px;
     height: 3px;
-    background: variables.$color-primary-70;
+    background: variables.$color-primary-60;
     margin: 3px 0;
     border-radius: 5px;
     transition: 0.3s;
