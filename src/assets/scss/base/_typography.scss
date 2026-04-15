@@ -6,7 +6,11 @@ body {
 }
 
 h1 {
-    @include mixins.header(xlarge);
+    @include mixins.header(base);
+
+    @media screen and (min-width:768px) {
+        @include mixins.header(xlarge);
+    }
 }
 
 h2 {
@@ -22,7 +26,7 @@ h4 {
 }
 
 a {
-    @include mixins.body(large);
+    @include mixins.body(base);
 
     &:hover {
         color: variables.$color-primary-60;
@@ -32,4 +36,8 @@ a {
         color: variables.$color-primary-60;
         font-weight: bold;
     }
+}
+
+button {
+    @include mixins.body(base);
 }

@@ -39,28 +39,10 @@ class HomeController extends Controller
 
     $html = $this->twig->render('presentation/personnalisation.twig', [
       'title' => "Personnalisation",
-      'links' => $this->navService->routesToLinks('/personnalisation'),
-    ]);
-
-
-    return new Response(
-      200,
-      ['Content-Type' => 'text/html'],
-      $html
-    );
-  }
-//View::baseTemplate("Accueil", $html)
-  public function presentationEcologie(ServerRequestInterface $request): ResponseInterface
-  {
-
-    $html = $this->twig->render('presentation/personnalisation.twig', [
-      'title' => "Personnalisation",
       'links' => $this->navService->routesToLinks('/presentation/personnalisation'),
     ]);
-    $html = $this->twig->render('presentation/personnalisation.twig', [
-      'title' => "Personnalisation",
-      'links' => $this->navService->routesToLinks('/presentation/personnalisation'),
-    ]);
+
+
     return new Response(
       200,
       ['Content-Type' => 'text/html'],

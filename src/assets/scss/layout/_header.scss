@@ -1,7 +1,102 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
-.logo-text {
+//===========================================
+//                  Top
+//===========================================
+
+//  Base
+//-------------------------------------------
+
+.header-top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    @media screen and (min-width: 768px) {
+        height: 72px;
+        border-bottom: solid 0.5px variables.$color-neutral-10;
+        margin-bottom: 8px;
+    }
+}
+
+//  Burger menu
+//-------------------------------------------
+
+.burger {
+    &:not(#burger) {
+        justify-self: start;
+        position: relative;
+        z-index: 2;
+    }
+
+    &#burger {
+        display: flex;
+        flex-direction: column;
+        @include mixins.icon(24);
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    & span {
+        width: 25px;
+        height: 3px;
+        background: variables.$color-black;
+        margin: 3px 0;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    &.open {
+        position: fixed;
+        top:10px;
+
+        & span:nth-child(2) {
+            opacity: 0;
+        }
+
+        & span:nth-child(1) {
+            transform: translateY(8.4px) rotate(45deg);
+        }
+
+        & span:nth-child(3) {
+            transform: translateY(-8.4px) rotate(-45deg);
+        }
+    }
+}
+
+//  Logo
+//-------------------------------------------
+
+div.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+svg.logo {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        width: 4em;
+        height: 4em;
+    }
+
+    path.logo-ext {
+        fill: variables.$color-black;
+    }
+
+    path.logo-int {
+        fill: variables.$color-primary-40;
+    }
+}
+
+p.logo {
     display: none;
 
     @media screen and (min-width: 768px) {
@@ -10,32 +105,61 @@
     }
 }
 
+//  User's icons
+//-------------------------------------------
+
+div.user {
+    display: flex;
+    justify-self: end;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin-left: 16px;
+
+        &:hover {
+            color: variables.$color-primary-60;
+            fill: variables.$color-primary-60;
+        }
+
+        p {
+            display: none;
+
+            @media screen and (min-width:768px) {
+                display: block;
+            }
+        }
+    }
+}
+
+//===========================================
+//                Navigation
+//===========================================
+
 .nav-title {
     display: none;
 
     &.active {
         display: contents;
-        font-size: 1.5em;
     }
-}
-
-#user {
-    margin-left: auto;
 }
 
 .nav-bar {
     display: none;
 
     &.open {
-        display: contents;
-        position: absolute;
-        top: 49px;
+        position: fixed;
+        top: 0px;
         left: 0px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0rem 1rem 1rem 1rem;
-        background-color: variables.$color-neutral-05;
+        right: 0px;
+        height: 100dvh;
+        display: block;
+        justify-content: center;
+        padding: 48px 16px 8px 16px;
+        background: linear-gradient(to right, variables.$color-neutral-05 60%, transparent);
+
     }
 }
 
@@ -45,7 +169,7 @@
     text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 
     .nav-title {
         &.active {
@@ -60,10 +184,30 @@
     .nav-menu {
 
         flex-direction: row;
-        padding-inline: 10px;
+        // padding-inline: 10px;
 
-        li {
-            margin: 0 1rem;
+        // li {
+        //     margin: 0 1rem;
+        // }
+    }
+}
+
+.ul-navigation {
+    flex-direction: column;
+    width: max-content;
+    align-items: flex-start;
+    gap: 32px;
+
+    & li a {
+        font-size: 24px;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+
+        & li a {
+            font-size: 18px;
         }
     }
 }

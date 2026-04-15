@@ -31,10 +31,10 @@ p {
 ul {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 svg {
-  fill: #2D6525;
   width: 24px;
   height: 24px;
 }
@@ -78,10 +78,16 @@ footer {
   height: fit-content;
   background-color: #FFFFFF;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 8px;
-  padding: 8px;
+  padding-block: 8px;
+  padding-inline: 16px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding-inline: 0px;
+  }
 }
 
 header {
@@ -91,10 +97,21 @@ header {
   height: fit-content;
   background-color: #FFFFFF;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
-  padding: 8px;
+  padding-block: 8px;
+  padding-inline: 16px;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding-inline: 0px;
+  }
+}
+
+button {
+  cursor: pointer;
 }
 
 aside {
@@ -102,61 +119,6 @@ aside {
   padding-left: 0.5rem;
   margin-left: 0.5rem;
   float: right;
-}
-
-.div-logo {
-  display: flex;
-  align-items: center;
-}
-
-#logo {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  #logo {
-    display: block;
-    width: 4em;
-    height: 4em;
-  }
-}
-#logo #logo-ext {
-  fill: #000000;
-}
-#logo #logo-int {
-  fill: #2D6525;
-}
-
-.burger-icon {
-  margin-right: 2%;
-  display: flex;
-  flex-direction: column;
-  width: 26px;
-}
-@media screen and (min-width: 1024px) {
-  .burger-icon {
-    display: none;
-  }
-}
-
-.burger-icon span {
-  width: 25px;
-  height: 3px;
-  background: #2D6525;
-  margin: 3px 0;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.burger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-icon.open span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-.burger-icon.open span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
 }
 
 #youtube,
@@ -219,9 +181,20 @@ h1 {
   font-weight: 600;
   letter-spacing: -2%;
   font-style: normal;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 130%;
   color: #000000;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-family: "DM Sans";
+    font-weight: 600;
+    letter-spacing: -2%;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 130%;
+    color: #000000;
+  }
 }
 
 h2 {
@@ -259,7 +232,7 @@ a {
   font-weight: 400;
   letter-spacing: 0%;
   font-style: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
   color: #000000;
 }
@@ -269,6 +242,16 @@ a:hover {
 a.active {
   color: #2D6525;
   font-weight: bold;
+}
+
+button {
+  font-family: "DM Sans";
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
 }
 
 .newsletter-button {
@@ -541,11 +524,87 @@ section.down .carousel-dot .dot6 {
   }
 }
 
-.logo-text {
+.header-top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header-top {
+    height: 72px;
+    border-bottom: solid 0.5px #E3E8E5;
+    margin-bottom: 8px;
+  }
+}
+
+.burger:not(#burger) {
+  justify-self: start;
+  position: relative;
+  z-index: 2;
+}
+.burger#burger {
+  display: flex;
+  flex-direction: column;
+  width: 24px;
+  height: 24px;
+}
+@media screen and (min-width: 768px) {
+  .burger#burger {
+    display: none;
+  }
+}
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #000000;
+  margin: 3px 0;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.burger.open {
+  position: fixed;
+  top: 10px;
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(1) {
+  transform: translateY(8.4px) rotate(45deg);
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-8.4px) rotate(-45deg);
+}
+
+div.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+svg.logo {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .logo-text {
+  svg.logo {
+    display: block;
+    width: 4em;
+    height: 4em;
+  }
+}
+svg.logo path.logo-ext {
+  fill: #000000;
+}
+svg.logo path.logo-int {
+  fill: #499D3D;
+}
+
+p.logo {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  p.logo {
     display: contents;
     font-family: Genos;
     font-weight: 400;
@@ -558,31 +617,50 @@ section.down .carousel-dot .dot6 {
   }
 }
 
+div.user {
+  display: flex;
+  justify-self: end;
+}
+div.user button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-left: 16px;
+}
+div.user button:hover {
+  color: #2D6525;
+  fill: #2D6525;
+}
+div.user button p {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  div.user button p {
+    display: block;
+  }
+}
+
 .nav-title {
   display: none;
 }
 .nav-title.active {
   display: contents;
-  font-size: 1.5em;
-}
-
-#user {
-  margin-left: auto;
 }
 
 .nav-bar {
   display: none;
 }
 .nav-bar.open {
-  display: contents;
-  position: absolute;
-  top: 49px;
+  position: fixed;
+  top: 0px;
   left: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0rem 1rem 1rem 1rem;
-  background-color: #F1F3F2;
+  right: 0px;
+  height: 100dvh;
+  display: block;
+  justify-content: center;
+  padding: 48px 16px 8px 16px;
+  background: linear-gradient(to right, #F1F3F2 60%, transparent);
 }
 
 .nav-menu {
@@ -591,7 +669,7 @@ section.down .carousel-dot .dot6 {
   text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .nav-title.active {
     display: none;
   }
@@ -600,18 +678,23 @@ section.down .carousel-dot .dot6 {
   }
   .nav-menu {
     flex-direction: row;
-    padding-inline: 10px;
-  }
-  .nav-menu li {
-    margin: 0 1rem;
   }
 }
 .ul-navigation {
   flex-direction: column;
+  width: max-content;
+  align-items: flex-start;
+  gap: 32px;
 }
-@media screen and (min-width: 1024px) {
+.ul-navigation li a {
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
   .ul-navigation {
     flex-direction: row;
+  }
+  .ul-navigation li a {
+    font-size: 18px;
   }
 }
 
