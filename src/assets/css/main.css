@@ -641,17 +641,17 @@ div.user button p {
   }
 }
 
-.nav-title {
+h1.navigation {
   display: none;
 }
-.nav-title.active {
+h1.navigation.active {
   display: contents;
 }
 
-.nav-bar {
+nav.navigation {
   display: none;
 }
-.nav-bar.open {
+nav.navigation.open {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -660,40 +660,41 @@ div.user button p {
   display: block;
   justify-content: center;
   padding: 48px 16px 8px 16px;
-  background: linear-gradient(to right, #F1F3F2 60%, transparent);
+  background: #F1F3F2;
 }
 
-.nav-menu {
+li.navigation {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .nav-title.active {
+  h1.navigation.active {
     display: none;
   }
-  .nav-bar {
+  nav.navigation {
     display: contents;
   }
-  .nav-menu {
+  li.navigation {
     flex-direction: row;
   }
 }
-.ul-navigation {
+ul.navigation {
   flex-direction: column;
   width: max-content;
   align-items: flex-start;
-  gap: 32px;
+  gap: 8px;
 }
-.ul-navigation li a {
+ul.navigation li a {
   font-size: 24px;
 }
 @media screen and (min-width: 768px) {
-  .ul-navigation {
+  ul.navigation {
     flex-direction: row;
+    gap: 32px;
   }
-  .ul-navigation li a {
+  ul.navigation li a {
     font-size: 18px;
   }
 }

@@ -138,7 +138,7 @@ div.user {
 //                Navigation
 //===========================================
 
-.nav-title {
+h1.navigation {
     display: none;
 
     &.active {
@@ -146,7 +146,7 @@ div.user {
     }
 }
 
-.nav-bar {
+nav.navigation {
     display: none;
 
     &.open {
@@ -158,12 +158,12 @@ div.user {
         display: block;
         justify-content: center;
         padding: 48px 16px 8px 16px;
-        background: linear-gradient(to right, variables.$color-neutral-05 60%, transparent);
+        background: variables.$color-neutral-05;
 
     }
 }
 
-.nav-menu {
+li.navigation {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -171,17 +171,17 @@ div.user {
 
 @media screen and (min-width: 768px) {
 
-    .nav-title {
+    h1.navigation {
         &.active {
             display: none;
         }
     }
 
-    .nav-bar {
+    nav.navigation {
         display: contents;
     }
 
-    .nav-menu {
+    li.navigation {
 
         flex-direction: row;
         // padding-inline: 10px;
@@ -192,11 +192,11 @@ div.user {
     }
 }
 
-.ul-navigation {
+ul.navigation {
     flex-direction: column;
     width: max-content;
     align-items: flex-start;
-    gap: 32px;
+    gap: 8px;
 
     & li a {
         font-size: 24px;
@@ -205,6 +205,7 @@ div.user {
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
+        gap:32px;
 
         & li a {
             font-size: 18px;
