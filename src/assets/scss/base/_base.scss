@@ -26,6 +26,7 @@ p {
 ul {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 svg {
@@ -72,6 +73,11 @@ footer {
 
 header {
     @include mixins.banner(bottom);
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
 }
 
 aside {
