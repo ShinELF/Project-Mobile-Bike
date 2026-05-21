@@ -40,7 +40,7 @@ return [
     'controllerMethod' => 'index',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Identification',
+    'titleMenu' => '',
     'middlewares' => [
       // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
     ]
