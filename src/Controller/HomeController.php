@@ -50,7 +50,7 @@ class HomeController extends Controller
     );
   }
 
-  public function Ecologie(ServerRequestInterface $request): ResponseInterface
+  public function Écologie(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('presentation/ecologie.twig', [
@@ -66,25 +66,25 @@ class HomeController extends Controller
     );
   } //View::baseTemplate("presentationEcologie", $html)
 
-    public function pageAdministration(ServerRequestInterface $request): ResponseInterface
-    {
+  public function pageAdministration(ServerRequestInterface $request): ResponseInterface
+  {
 
-        $html = $this->twig->render('home/administration.twig', [
-            'title' => "Administration",
-            'links' => $this->navService->routesToLinks('/administration'),
-            'date' => date(DATE_ATOM, strtotime('now'))
-        ]);
-        /* $html = View::header($links);
+    $html = $this->twig->render('home/administration.twig', [
+      'title' => "Administration",
+      'links' => $this->navService->routesToLinks('/administration'),
+      'date' => date(DATE_ATOM, strtotime('now'))
+    ]);
+    /* $html = View::header($links);
         $html .= "<h1>Page d'accueil</h1>"; */
-        return new Response(
-            200,
-            ['Content-Type' => 'text/html'],
-            $html
-        );
-    }
+    return new Response(
+      200,
+      ['Content-Type' => 'text/html'],
+      $html
+    );
+  }
 
 
-      public function event(ServerRequestInterface $request): ResponseInterface
+  public function event(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/evenement.twig', [
@@ -100,7 +100,7 @@ class HomeController extends Controller
     );
   }
 
-//View::baseTemplate("Accueil", $html)
+  //View::baseTemplate("Accueil", $html)
 
   public function entretien(ServerRequestInterface $request): ResponseInterface
   {
@@ -118,23 +118,22 @@ class HomeController extends Controller
     );
   } //View::baseTemplate("Accueil", $html)
 
-    public function pageInscription(ServerRequestInterface $request): ResponseInterface
-    {
+  public function pageInscription(ServerRequestInterface $request): ResponseInterface
+  {
 
-        $html = $this->twig->render('home/inscription.twig', [
-            'title' => "Inscription",
-            'links' => $this->navService->routesToLinks('/inscription'),
-        ]);
-        /* $html = View::header($links);
+    $html = $this->twig->render('home/inscription.twig', [
+      'title' => "Inscription",
+      'links' => $this->navService->routesToLinks('/inscription'),
+    ]);
+    /* $html = View::header($links);
         $html .= "<h1>Page d'accueil</h1>"; */
-        return new Response(
-            200,
-            ['Content-Type' => 'text/html'],
-            $html
-        );
-
-    }
-      public function subsciptionSuccess(ServerRequestInterface $request): ResponseInterface
+    return new Response(
+      200,
+      ['Content-Type' => 'text/html'],
+      $html
+    );
+  }
+  public function subscriptionSuccess(ServerRequestInterface $request): ResponseInterface
   {
 
     $title =  "Ajout d'un utilisateur";
@@ -152,7 +151,4 @@ class HomeController extends Controller
       $html
     );
   }
-
- 
-
 }
