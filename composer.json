@@ -1,6 +1,7 @@
 {
     "name": "diginamic/framework",
     "description": "website for my evaluation",
+     "license": "proprietary",
     "type": "project",
     "autoload": {
         "psr-4": {
