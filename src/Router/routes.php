@@ -11,7 +11,7 @@ use Diginamic\Framework\Middleware\InputCheckerMiddleware;
 
 /**
  * Fichier de configuration des routes
- * 
+ *
  * Chaque route est définie par :
  * - path : le chemin de la route
  * - controller : la classe du contrôleur
@@ -40,7 +40,7 @@ return [
     'controllerMethod' => 'index',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Identification',
+    'titleMenu' => '',
     'middlewares' => [
       // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
     ]
@@ -126,17 +126,17 @@ return [
     'titleMenu' => 'Personnalisation',
     'middlewares' => []
   ],
-   [
+  [
     'path' => '/presentation/ecologie',
     'controller' => HomeController::class,
-    'controllerMethod' => 'ecologie',
+    'controllerMethod' => 'écologie',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => 'Écologie',
     'middlewares' => []
   ],
-     [
-    'path' => '/presentation',
+  [
+    'path' => '/presentation/{id}',
     'controller' => ProductController::class,
     'controllerMethod' => 'findOne',
     'httpMethod' => 'GET',
@@ -144,7 +144,7 @@ return [
     'titleMenu' => 'Présentation des produits',
     'middlewares' => []
   ],
-    [
+  [
     'path' => '/evenement',
     'controller' => HomeController::class,
     'controllerMethod' => 'event',
@@ -162,7 +162,7 @@ return [
     'titleMenu' => 'Boutique en ligne',
     'middlewares' => []
   ],
-    [
+  [
     'path' => '/entretien',
     'controller' => HomeController::class,
     'controllerMethod' => 'entretien',
@@ -173,15 +173,14 @@ return [
   ],
 
 
-    [
+  [
     'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'displayAddForm',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => '',
-    'middlewares' => [
-    ]
+    'middlewares' => []
   ],
   [
     'path' => '/administration/add',
@@ -194,46 +193,36 @@ return [
       // new InputCheckerMiddleware(['/administration/add'])
     ]
   ],
-    [
-        'path' => '/administration',
-        'controller' => AdministrationController::class,
-        'controllerMethod' => 'pageAdministration',
-        'httpMethod' => 'GET',
-        'params' => [],
-        'titleMenu' => 'Administration',
-        'middlewares' => [ new AuthAdminMiddleware(['/administration'])
-        ]
-    ],
-    // [
-    //     'path' => '/inscription',
-    //     'controller' => HomeController::class,
-    //     'controllerMethod' => 'pageInscription',
-    //     'httpMethod' => 'GET',
-    //     'params' => [],
-    //     'titleMenu' => '',
-    //     'middlewares' => [
-    //     ]
-    // ],
-        [
-        'path' => '/inscription',
-        'controller' => UserController::class,
-        'controllerMethod' => 'add',
-        'httpMethod' => 'POST',
-        'params' => [],
-        'titleMenu' => '',
-        'middlewares' => [
-              new InputCheckerMiddleware(['/inscription'])
-        ]
-    ],
-            [
-        'path' => '/inscriptionReussie',
-        'controller' => HomeController::class,
-        'controllerMethod' => 'subsciptionSuccess',
-        'httpMethod' => 'GET',
-        'params' => [],
-        'titleMenu' => '',
-        'middlewares' => [
+  [
+    'path' => '/administration',
+    'controller' => AdministrationController::class,
+    'controllerMethod' => 'pageAdministration',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => 'Administration',
+    'middlewares' => [
+      new AuthAdminMiddleware(['/administration'])
+    ]
+  ],
+  [
+    'path' => '/inscription',
+    'controller' => UserController::class,
+    'controllerMethod' => 'add',
+    'httpMethod' => 'POST',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => [
+      new InputCheckerMiddleware(['/inscription'])
+    ]
+  ],
+  [
+    'path' => '/inscriptionReussie',
+    'controller' => HomeController::class,
+    'controllerMethod' => 'subscriptionSuccess',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
 
-        ]
-    ],
 ];

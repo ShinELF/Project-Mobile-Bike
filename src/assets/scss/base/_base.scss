@@ -1,0 +1,88 @@
+@use "./../abstracts/variables";
+@use "./../abstracts/mixins";
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+main {
+    text-align: justify;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+iframe {
+    max-width: 100%;
+    margin-block: 10px;
+}
+
+p {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    @include mixins.icon(24);
+}
+
+form {
+    display: flex;
+    padding: 5%;
+    background-color: variables.$color-neutral-05;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+label {
+    display: block;
+    color: variables.$color-primary-70;
+    font-size: 1.2em;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+input {
+    display: block;
+    background-color: variables.$color-neutral-10;
+    border-radius: 10px;
+    border: 1px solid variables.$color-neutral-70;
+    width: 90%;
+    padding: 2%;
+
+    &:target {
+        border: 1px solid variables.$color-neutral-70;
+    }
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    @include mixins.banner(top);
+}
+
+header {
+    @include mixins.banner(bottom);
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+}
+
+aside {
+    width: 50%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+}

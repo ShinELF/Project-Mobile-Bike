@@ -1,5 +1,5 @@
 const burger = document.getElementById("burger");
-const navMenu = document.getElementById("nav-bar");
+const navMenu = document.getElementById("navigation");
 
 burger.addEventListener("click", () => {
 burger.classList.toggle("open");
@@ -7,7 +7,7 @@ navMenu.classList.toggle("open");
 });
 
 // Fermer le menu quand on clique sur un lien
-document.querySelectorAll(".nav-menu li a").forEach((link) => {
+document.querySelectorAll(".navigation li a").forEach((link) => {
 link.addEventListener("click", () => {
     burger.classList.remove("open");
     navMenu.classList.remove("open");

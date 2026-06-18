@@ -1,73 +1,73 @@
-// @use "./../abstracts/variables";
+@use "./../abstracts/variables";
 
-// section.mainSection {
-//     margin-top: 30px;
-//     margin-right: 35px;
+section.mainSection {
+    margin-top: 30px;
+    margin-right: 35px;
 
-//     .texte {
-//         margin-bottom: 100px;
-//         text-align: center;
-//     }
-
-
-
-// }
-
-// span.communiquer {
-//     display: none;
-// }
-
-// span.demarquer {
-//     display: none;
-// }
-
-// span.marquer {
-//     display: none;
-// }
-
-// @media screen and (min-width: 900px) {
-//     section.mainSection {
-//         display: flex;
-
-//         .texte {
-//             flex: 1;
-//             padding: 2%;
-//             padding-top: 100px;
-//             margin-bottom: 100px;
-//             text-align: center;
-//         }
+    .texte {
+        margin-bottom: 100px;
+        text-align: center;
+    }
 
 
-//         span.communiquer {
-//             display: flex;
-//             font-size: 50px;
-//             color: variables.$color-background;
-//             z-index: -2;
-//             position: absolute;
-//             margin-left: 35%;
-//             margin-top: -15%;
 
-//         }
+}
 
-//         span.demarquer {
-//             display: block;
-//             font-size: 30px;
-//             color: variables.$color-background;
-//             z-index: -2;
-//             position: absolute;
-//             margin-left: 65%;
-//             margin-top: -12%;
-//         }
+span.communiquer {
+    display: none;
+}
 
-//         span.marquer {
-//             display: block;
-//             font-size: 40px;
-//             color: variables.$color-background;
-//             z-index: -2;
-//             position: absolute;
-//             margin-left: 55%;
-//             margin-top: -10%;
-//         }
+span.demarquer {
+    display: none;
+}
 
-//     }
-// }
+span.marquer {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    section.mainSection {
+        display: flex;
+
+        .texte {
+            flex: 1;
+            padding: 2%;
+            padding-top: 100px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+
+
+        span.communiquer {
+            display: flex;
+            font-size: 50px;
+            color: variables.$color-neutral-60;
+            z-index: -2;
+            position: absolute;
+            margin-left: 35%;
+            margin-top: -15%;
+
+        }
+
+        span.demarquer {
+            display: block;
+            font-size: 30px;
+            color: variables.$color-neutral-60;
+            z-index: -2;
+            position: absolute;
+            margin-left: 65%;
+            margin-top: -12%;
+        }
+
+        span.marquer {
+            display: block;
+            font-size: 40px;
+            color: variables.$color-neutral-60;
+            z-index: -2;
+            position: absolute;
+            margin-left: 55%;
+            margin-top: -10%;
+        }
+
+    }
+}

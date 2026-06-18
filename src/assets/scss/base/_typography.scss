@@ -1,41 +1,43 @@
 @use "./../abstracts/variables";
+@use "./../abstracts/mixins";
 
 body {
-    font-family: variables.$font-paragraph;
-    color: variables.$color-primary-light;
-    text-align: justify;
+    @include mixins.body(base);
 }
 
-header {
-    font-family: variables.$font-header;
+h1 {
+    @include mixins.header(base);
+
+    @media screen and (min-width:768px) {
+        @include mixins.header(xlarge);
+    }
 }
 
-footer {
-    font-family: variables.$font-header;
-    text-align: center;
+h2 {
+    @include mixins.header(large);
+}
+
+h3 {
+    @include mixins.header(base);
+}
+
+h4 {
+    @include mixins.header(small);
 }
 
 a {
-    text-decoration: none;
-    color: variables.$color-primary-light;
+    @include mixins.body(base);
+
+    &:hover {
+        color: variables.$color-primary-60;
+    }
+
+    &.active {
+        color: variables.$color-primary-60;
+        font-weight: bold;
+    }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: variables.$color-primary-dark;
-    font-family: variables.$font-header;
+button {
+    @include mixins.body(base);
 }
-
-.nav-title {
-    color: variables.$color-primary-light;
-}
-
-p {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-}
-

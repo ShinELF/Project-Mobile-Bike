@@ -1,42 +1,178 @@
 @use "variables";
+@use "./../ressources/fonts";
 
-//=================================
-//             Svg
-//=================================
+//===========================================
+//                  Fonts
+//===========================================
 
-@mixin icon {
-    width: 25px;
-    height: 25px;
-    fill: variables.$color-primary-light;
+//  Body
+//-------------------------------------------
+@mixin body($size) {
+    font-family: "DM Sans";
+    font-weight: variables.$regular;
+    letter-spacing: 0%;
+    font-style: normal;
+
+    @if $size =="small" {
+        font-size: 14px;
+    }
+
+    @else if $size =="base" {
+        font-size: 16px;
+    }
+
+    @else if $size =="large" {
+        font-size: 18px;
+    }
+
+    line-height: 150%;
+    color: variables.$color-black;
 }
 
-//======================
-//       Banner
-//======================
+//  Header
+//-------------------------------------------
+@mixin header($size) {
+    font-family: 'DM Sans';
+    font-weight: variables.$semibold;
+    letter-spacing: -2%;
+    font-style: normal;
+
+    @if $size =="small" {
+        font-size: 20px;
+    }
+
+    @else if $size =="base" {
+        font-size: 24px;
+    }
+
+    @else if $size =="large" {
+        font-size: 28px;
+    }
+
+    @else if $size =="xlarge" {
+        font-size: 32px;
+    }
+
+    line-height: 130%;
+    color: variables.$color-black;
+}
+
+//  Display
+//-------------------------------------------
+@mixin display($size) {
+    font-family: Genos;
+    font-weight: variables.$regular;
+    letter-spacing: -2.5%;
+    font-style: normal;
+
+    @if $size =="small" {
+        font-size: 48px;
+    }
+
+    @else if $size =="base" {
+        font-size: 60px;
+    }
+
+    @else if $size =="large" {
+        font-size: 72px;
+    }
+
+    line-height: 120%;
+    color: variables.$color-black;
+}
+
+//  Logo
+//-------------------------------------------
+@mixin logo($size, $direction) {
+    font-family: Genos;
+    font-weight: variables.$regular;
+    font-style: italic;
+    letter-spacing: -6.5%;
+
+    @if $size =="xsmall" {
+        font-size: 28px;
+        line-height: 16px;
+    }
+
+    @else if $size =="small" {
+        font-size: 36px;
+        line-height: 20px;
+    }
+
+    @else if $size =="base" {
+        font-size: 40px;
+        line-height: 24%;
+    }
+
+    @else if $size =="large" {
+        font-size: 56px;
+        line-height: 32px;
+    }
+
+    @else if $size =="xlarge" {
+        font-size: 72px;
+        line-height: 40px;
+    }
+
+    @if $direction =="horizontal" {
+        text-align: start;
+    }
+
+    @else if $direction =="vertical" {
+        text-align: center;
+    }
+
+    color: variables.$color-black;
+}
+
+//===========================================
+//                  Svg
+//===========================================
+
+@mixin icon($size) {
+
+    @if $size ==16 {
+        width: 16px;
+        height: 16px;
+    }
+
+    @else if $size ==24 {
+        width: 24px;
+        height: 24px;
+    }
+
+    @else if $size ==32 {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+//===========================================
+//                  Banner
+//===========================================
 
 @mixin banner($direction) {
-    border-#{$direction}: solid 1px variables.$color-primary-dark;
+    border-#{$direction}: solid 1px variables.$color-primary-70;
 
     @if $direction =="top" {
-        box-shadow: 0 0 0 2px variables.$color-shadow;
+        box-shadow: 0 -5px 5px -6px variables.$color-primary-70;
     }
 
     @else if $direction =="bottom" {
-        box-shadow: 0 2px 0 0 variables.$color-shadow;
+        box-shadow: 0 5px 5px -6px variables.$color-primary-70;
     }
 
-    width: 100%;
-    height: 30px;
-    background-color: variables.$color-background;
+    width: auto;
+    height: fit-content;
+    background-color: variables.$color-white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-#{$direction}: 2%;
-    padding: 1%;
+    margin-#{$direction}: 8px;
+    padding-block: 8px;
+    padding-inline: 16px;
 
-    @media screen and (min-width: 1024px) {
-        height: 70px;
-        padding: 0%;
-        margin-#{$direction}: 1%;
+    @media screen and (min-width: 768px) {
+        padding-inline: 0px;
     }
 }
