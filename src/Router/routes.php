@@ -40,7 +40,7 @@ return [
     'controllerMethod' => 'index',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => '',
+    'titleMenu' => 'login',
     'middlewares' => [
       // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
     ]
@@ -49,6 +49,17 @@ return [
     'path' => '/login-post',
     'controller' => LoginController::class,
     'controllerMethod' => 'submitLogin',
+    'httpMethod' => 'POST',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => [
+      // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
+    ]
+  ],
+    [
+    'path' => '/logout-post',
+    'controller' => LoginController::class,
+    'controllerMethod' => 'logout',
     'httpMethod' => 'POST',
     'params' => [],
     'titleMenu' => '',

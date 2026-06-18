@@ -15,7 +15,7 @@ use GuzzleHttp\Psr7\Response;
 
 // Démarrer la session si vous utilisez les sessions pour l'authentification
 session_start();
-
+ini_set('session.use_strict_mode', 1);
 
 // Chemins relatifs à la racine du projet
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/src/Views');

@@ -48,11 +48,16 @@ class LoginController extends Controller
     error_log("login : " . $login);
     error_log("password : " . $password);
 
-
-    $html = "<h1>Identification réussie</h1>";
-    $html .= '<p>';
-    $html .= '    votre login : ' . $login;
-    $html .= '</p>';
+    // Si tout s'est bien passé, on redirige
+    return new Response(
+      302,
+      ['Location' => '/'],
+      ''
+    );
+  }
+  public function logout(ServerRequestInterface $request): ResponseInterface
+  {
+      session_destroy();
 
     // Si tout s'est bien passé, on redirige
     return new Response(

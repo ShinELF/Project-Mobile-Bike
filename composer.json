@@ -1,5 +1,6 @@
 {
     "name": "diginamic/framework",
+    "description": "website for my evaluation",
     "type": "project",
     "autoload": {
         "psr-4": {

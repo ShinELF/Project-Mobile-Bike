@@ -640,6 +640,23 @@ div.user button p {
     display: block;
   }
 }
+div.user form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+}
+div.user form:hover {
+  color: #2D6525;
+  fill: #2D6525;
+}
+div.user form p {
+  display: block;
+}
+div.user form button {
+  margin-right: 16px;
+}
 
 h1.navigation {
   display: none;
