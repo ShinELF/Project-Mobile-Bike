@@ -19,5 +19,9 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.89.1"
+  },
+  "dependencies": {
+    "bullmq": "^5.79.0",
+    "express": "^5.2.1"
   }
 }
