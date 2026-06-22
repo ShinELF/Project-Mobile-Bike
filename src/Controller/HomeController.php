@@ -50,7 +50,7 @@ class HomeController extends Controller
     );
   }
 
-  public function Écologie(ServerRequestInterface $request): ResponseInterface
+  public function écologie(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('presentation/ecologie.twig', [

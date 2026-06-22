@@ -218,6 +218,16 @@ return [
   [
     'path' => '/inscription',
     'controller' => UserController::class,
+    'controllerMethod' => 'displayAddForm',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => [
+    ]
+  ],
+  [
+    'path' => '/inscription',
+    'controller' => UserController::class,
     'controllerMethod' => 'add',
     'httpMethod' => 'POST',
     'params' => [],

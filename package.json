@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "sass src/assets/scss/main.scss src/assets/css/main.css --watch",
-    "bind" : "node app.js"
+    "bind": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
     "sass": "^1.89.1"
   },
   "dependencies": {
-    "bullmq": "^5.79.0",
     "express": "^5.2.1"
   }
 }
