@@ -1,13 +1,6 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
-//===========================================
-//                  Top
-//===========================================
-
-//  Base
-//-------------------------------------------
-
 .header-top {
     width: 100%;
     display: grid;
@@ -21,9 +14,6 @@
         margin-bottom: 8px;
     }
 }
-
-//  Burger menu
-//-------------------------------------------
 
 .burger {
     &:not(#burger) {
@@ -69,9 +59,6 @@
     }
 }
 
-//  Logo
-//-------------------------------------------
-
 a.logo {
     display: flex;
     align-items: center;
@@ -104,9 +91,6 @@ p.logo {
         @include mixins.logo(small, horizontal);
     }
 }
-
-//  User's icons
-//-------------------------------------------
 
 div.user {
     display: flex;
@@ -154,10 +138,6 @@ div.user {
     }
 }
 
-//===========================================
-//                Navigation
-//===========================================
-
 h1.navigation {
     display: none;
 
@@ -204,11 +184,6 @@ li.navigation {
     li.navigation {
 
         flex-direction: row;
-        // padding-inline: 10px;
-
-        // li {
-        //     margin: 0 1rem;
-        // }
     }
 }
 

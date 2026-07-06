@@ -1,7 +1,4 @@
-// **************Carousel creation**************
-
 // Targetting the different position of the carousel and the buttons
-
 const prevBtn = document.getElementById("index-button-prev");
 const nextBtn = document.getElementById("index-button-next");
 
