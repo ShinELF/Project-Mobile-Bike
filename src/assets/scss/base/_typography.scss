@@ -31,11 +31,6 @@ a {
     &:hover {
         color: variables.$color-primary-60;
     }
-
-    &.active {
-        color: variables.$color-primary-60;
-        font-weight: bold;
-    }
 }
 
 button {

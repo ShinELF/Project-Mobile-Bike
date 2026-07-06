@@ -18,8 +18,8 @@ class NavigationService
   /**
    * Créer un tableau de liens à afficher dans la navigation en fonction de l'authentification de l'utilisateur
    *
-   * @param String $activePath
-   * @return Array - les liens 
+   * @param string $activePath
+   * @return array
    */
   public function routesToLinks(string $activePath)
   {
@@ -35,7 +35,7 @@ class NavigationService
         $links[] = [
           "title" => $route["titleMenu"],
           "path" => $route['path'],
-          "active" => ($route['path'] == $activePath) ? " active" : "",
+          "active" => ($route['path'] == $activePath) ? true : false,
         ];
       }
     }

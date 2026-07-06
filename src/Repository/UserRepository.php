@@ -51,7 +51,7 @@ class UserRepository extends AbstractRepository
     $user = $this->findByLogin($login);
 
     // En production, utilisez password_verify() pour comparer les mots de passe hachés
-    if ($user && $user->password === $password) {
+    if ($user && password_verify($password,$user->password)) {
       return $user;
     }
 

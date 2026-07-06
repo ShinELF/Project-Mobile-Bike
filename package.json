@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile": "sass src/assets/scss/main.scss src/assets/css/main.css --watch",
-    "bind": "node app.js"
+    "compile": "sass src/assets/scss/main.scss src/assets/css/main.css --watch"
   },
   "repository": {
     "type": "git",

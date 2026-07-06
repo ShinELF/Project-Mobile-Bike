@@ -1,31 +1,5 @@
 @use "./../abstracts/variables";
 
-.newsletter-button {
-    display: none;
-
-    @media screen and (min-width: 1024px) {
-        background-color: variables.$color-neutral-05;
-        position: fixed;
-        top: 20%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0px 10px 10px 0px;
-        border: solid 1px variables.$color-primary-70;
-        border-left: none;
-
-        &:hover {
-            background-color: variables.$color-primary-70;
-        }
-
-        &:hover #newsletter-icon {
-            fill: variables.$color-primary-05;
-        }
-    }
-}
-
 .button-form {
     margin-top: 7%;
     border: 1px solid variables.$color-primary-70;
