@@ -1,11 +1,11 @@
-{% extends "base.twig" %}
+{# {% extends "base.twig" %} #}
 
 {% block content %}
-	<section class="login">
-
+	<dialog id="login_modale" closedby="any">
+		<button type="button" commandfor="login_modale" command="close" class="close-button">Fermer</button>
 		<form method="post" action="/login-post">
 
-			<h1 class="form-title">{{ title }}</h1>
+			<h2>Connexion</h2>
 
 			<div class="input-area">
 				<label id="login-label" for="login">Login</label>
@@ -15,7 +15,7 @@
 				<input type="password" id="password" name="password" required>
 			</div>
 
-			<button type="submit" class="button-form">Connexion</button>
+			<button type="submit">Connexion</button>
 
 			<div class="form-paragraph">
 				<p>Vous n'avez pas encore de compte ?
@@ -25,5 +25,5 @@
 
 		</form>
 
-	</section>
+	</dialog>
 {% endblock %}

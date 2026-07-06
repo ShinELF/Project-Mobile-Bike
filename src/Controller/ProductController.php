@@ -43,4 +43,47 @@ class ProductController extends Controller
             $html
         );
     }
+          public function displayAddForm(ServerRequestInterface $request): ResponseInterface
+    {
+
+        $title =  "Ajout d'un produit";
+        $html = $this->twig->render('shop/addForm.twig', [
+            'title' => $title,
+            'links' => $this->navService->routesToLinks('/administration/add'),
+            'status' => $this->loginService->connection()
+        ]);
+
+
+
+        return new Response(
+            200,
+            ['Content-Type' => 'text/html'],
+            $html
+        );
+    }
+
+    public function add(ServerRequestInterface $request): ResponseInterface
+    {
+        // Récupération des données du formulaire dans le cadre du PSR-7 qui utilise les objets request et response
+        $data = $request->getParsedBody();
+
+        // Création de l'entité User
+        $productEntity = new Product();
+
+        // Hydratation de l'utilisation
+        $productEntity->hydrate($data);
+
+
+        // Appel au modèle ou au repository
+        $this->productRepository->save($productEntity);
+
+
+
+        // Si tout s'est bien passé, on redirige
+        return new Response(
+            302,
+            ['Location' => '/administration'],
+            ''
+        );
+    }
 }

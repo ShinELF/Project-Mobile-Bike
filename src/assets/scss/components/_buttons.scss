@@ -1,8 +1,9 @@
 @use "./../abstracts/variables";
+@use "./../abstracts/mixins";
 
-.button-form {
+form button {
     margin-top: 7%;
-    border: 1px solid variables.$color-primary-70;
+    border: 1px solid variables.$color-primary-30;
     border-radius: 5px;
     padding: 2%;
     font-size: 1.2em;
@@ -10,10 +11,17 @@
     color: variables.$color-primary-70;
 
     &:hover {
-        border: 1px solid variables.$color-primary-70;
+        border: 1px solid variables.$color-primary-90;
         background-color: variables.$color-primary-70;
         color: variables.$color-primary-05;
     }
+}
+
+.close-button {
+    @include mixins.body(small);
+    position:absolute;
+    top:16px;
+    right:16px;
 }
 
 @media screen and (min-width: 1024px) {

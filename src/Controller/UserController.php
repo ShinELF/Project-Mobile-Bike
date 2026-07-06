@@ -100,22 +100,6 @@ class UserController extends Controller
     );
   }
 
-  public function login(ServerRequestInterface $request): ResponseInterface
-  {
-
-    $html = $this->twig->render('user/login.twig', [
-      'title' => 'Connexion - Mobile Bike',
-      'links' => $this->navService->routesToLinks('/login'),
-      'status' => $this->loginService->connection()
-    ]);
-
-    // Création et renvoi de la réponse
-    return new Response(
-      200,
-      ['Content-Type' => 'text/html'],
-      $html
-    );
-  }
   public function submitLogin(ServerRequestInterface $request): ResponseInterface
   {
     // Récupération des données du formulaire
