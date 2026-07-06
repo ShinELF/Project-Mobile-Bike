@@ -235,6 +235,7 @@ a {
   font-size: 16px;
   line-height: 150%;
   color: #000000;
+  color: #143510;
 }
 a:hover {
   color: #2D6525;
@@ -250,19 +251,32 @@ button {
   color: #000000;
 }
 
-.button-form {
+form button {
   margin-top: 7%;
-  border: 1px solid #214E1A;
+  border: 1px solid #5ABE4C;
   border-radius: 5px;
   padding: 2%;
   font-size: 1.2em;
   background-color: #D0FCCD;
   color: #214E1A;
 }
-.button-form:hover {
-  border: 1px solid #214E1A;
+form button:hover {
+  border: 1px solid #0A2007;
   background-color: #214E1A;
   color: #D0FCCD;
+}
+
+.close-button {
+  font-family: "DM Sans";
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -440,12 +454,6 @@ section.down .carousel-dot .dot6 {
   grid-row: 1;
 }
 
-@media screen and (min-width: 1024px) {
-  section.login {
-    padding-inline: 30%;
-  }
-}
-
 .input-area {
   width: 100%;
 }
@@ -481,6 +489,23 @@ section.down .carousel-dot .dot6 {
   border: 1px solid #46534B;
   height: 700px;
   margin-top: 5%;
+}
+
+dialog {
+  margin: auto;
+  padding: 32px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 4px #0A2007;
+}
+dialog::backdrop {
+  background-color: rgba(46, 56, 50, 0.8);
+}
+dialog form {
+  background-color: #FFFFFF;
+  border-radius: 0px;
+  padding: 0px;
 }
 
 .scroller {

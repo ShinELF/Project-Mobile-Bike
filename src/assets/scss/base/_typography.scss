@@ -27,7 +27,7 @@ h4 {
 
 a {
     @include mixins.body(base);
-
+    color: variables.$color-primary-80;
     &:hover {
         color: variables.$color-primary-60;
     }

@@ -1,0 +1,20 @@
+@use "./../abstracts/variables";
+
+dialog {
+    margin: auto;
+    padding: 32px;
+    background-color: variables.$color-white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 4px 4px variables.$color-primary-90;
+
+    &::backdrop {
+        background-color: variables.$color-background;
+    }
+
+    & form {
+        background-color: variables.$color-white;
+        border-radius: 0px;
+        padding: 0px;
+    }
+}

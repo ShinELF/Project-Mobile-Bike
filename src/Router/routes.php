@@ -106,15 +106,6 @@ return [
     'middlewares' => []
   ],
   [
-    'path' => '/login',
-    'controller' => UserController::class,
-    'controllerMethod' => 'login',
-    'httpMethod' => 'GET',
-    'params' => [],
-    'titleMenu' => '',
-    'middlewares' => []
-  ],
-  [
     'path' => '/login-post',
     'controller' => UserController::class,
     'controllerMethod' => 'submitLogin',
@@ -220,22 +211,22 @@ return [
   //   'titleMenu' => 'Présentation des produits',
   //   'middlewares' => []
   // ],
-  // [
-  //   'path' => '/administration/add',
-  //   'controller' => ProductController::class,
-  //   'controllerMethod' => 'displayAddForm',
-  //   'httpMethod' => 'GET',
-  //   'params' => [],
-  //   'titleMenu' => '',
-  //   'middlewares' => []
-  // ],
-  // [
-  //   'path' => '/administration/add',
-  //   'controller' => ProductController::class,
-  //   'controllerMethod' => 'add',
-  //   'httpMethod' => 'POST',
-  //   'params' => [],
-  //   'titleMenu' => '',
-  //   'middlewares' => []
-  // ],
+  [
+    'path' => '/administration/add',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'displayAddForm',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
+  [
+    'path' => '/administration/add',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'add',
+    'httpMethod' => 'POST',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
 ];
