@@ -1,8 +1,5 @@
 @use "./../abstracts/variables";
 
-//===========================================
-//              Social media
-//===========================================
 #youtube,
 #facebook {
     width: 48px;
@@ -24,9 +21,6 @@
     fill: variables.$color-primary-70;
 }
 
-//===========================================
-//                  Carousels
-//===========================================
 .button-carousel {
     width: 30px;
     max-width: 70px;

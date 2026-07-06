@@ -6,7 +6,7 @@ class User
 {
   public ?int $id = null;
   public string $login;
-  public string $password; // En production, utiliser un hash
+  public string $password;
   public string $email;
   public ?bool $isadmin = null;
 

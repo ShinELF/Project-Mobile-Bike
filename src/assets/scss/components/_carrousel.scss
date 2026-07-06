@@ -1,8 +1,5 @@
 @use "./../abstracts/variables";
 
-//===========================================
-//              Carousel - image
-//===========================================
 #carousel-container,
 .carousel-track-container {
 
@@ -63,9 +60,6 @@ img.carousel-image {
     }
 }
 
-//===========================================
-//              Carousel - comments
-//===========================================
 section.down {
     position: relative;
     margin-top: 30px;
