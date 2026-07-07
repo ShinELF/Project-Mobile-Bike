@@ -151,4 +151,8 @@
     margin-#{$direction}: 8px;
     padding-block: 8px;
     padding-inline: 16px;
+
+    @media screen and (min-width: 768px) {
+        padding-inline: 0px;
+    }
 }

@@ -1,6 +1,20 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
+.header-top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    @media screen and (min-width: 768px) {
+        height: 72px;
+        border-bottom: solid 0.5px variables.$color-neutral-10;
+        margin-bottom: 8px;
+    }
+}
+
 .burger {
     &:not(#burger) {
         justify-self: start;
@@ -58,6 +72,10 @@ svg.logo {
         display: block;
         width: 4em;
         height: 4em;
+    }
+
+    path.logo-ext {
+        fill: variables.$color-black;
     }
 
     path.logo-int {
