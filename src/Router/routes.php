@@ -17,6 +17,7 @@ use Diginamic\Framework\Middleware\InputCheckerMiddleware;
  * - controllerMethod : la méthode du contrôleur à appeler
  * - httpMethod : la méthode HTTP (GET, POST, etc.)
  * - params : (optionnel) les patterns pour les paramètres d'URL
+ * - titleNav : (optionnel) le titre qui apparait dans la barre de navigation
  * - middlewares : (optionnel) les middlewares spécifiques à cette route
  */
 return [
