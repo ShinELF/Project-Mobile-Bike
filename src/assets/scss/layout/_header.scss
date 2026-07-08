@@ -1,6 +1,8 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
+
+// Menu burger
 .burger {
     &:not(#burger) {
         justify-self: start;
@@ -45,6 +47,7 @@
     }
 }
 
+// Logo
 a.logo {
     display: flex;
     align-items: center;
@@ -74,52 +77,7 @@ p.logo {
     }
 }
 
-div.user {
-    display: flex;
-    justify-self: end;
-
-    button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4px;
-        margin-left: 16px;
-
-        &:hover {
-            color: variables.$color-primary-60;
-            fill: variables.$color-primary-60;
-        }
-
-        p {
-            display: none;
-
-            @media screen and (min-width:768px) {
-                display: block;
-            }
-        }
-    }
-
-    form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding : 0;
-        background: none;
-
-        &:hover {
-            color: variables.$color-primary-60;
-            fill: variables.$color-primary-60;
-        }
-
-        p {
-                display: block;
-            }
-        button {
-            margin-right : 16px;
-        }
-    }
-}
-
+// Navigation
 nav.navigation {
     display: none;
 
@@ -174,4 +132,86 @@ ul.navigation {
             font-size: 18px;
         }
     }
+}
+
+// Menu utilisateur
+ul.user {
+    display: flex;
+    justify-self: end;
+
+    a {
+        color: variables.$color-black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin-inline: 8px;
+
+        &:hover {
+            color: variables.$color-primary-60;
+            fill: variables.$color-primary-60;
+        }
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin-inline: 8px;
+
+        &:hover {
+            color: variables.$color-primary-60;
+            fill: variables.$color-primary-60;
+        }
+
+        p {
+            display: none;
+
+            @media screen and (min-width:768px) {
+                display: block;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: none;
+
+        &:hover {
+            color: variables.$color-primary-60;
+            fill: variables.$color-primary-60;
+        }
+
+        p {
+            display: block;
+        }
+
+        button {
+            margin-right: 16px;
+        }
+    }
+}
+
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    width: 110%;
+    right: 0px;
+    z-index: 2;
+    background-color: variables.$color-white;
+    padding-block-start: 8px;
+    border: solid 1px variables.$color-primary-70;
+}
+
+li.user:hover .sous-menu {
+    display: grid;
+}
+
+li.user {
+    position: relative;
 }
