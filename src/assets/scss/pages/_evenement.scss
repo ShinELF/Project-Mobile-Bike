@@ -1,7 +1,7 @@
     section.haute {
         display: block;
 
-        .hauteImage {
+        .haute-image {
             max-width: 100%;
         }
     }
@@ -9,18 +9,18 @@
     section.basse {
         display: block;
 
-        .basseImage {
+        .basse-image {
             max-width: 100%;
         }
 
-        .basseReservation {
+        .basse-reservation {
             padding: 0;
         }
     }
     section.haute {
         display: block;
 
-        .hauteImage {
+        .haute-image {
             max-width: 100%;
         }
     }
@@ -28,11 +28,11 @@
     section.basse {
         display: block;
 
-        .basseImage {
+        .basse-image {
             max-width: 100%;
         }
 
-        .basseReservation {
+        .basse-reservation {
             padding: 0;
         }
     }
@@ -40,7 +40,7 @@
     section.haute {
         display: block;
 
-        .hauteImage {
+        .haute-image {
             max-width: 100%;
         }
     }
@@ -48,11 +48,11 @@
     section.basse {
         display: block;
 
-        .basseImage {
+        .basse-image {
             max-width: 100%;
         }
 
-        .basseReservation {
+        .basse-reservation {
             padding: 0;
         }
     }
@@ -62,7 +62,7 @@
             display: flex;
             gap: 50px;
 
-            .hauteChild {
+            .haute-child {
                 flex-direction: column;
 
                 h2 {
@@ -74,7 +74,7 @@
                 }
             }
 
-            .hauteImage {
+            .haute_image {
                 width: 100%;
             }
         }
@@ -83,7 +83,7 @@
             display: flex;
             gap: 50px;
 
-            .hauteChild {
+            .haute-child {
                 flex-direction: column;
 
                 h2 {
@@ -95,7 +95,7 @@
                 }
             }
 
-            .hauteImage {
+            .haute-image {
                 width: 100%;
             }
         }
@@ -105,7 +105,7 @@
                 display: flex;
                 gap: 50px;
 
-                .hauteChild {
+                .haute-child {
                     flex-direction: column;
 
                     h2 {
@@ -117,7 +117,7 @@
                     }
                 }
 
-                .hauteImage {
+                .haute-image {
                     width: 100%;
                 }
             }
@@ -136,11 +136,11 @@
                         flex: 1;
                     }
 
-                    .basseImage {
+                    .basse-image {
                         width: 700px;
                     }
 
-                    .basseReservation {
+                    .basse-reservation {
                         font-size: 30px;
                         padding-left: 100px;
                         padding-top: 250px;
@@ -152,12 +152,12 @@
                 position: relative;
             }
 
-            .basseImage {
+            .basse-image {
                 width: 700px;
                 object-fit: cover;
             }
 
-            .basseReservation {
+            .basse-reservation {
                 font-size: 30px;
                 padding-left: 100px;
                 padding-top: 250px;
@@ -249,11 +249,11 @@
         flex: 1;
     }
 
-    .basseImage {
+    .basse-image {
         width: 700px;
     }
 
-    .basseReservation {
+    .basse-reservation {
         font-size: 30px;
         padding-left: 100px;
         padding-top: 250px;
