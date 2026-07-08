@@ -5,18 +5,18 @@ img {
     box-shadow: 8px 8px 10px 0 variables.$color-neutral-70;
 }
 
-.co2Text,
-.printText,
-.healthText {
+.co2-text,
+.print-text,
+.health-text {
     display: none;
 }
 
-.imgBike {
+.image-bike {
     margin-top: 60px;
     box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.btnreadMore {
+.button-read-more {
     background-color: #006680;
     color: white;
     text-decoration: none;
@@ -24,9 +24,9 @@ img {
     padding: 10px;
 }
 
-.co2Text,
-.printText,
-.healthText {
+.co2-text,
+.print-text,
+.health-text {
     display: none;
 }
 
@@ -35,13 +35,13 @@ img {
     box-shadow: 8px 8px 10px 0 variables.$color-neutral-70;
 }
 
-.co2Text,
-.printText,
-.healthText {
+.co2-text,
+.print-text,
+.health-text {
     display: none;
 }
 
-.subSection {
+.sub-section {
     border-top: 1px solid variables.$color-primary-70;
     margin-top: 200px;
     text-align: left;
