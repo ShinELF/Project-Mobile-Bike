@@ -147,10 +147,6 @@ button {
   border: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 ul {
   list-style: none;
 }
@@ -162,7 +158,6 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
-  color: #000000;
 }
 
 h1 {
@@ -170,9 +165,9 @@ h1 {
   font-weight: 600;
   letter-spacing: -2%;
   font-style: normal;
-  font-size: 24px;
+  color: #2D6525;
   line-height: 130%;
-  color: #000000;
+  font-size: 24px;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -180,9 +175,9 @@ h1 {
     font-weight: 600;
     letter-spacing: -2%;
     font-style: normal;
-    font-size: 32px;
+    color: #2D6525;
     line-height: 130%;
-    color: #000000;
+    font-size: 32px;
   }
 }
 
@@ -191,9 +186,9 @@ h2 {
   font-weight: 600;
   letter-spacing: -2%;
   font-style: normal;
-  font-size: 28px;
+  color: #2D6525;
   line-height: 130%;
-  color: #000000;
+  font-size: 28px;
 }
 
 h3 {
@@ -201,9 +196,9 @@ h3 {
   font-weight: 600;
   letter-spacing: -2%;
   font-style: normal;
-  font-size: 24px;
+  color: #2D6525;
   line-height: 130%;
-  color: #000000;
+  font-size: 24px;
 }
 
 h4 {
@@ -211,19 +206,19 @@ h4 {
   font-weight: 600;
   letter-spacing: -2%;
   font-style: normal;
-  font-size: 20px;
+  color: #2D6525;
   line-height: 130%;
-  color: #000000;
+  font-size: 20px;
 }
 
 a {
+  text-decoration: none;
   font-family: "DM Sans";
   font-weight: 400;
   letter-spacing: 0%;
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
-  color: #000000;
   color: #143510;
 }
 a:hover {
@@ -237,7 +232,15 @@ button {
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
-  color: #000000;
+}
+
+p {
+  font-family: "DM Sans";
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 form button {
@@ -262,7 +265,6 @@ form button:hover {
   font-style: normal;
   font-size: 14px;
   line-height: 150%;
-  color: #000000;
   position: absolute;
   top: 16px;
   right: 16px;
@@ -509,21 +511,12 @@ dialog form {
   }
 }
 
-.burger:not(#burger) {
-  justify-self: start;
-  position: relative;
-  z-index: 2;
-}
-.burger#burger {
+.burger {
   display: flex;
   flex-direction: column;
   width: 24px;
   height: 24px;
-}
-@media screen and (min-width: 768px) {
-  .burger#burger {
-    display: none;
-  }
+  z-index: 2;
 }
 .burger span {
   width: 25px;
@@ -532,10 +525,6 @@ dialog form {
   margin: 3px 0;
   border-radius: 5px;
   transition: 0.3s;
-}
-.burger.open {
-  position: fixed;
-  top: 10px;
 }
 .burger.open span:nth-child(2) {
   opacity: 0;
@@ -546,33 +535,54 @@ dialog form {
 .burger.open span:nth-child(3) {
   transform: translateY(-8.4px) rotate(-45deg);
 }
-
-a.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
 }
 
-svg.logo {
+@media screen and (min-width: 768px) {
+  a.index {
+    display: none;
+  }
+}
+
+a.logo {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  svg.logo {
-    display: block;
+  a.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  a.logo svg {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  a.logo path.logo-int {
+    fill: #499D3D;
+  }
+  a.logo p {
+    font-family: Genos;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -6.5%;
+    font-size: 28px;
+    line-height: 16px;
+    text-align: start;
+    color: #000000;
+  }
+}
+@media screen and (min-width: 992px) {
+  a.logo {
+    gap: 8px;
+  }
+  a.logo svg {
     width: 4em;
     height: 4em;
   }
-}
-svg.logo path.logo-int {
-  fill: #499D3D;
-}
-
-p.logo {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  p.logo {
-    display: contents;
+  a.logo p {
     font-family: Genos;
     font-weight: 400;
     font-style: italic;
@@ -589,14 +599,59 @@ nav.navigation {
 }
 nav.navigation.open {
   position: fixed;
-  top: 0px;
+  top: 40px;
   left: 0px;
-  right: 0px;
+  width: 70%;
   height: 100dvh;
   display: block;
-  justify-content: center;
-  padding: 48px 16px 8px 16px;
+  padding: 8px 16px 8px 16px;
   background: #F1F3F2;
+}
+@media screen and (min-width: 576px) {
+  nav.navigation.open {
+    top: 56px;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav.navigation {
+    display: block;
+  }
+}
+nav.navigation a {
+  font-size: 24px;
+  color: #000000;
+}
+nav.navigation a:hover {
+  color: #2D6525;
+}
+@media screen and (min-width: 768px) {
+  nav.navigation a {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 992px) {
+  nav.navigation a {
+    font-size: 18px;
+  }
+}
+
+ul.navigation {
+  flex-direction: column;
+  align-items: flex-start;
+  width: max-content;
+  gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  ul.navigation {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 992px) {
+  ul.navigation {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 li.navigation {
@@ -604,31 +659,9 @@ li.navigation {
   flex-direction: column;
   text-align: center;
 }
-
 @media screen and (min-width: 768px) {
-  nav.navigation {
-    display: contents;
-  }
   li.navigation {
     flex-direction: row;
-  }
-}
-ul.navigation {
-  flex-direction: column;
-  width: max-content;
-  align-items: flex-start;
-  gap: 8px;
-}
-ul.navigation li a {
-  font-size: 24px;
-}
-@media screen and (min-width: 768px) {
-  ul.navigation {
-    flex-direction: row;
-    gap: 32px;
-  }
-  ul.navigation li a {
-    font-size: 18px;
   }
 }
 
@@ -636,7 +669,16 @@ ul.user {
   display: flex;
   justify-self: end;
 }
-ul.user a {
+ul.user p:not(#logout-text) {
+  display: none;
+}
+@media screen and (min-width: 576px) and (max-width: 768px), (min-width: 992px) {
+  ul.user p:not(#logout-text) {
+    display: block;
+  }
+}
+ul.user a,
+ul.user button {
   color: #000000;
   display: flex;
   align-items: center;
@@ -644,56 +686,31 @@ ul.user a {
   gap: 4px;
   margin-inline: 8px;
 }
-ul.user a:hover {
-  color: #2D6525;
-  fill: #2D6525;
-}
-ul.user button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  margin-inline: 8px;
-}
+ul.user a:hover,
 ul.user button:hover {
   color: #2D6525;
   fill: #2D6525;
 }
-ul.user button p {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  ul.user button p {
-    display: block;
-  }
-}
 ul.user form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0;
-  background: none;
-}
-ul.user form:hover {
-  color: #2D6525;
-  fill: #2D6525;
-}
-ul.user form p {
-  display: block;
-}
-ul.user form button {
-  margin-right: 16px;
 }
 
 .sous-menu {
   display: none;
   position: absolute;
-  width: 110%;
+  width: fit-content;
+  height: fit-content;
   right: 0px;
   z-index: 2;
   background-color: #FFFFFF;
-  padding-block-start: 8px;
+  padding-block: 8px;
   border: solid 1px #214E1A;
+}
+.sous-menu li:hover {
+  background-color: #F1F3F2;
+}
+.sous-menu button p {
+  margin: 0px;
 }
 
 li.user:hover .sous-menu {
@@ -808,9 +825,6 @@ section.basse .basse-reservation {
   section.haute .haute-child h2 {
     padding-bottom: 20px;
   }
-  section.haute .haute-child p {
-    font-size: 25px;
-  }
   section.haute .haute_image {
     width: 100%;
   }
@@ -826,9 +840,6 @@ section.basse .basse-reservation {
   section.haute .haute-child h2 {
     padding-bottom: 20px;
   }
-  section.haute .haute-child p {
-    font-size: 25px;
-  }
   section.haute .haute-image {
     width: 100%;
   }
@@ -843,9 +854,6 @@ section.basse .basse-reservation {
   }
   section.haute .haute-child h2 {
     padding-bottom: 20px;
-  }
-  section.haute .haute-child p {
-    font-size: 25px;
   }
   section.haute .haute-image {
     width: 100%;

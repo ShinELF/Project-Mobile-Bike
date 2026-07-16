@@ -1,3 +1,4 @@
+const account = document.getElementById("account")
 const burger = document.getElementById("burger");
 const navMenu = document.getElementById("navigation");
 
@@ -14,9 +15,9 @@ link.addEventListener("click", () => {
 });
 });
 
-// Fermer le menu burger si on redimensionne au-dessus de 1024px
+// Fermer le menu burger si on redimensionne au-dessus de 768px
 window.addEventListener("resize", () => {
-if (window.innerWidth >= 1024) {
+if (window.innerWidth >= 768) {
     burger.classList.remove("open");
     navMenu.classList.remove("open");
 }

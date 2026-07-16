@@ -20,7 +20,6 @@
     }
 
     line-height: 150%;
-    color: variables.$color-black;
 }
 
 @mixin header($size) {
@@ -28,6 +27,8 @@
     font-weight: variables.$semibold;
     letter-spacing: -2%;
     font-style: normal;
+    color: variables.$color-primary-60;
+    line-height: 130%;
 
     @if $size =="small" {
         font-size: 20px;
@@ -45,8 +46,6 @@
         font-size: 32px;
     }
 
-    line-height: 130%;
-    color: variables.$color-black;
 }
 
 @mixin display($size) {
@@ -68,7 +67,6 @@
     }
 
     line-height: 120%;
-    color: variables.$color-black;
 }
 
 @mixin logo($size, $direction) {

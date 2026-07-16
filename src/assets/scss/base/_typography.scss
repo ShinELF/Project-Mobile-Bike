@@ -26,8 +26,10 @@ h4 {
 }
 
 a {
+    text-decoration: none;
     @include mixins.body(base);
     color: variables.$color-primary-80;
+
     &:hover {
         color: variables.$color-primary-60;
     }
@@ -37,3 +39,6 @@ button {
     @include mixins.body(base);
 }
 
+p {
+    @include mixins.body(base);
+}
