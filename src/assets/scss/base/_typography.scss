@@ -28,7 +28,7 @@ h4 {
 a {
     text-decoration: none;
     @include mixins.body(base);
-    color: variables.$color-primary-80;
+    color: variables.$color-primary-70;
 
     &:hover {
         color: variables.$color-primary-60;

@@ -219,7 +219,7 @@ a {
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
-  color: #143510;
+  color: #214E1A;
 }
 a:hover {
   color: #2D6525;
@@ -554,11 +554,10 @@ a.logo {
   a.logo {
     display: flex;
     align-items: center;
-    gap: 4px;
   }
   a.logo svg {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.7em;
+    height: 2.7em;
   }
   a.logo path.logo-int {
     fill: #499D3D;
@@ -575,12 +574,9 @@ a.logo {
   }
 }
 @media screen and (min-width: 992px) {
-  a.logo {
-    gap: 8px;
-  }
   a.logo svg {
-    width: 4em;
-    height: 4em;
+    width: 3.4em;
+    height: 3.4em;
   }
   a.logo p {
     font-family: Genos;

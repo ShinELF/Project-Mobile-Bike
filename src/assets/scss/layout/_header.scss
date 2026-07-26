@@ -47,11 +47,10 @@ a.logo {
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
-        gap: 4px;
 
         svg {
-            width: 2.5em;
-            height: 2.5em;
+            width: 2.7em;
+            height: 2.7em;
         }
 
         path.logo-int {
@@ -64,11 +63,10 @@ a.logo {
     }
 
     @media screen and (min-width: 992px) {
-        gap: 8px;
 
         svg {
-            width: 4em;
-            height: 4em;
+            width: 3.4em;
+            height: 3.4em;
         }
 
         p {
