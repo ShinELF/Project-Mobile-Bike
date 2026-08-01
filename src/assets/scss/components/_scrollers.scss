@@ -4,7 +4,7 @@
         height: 415px;
         overflow-y: scroll;
         scrollbar-color: variables.$color-neutral-60 variables.$color-neutral-05;
-        scrollbar-width: 20px;
+        scrollbar-width: thin;
 
         @media screen and (min-width: 1024px) {
             scrollbar-width: auto;

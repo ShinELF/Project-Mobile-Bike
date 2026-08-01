@@ -4,7 +4,6 @@
 @mixin body($size) {
     font-family: "DM Sans";
     font-weight: variables.$regular;
-    letter-spacing: 0%;
     font-style: normal;
 
     @if $size =="small" {
@@ -25,25 +24,28 @@
 @mixin header($size) {
     font-family: 'DM Sans';
     font-weight: variables.$semibold;
-    letter-spacing: -2%;
     font-style: normal;
     color: variables.$color-primary-60;
     line-height: 130%;
 
     @if $size =="small" {
         font-size: 20px;
+        letter-spacing: -0.4px;
     }
 
     @else if $size =="base" {
         font-size: 24px;
+        letter-spacing: -0.48px;
     }
 
     @else if $size =="large" {
         font-size: 28px;
+        letter-spacing: -0.56px;
     }
 
     @else if $size =="xlarge" {
         font-size: 32px;
+        letter-spacing: -0.64px;
     }
 
 }
@@ -51,19 +53,21 @@
 @mixin display($size) {
     font-family: Genos;
     font-weight: variables.$regular;
-    letter-spacing: -2.5%;
     font-style: normal;
 
     @if $size =="small" {
         font-size: 48px;
+        letter-spacing: -1.2px;
     }
 
     @else if $size =="base" {
         font-size: 60px;
+        letter-spacing: -1.5px;
     }
 
     @else if $size =="large" {
         font-size: 72px;
+        letter-spacing: -1.8px;
     }
 
     line-height: 120%;
@@ -73,31 +77,35 @@
     font-family: Genos;
     font-weight: variables.$regular;
     font-style: italic;
-    letter-spacing: -6.5%;
 
     @if $size =="xsmall" {
         font-size: 28px;
         line-height: 16px;
+        letter-spacing: -1.82px;
     }
 
     @else if $size =="small" {
         font-size: 36px;
         line-height: 20px;
+        letter-spacing: -2.34px;
     }
 
     @else if $size =="base" {
         font-size: 40px;
         line-height: 24px;
+        letter-spacing: -2.6px;
     }
 
     @else if $size =="large" {
         font-size: 56px;
         line-height: 32px;
+        letter-spacing: -3.64px;
     }
 
     @else if $size =="xlarge" {
         font-size: 72px;
         line-height: 40px;
+        letter-spacing: -4.68px;
     }
 
     @if $direction =="horizontal" {

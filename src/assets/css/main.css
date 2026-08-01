@@ -154,7 +154,6 @@ ul {
 body {
   font-family: "DM Sans";
   font-weight: 400;
-  letter-spacing: 0%;
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
@@ -163,59 +162,58 @@ body {
 h1 {
   font-family: "DM Sans";
   font-weight: 600;
-  letter-spacing: -2%;
   font-style: normal;
   color: #2D6525;
   line-height: 130%;
   font-size: 24px;
+  letter-spacing: -0.48px;
 }
 @media screen and (min-width: 768px) {
   h1 {
     font-family: "DM Sans";
     font-weight: 600;
-    letter-spacing: -2%;
     font-style: normal;
     color: #2D6525;
     line-height: 130%;
     font-size: 32px;
+    letter-spacing: -0.64px;
   }
 }
 
 h2 {
   font-family: "DM Sans";
   font-weight: 600;
-  letter-spacing: -2%;
   font-style: normal;
   color: #2D6525;
   line-height: 130%;
   font-size: 28px;
+  letter-spacing: -0.56px;
 }
 
 h3 {
   font-family: "DM Sans";
   font-weight: 600;
-  letter-spacing: -2%;
   font-style: normal;
   color: #2D6525;
   line-height: 130%;
   font-size: 24px;
+  letter-spacing: -0.48px;
 }
 
 h4 {
   font-family: "DM Sans";
   font-weight: 600;
-  letter-spacing: -2%;
   font-style: normal;
   color: #2D6525;
   line-height: 130%;
   font-size: 20px;
+  letter-spacing: -0.4px;
 }
 
 a {
   text-decoration: none;
   font-family: "DM Sans";
   font-weight: 400;
-  letter-spacing: 0%;
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
@@ -228,7 +226,6 @@ a:hover {
 button {
   font-family: "DM Sans";
   font-weight: 400;
-  letter-spacing: 0%;
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
@@ -237,7 +234,6 @@ button {
 p {
   font-family: "DM Sans";
   font-weight: 400;
-  letter-spacing: 0%;
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
@@ -261,7 +257,6 @@ form button:hover {
 .close-button {
   font-family: "DM Sans";
   font-weight: 400;
-  letter-spacing: 0%;
   font-style: normal;
   font-size: 14px;
   line-height: 150%;
@@ -413,8 +408,8 @@ section.down .com1 .com2 .com3 .com4 .com5 .com6 {
 }
 section.down .carousel-dot {
   display: grid;
-  grid-template-columns: 6;
-  grid-template-rows: 1;
+  grid-template-columns: 6fr;
+  grid-template-rows: 1fr;
   gap: 10px;
   position: absolute;
   bottom: 20px;
@@ -503,7 +498,7 @@ dialog form {
   height: 415px;
   overflow-y: scroll;
   scrollbar-color: #5D6F64 #F1F3F2;
-  scrollbar-width: 20px;
+  scrollbar-width: thin;
 }
 @media screen and (min-width: 1024px) {
   .scroller {
@@ -566,9 +561,9 @@ a.logo {
     font-family: Genos;
     font-weight: 400;
     font-style: italic;
-    letter-spacing: -6.5%;
     font-size: 28px;
     line-height: 16px;
+    letter-spacing: -1.82px;
     text-align: start;
     color: #000000;
   }
@@ -582,9 +577,9 @@ a.logo {
     font-family: Genos;
     font-weight: 400;
     font-style: italic;
-    letter-spacing: -6.5%;
     font-size: 36px;
     line-height: 20px;
+    letter-spacing: -2.34px;
     text-align: start;
     color: #000000;
   }
