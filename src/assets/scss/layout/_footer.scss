@@ -1,0 +1,22 @@
+@use "./../abstracts/variables";
+
+.columns {
+    display: grid;
+    grid-auto-flow: row;
+    border-bottom: 1px solid variables.$color-neutral-10;
+
+        @media screen and (min-width: 576px) {
+            grid-auto-flow: column;
+        }
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid variables.$color-neutral-10;
+}
+
+.credit {
+    text-align: center;
+}

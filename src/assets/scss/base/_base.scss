@@ -33,35 +33,35 @@ svg {
     @include mixins.icon(24);
 }
 
-form {
-    display: flex;
-    padding: 5%;
-    background-color: variables.$color-neutral-05;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-}
+// form {
+//     display: flex;
+//     padding: 5%;
+//     background-color: variables.$color-neutral-05;
+//     flex-direction: column;
+//     align-items: center;
+//     border-radius: 20px;
+// }
 
-label {
-    display: block;
-    color: variables.$color-primary-70;
-    font-size: 1.2em;
-    margin-top: 3%;
-    margin-left: 2%;
-}
+// label {
+//     display: block;
+//     color: variables.$color-primary-70;
+//     font-size: 1.2em;
+//     margin-top: 3%;
+//     margin-left: 2%;
+// }
 
-input {
-    display: block;
-    background-color: variables.$color-neutral-10;
-    border-radius: 10px;
-    border: 1px solid variables.$color-neutral-70;
-    width: 90%;
-    padding: 2%;
+// input {
+//     display: block;
+//     background-color: variables.$color-neutral-10;
+//     border-radius: 10px;
+//     border: 1px solid variables.$color-neutral-70;
+//     width: 90%;
+//     padding: 2%;
 
-    &:target {
-        border: 1px solid variables.$color-neutral-70;
-    }
-}
+//     &:target {
+//         border: 1px solid variables.$color-neutral-70;
+//     }
+// }
 
 footer {
     position: relative;
@@ -72,6 +72,9 @@ footer {
 
 header {
     @include mixins.banner(bottom);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button {

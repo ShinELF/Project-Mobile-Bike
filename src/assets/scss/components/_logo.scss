@@ -1,0 +1,35 @@
+@use "./../abstracts/variables";
+@use "./../abstracts/mixins";
+
+.logo {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 3.4em;
+            height: 2.6em;
+        }
+
+        path.logo-int {
+            fill: variables.$color-primary-40;
+        }
+
+        p {
+            @include mixins.logo(small, horizontal);
+        }
+}
+
+.header {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer {
+        display: flex;
+        align-items: center;
+
+}

@@ -41,39 +41,7 @@ a.index {
     }
 }
 
-a.logo {
-    display: none;
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-
-        svg {
-            width: 2.7em;
-            height: 2.7em;
-        }
-
-        path.logo-int {
-            fill: variables.$color-primary-40;
-        }
-
-        p {
-            @include mixins.logo(xsmall, horizontal);
-        }
-    }
-
-    @media screen and (min-width: 992px) {
-
-        svg {
-            width: 3.4em;
-            height: 3.4em;
-        }
-
-        p {
-            @include mixins.logo(small, horizontal);
-        }
-    }
-}
 
 nav.navigation {
     display: none;

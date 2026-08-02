@@ -151,9 +151,6 @@
     width: auto;
     height: fit-content;
     background-color: variables.$color-white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-#{$direction}: 8px;
     padding-block: 8px;
     padding-inline: 16px;

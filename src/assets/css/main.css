@@ -39,35 +39,6 @@ svg {
   height: 24px;
 }
 
-form {
-  display: flex;
-  padding: 5%;
-  background-color: #F1F3F2;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 20px;
-}
-
-label {
-  display: block;
-  color: #214E1A;
-  font-size: 1.2em;
-  margin-top: 3%;
-  margin-left: 2%;
-}
-
-input {
-  display: block;
-  background-color: #E3E8E5;
-  border-radius: 10px;
-  border: 1px solid #46534B;
-  width: 90%;
-  padding: 2%;
-}
-input:target {
-  border: 1px solid #46534B;
-}
-
 footer {
   position: relative;
   bottom: 0;
@@ -77,9 +48,6 @@ footer {
   width: auto;
   height: fit-content;
   background-color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 8px;
   padding-block: 8px;
   padding-inline: 16px;
@@ -91,12 +59,12 @@ header {
   width: auto;
   height: fit-content;
   background-color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 8px;
   padding-block: 8px;
   padding-inline: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 button {
@@ -449,6 +417,43 @@ section.down .carousel-dot .dot6 {
   font-size: 1.1em;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo svg {
+  width: 3.4em;
+  height: 2.6em;
+}
+.logo path.logo-int {
+  fill: #499D3D;
+}
+.logo p {
+  font-family: Genos;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 20px;
+  letter-spacing: -2.34px;
+  text-align: start;
+  color: #000000;
+}
+
+.header {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
 #background {
   height: 70%;
 }
@@ -539,49 +544,6 @@ dialog form {
 @media screen and (min-width: 768px) {
   a.index {
     display: none;
-  }
-}
-
-a.logo {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  a.logo {
-    display: flex;
-    align-items: center;
-  }
-  a.logo svg {
-    width: 2.7em;
-    height: 2.7em;
-  }
-  a.logo path.logo-int {
-    fill: #499D3D;
-  }
-  a.logo p {
-    font-family: Genos;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 28px;
-    line-height: 16px;
-    letter-spacing: -1.82px;
-    text-align: start;
-    color: #000000;
-  }
-}
-@media screen and (min-width: 992px) {
-  a.logo svg {
-    width: 3.4em;
-    height: 3.4em;
-  }
-  a.logo p {
-    font-family: Genos;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 36px;
-    line-height: 20px;
-    letter-spacing: -2.34px;
-    text-align: start;
-    color: #000000;
   }
 }
 
@@ -710,6 +672,28 @@ li.user:hover .sous-menu {
 
 li.user {
   position: relative;
+}
+
+.columns {
+  display: grid;
+  grid-auto-flow: row;
+  border-bottom: 1px solid #E3E8E5;
+}
+@media screen and (min-width: 576px) {
+  .columns {
+    grid-auto-flow: column;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E3E8E5;
+}
+
+.credit {
+  text-align: center;
 }
 
 section.high article {
