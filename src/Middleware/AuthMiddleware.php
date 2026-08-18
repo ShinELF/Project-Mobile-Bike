@@ -50,15 +50,7 @@ class AuthMiddleware implements MiddlewareInterface
           );
         }
         break;
-        if (!$this->isAnAdmin($request)) {
-          // Redirection vers la page de connexion ou message d'erreur
-          return new Response(
-            401,
-            ['Content-Type' => 'text/html'],
-            '<h1>401 - Non autorisé</h1><p>Vous devez être administrateur pour accéder à cette page.</p>'
-          );
-        }
-        break;
+
       }
     }
 

@@ -1,8 +1,5 @@
 @use "./../abstracts/variables";
 
-//===========================================
-//              Carousel - image
-//===========================================
 #carousel-container,
 .carousel-track-container {
 
@@ -63,9 +60,6 @@ img.carousel-image {
     }
 }
 
-//===========================================
-//              Carousel - comments
-//===========================================
 section.down {
     position: relative;
     margin-top: 30px;
@@ -139,8 +133,8 @@ section.down {
 
     .carousel-dot {
         display: grid;
-        grid-template-columns: 6;
-        grid-template-rows: 1;
+        grid-template-columns: 6fr;
+        grid-template-rows: 1fr;
         gap: 10px;
         position: absolute;
         bottom: 20px;

@@ -1,6 +1,6 @@
 @use "./../abstracts/variables";
 
-section.mainSection {
+section.main-section {
     margin-top: 30px;
     margin-right: 35px;
 
@@ -8,9 +8,6 @@ section.mainSection {
         margin-bottom: 100px;
         text-align: center;
     }
-
-
-
 }
 
 span.communiquer {
@@ -26,7 +23,7 @@ span.marquer {
 }
 
 @media screen and (min-width: 900px) {
-    section.mainSection {
+    section.main-section {
         display: flex;
 
         .texte {

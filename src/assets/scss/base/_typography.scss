@@ -26,18 +26,19 @@ h4 {
 }
 
 a {
+    text-decoration: none;
     @include mixins.body(base);
+    color: variables.$color-primary-70;
 
     &:hover {
         color: variables.$color-primary-60;
     }
-
-    &.active {
-        color: variables.$color-primary-60;
-        font-weight: bold;
-    }
 }
 
 button {
+    @include mixins.body(base);
+}
+
+p {
     @include mixins.body(base);
 }

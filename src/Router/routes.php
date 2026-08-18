@@ -2,7 +2,6 @@
 
 use Diginamic\Framework\Controller\AdministrationController;
 use Diginamic\Framework\Controller\HomeController;
-use Diginamic\Framework\Controller\LoginController;
 use Diginamic\Framework\Controller\UserController;
 use Diginamic\Framework\Controller\ProductController;
 use Diginamic\Framework\Middleware\AuthMiddleware;
@@ -27,127 +26,22 @@ return [
     'controllerMethod' => 'index',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Accueil',
-    'middlewares' => [
-      // Vous pouvez ajouter des middlewares spécifiques à cette route
-      // new LoggingMiddleware(),
-    ]
-  ],
-
-  [
-    'path' => '/login',
-    'controller' => LoginController::class,
-    'controllerMethod' => 'index',
-    'httpMethod' => 'GET',
-    'params' => [],
-    'titleMenu' => '',
-    'middlewares' => [
-      // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
-    ]
-  ],
-  [
-    'path' => '/login-post',
-    'controller' => LoginController::class,
-    'controllerMethod' => 'submitLogin',
-    'httpMethod' => 'POST',
-    'params' => [],
-    'titleMenu' => '',
-    'middlewares' => [
-      // new AuthMiddleware(['/admin'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
-    ]
-  ],
-  [
-    'path' => '/users',
-    'controller' => UserController::class,
-    'controllerMethod' => 'findAll',
-    'httpMethod' => 'GET',
-    'params' => [],
-    'titleMenu' => 'Gestion des utilisateurs',
-    'middlewares' => [
-      new AuthAdminMiddleware(['/users'])  // Ceci n'est pas nécessaire car la liste a été ajoutée en début du fichier index.php
-    ]
-  ],
-  [
-    'path' => '/users/add',
-    'controller' => UserController::class,
-    'controllerMethod' => 'displayAddForm',
-    'httpMethod' => 'GET',
-    'params' => [],
-    'titleMenu' => '',
-    'middlewares' => [
-      new AuthMiddleware(['/users/add'])
-    ]
-  ],
-  [
-    'path' => '/users/add',
-    'controller' => UserController::class,
-    'controllerMethod' => 'add',
-    'httpMethod' => 'POST',
-    'params' => [],
-    'titleMenu' => '',
-    'middlewares' => [
-      new AuthMiddleware(['/users/add']),
-      new InputCheckerMiddleware(['/users/add'])
-    ]
-  ],
-  [
-    'path' => '/users/update/{id}',
-    'controller' => UserController::class,
-    'controllerMethod' => 'displayFormEdit',
-    'httpMethod' => 'GET',
-    'params' => ['id' => '\d+'],
     'titleMenu' => '',
     'middlewares' => []
   ],
   [
-    'path' => '/users/update/{id}',
-    'controller' => UserController::class,
-    'controllerMethod' => 'edit',
-    'httpMethod' => 'POST',
-    'params' => ['id' => '\d+'],
-    'titleMenu' => '',
-    'middlewares' => []
-  ],
-  [
-    'path' => '/users/delete/{id}',
-    'controller' => UserController::class,
-    'controllerMethod' => 'delete',
-    'httpMethod' => 'GET',
-    'params' => ['id' => '\d+'],
-    'titleMenu' => '',
-    'middlewares' => []
-  ],
-  [
-    'path' => '/presentation/personnalisation',
+    'path' => '/presentation',
     'controller' => HomeController::class,
-    'controllerMethod' => 'personnalisation',
+    'controllerMethod' => 'displayOverview',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Personnalisation',
+    'titleMenu' => 'Présentation',
     'middlewares' => []
   ],
   [
-    'path' => '/presentation/ecologie',
+    'path' => '/evenements',
     'controller' => HomeController::class,
-    'controllerMethod' => 'écologie',
-    'httpMethod' => 'GET',
-    'params' => [],
-    'titleMenu' => 'Écologie',
-    'middlewares' => []
-  ],
-  [
-    'path' => '/presentation/{id}',
-    'controller' => ProductController::class,
-    'controllerMethod' => 'findOne',
-    'httpMethod' => 'GET',
-    'params' => ['id' => '\d+'],
-    'titleMenu' => 'Présentation des produits',
-    'middlewares' => []
-  ],
-  [
-    'path' => '/evenement',
-    'controller' => HomeController::class,
-    'controllerMethod' => 'event',
+    'controllerMethod' => 'displayEvent',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => 'Évènements',
@@ -156,53 +50,40 @@ return [
   [
     'path' => '/boutique',
     'controller' => ProductController::class,
-    'controllerMethod' => 'findAll',
+    'controllerMethod' => 'index',
     'httpMethod' => 'GET',
     'params' => [],
-    'titleMenu' => 'Boutique en ligne',
+    'titleMenu' => 'Produits',
     'middlewares' => []
   ],
   [
     'path' => '/entretien',
     'controller' => HomeController::class,
-    'controllerMethod' => 'entretien',
+    'controllerMethod' => 'displayMaintenance',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => 'Entretien',
     'middlewares' => []
   ],
-
-
   [
-    'path' => '/administration/add',
-    'controller' => ProductController::class,
+    'path' => '/admin',
+    'controller' => AdministrationController::class,
+    'controllerMethod' => 'index',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => 'Administration',
+    'middlewares' => [
+      new AuthAdminMiddleware(['/admin'])
+    ]
+  ],
+  [
+    'path' => '/inscription',
+    'controller' => UserController::class,
     'controllerMethod' => 'displayAddForm',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => '',
     'middlewares' => []
-  ],
-  [
-    'path' => '/administration/add',
-    'controller' => ProductController::class,
-    'controllerMethod' => 'add',
-    'httpMethod' => 'POST',
-    'params' => [],
-    'titleMenu' => '',
-    'middlewares' => [
-      // new InputCheckerMiddleware(['/administration/add'])
-    ]
-  ],
-  [
-    'path' => '/administration',
-    'controller' => AdministrationController::class,
-    'controllerMethod' => 'pageAdministration',
-    'httpMethod' => 'GET',
-    'params' => [],
-    'titleMenu' => 'Administration',
-    'middlewares' => [
-      new AuthAdminMiddleware(['/administration'])
-    ]
   ],
   [
     'path' => '/inscription',
@@ -217,12 +98,135 @@ return [
   ],
   [
     'path' => '/inscriptionReussie',
-    'controller' => HomeController::class,
-    'controllerMethod' => 'subscriptionSuccess',
+    'controller' => UserController::class,
+    'controllerMethod' => 'addSuccess',
     'httpMethod' => 'GET',
     'params' => [],
     'titleMenu' => '',
     'middlewares' => []
   ],
-
+  [
+    'path' => '/login-post',
+    'controller' => UserController::class,
+    'controllerMethod' => 'submitLogin',
+    'httpMethod' => 'POST',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
+  [
+    'path' => '/logout-post',
+    'controller' => UserController::class,
+    'controllerMethod' => 'logout',
+    'httpMethod' => 'POST',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
+  [
+    'path' => '/compte',
+    'controller' => UserController::class,
+    'controllerMethod' => 'index',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => [
+      new AuthMiddleware(['/compte'])
+    ]
+  ],
+  // [
+  //   'path' => '/users/add',
+  //   'controller' => UserController::class,
+  //   'controllerMethod' => 'displayAddForm',
+  //   'httpMethod' => 'GET',
+  //   'params' => [],
+  //   'titleMenu' => '',
+  //   'middlewares' => [
+  //     new AuthMiddleware(['/users/add'])
+  //   ]
+  // ],
+  // [
+  //   'path' => '/users/add',
+  //   'controller' => UserController::class,
+  //   'controllerMethod' => 'add',
+  //   'httpMethod' => 'POST',
+  //   'params' => [],
+  //   'titleMenu' => '',
+  //   'middlewares' => [
+  //     new AuthMiddleware(['/users/add']),
+  //     new InputCheckerMiddleware(['/users/add'])
+  //   ]
+  // ],
+  // [
+  //   'path' => '/users/update/{id}',
+  //   'controller' => UserController::class,
+  //   'controllerMethod' => 'displayFormEdit',
+  //   'httpMethod' => 'GET',
+  //   'params' => ['id' => '\d+'],
+  //   'titleMenu' => '',
+  //   'middlewares' => []
+  // ],
+  // [
+  //   'path' => '/users/update/{id}',
+  //   'controller' => UserController::class,
+  //   'controllerMethod' => 'edit',
+  //   'httpMethod' => 'POST',
+  //   'params' => ['id' => '\d+'],
+  //   'titleMenu' => '',
+  //   'middlewares' => []
+  // ],
+  // [
+  //   'path' => '/users/delete/{id}',
+  //   'controller' => UserController::class,
+  //   'controllerMethod' => 'delete',
+  //   'httpMethod' => 'GET',
+  //   'params' => ['id' => '\d+'],
+  //   'titleMenu' => '',
+  //   'middlewares' => []
+  // ],
+  // [
+  //   'path' => '/presentation/personnalisation',
+  //   'controller' => HomeController::class,
+  //   'controllerMethod' => 'personnalisation',
+  //   'httpMethod' => 'GET',
+  //   'params' => [],
+  //   'titleMenu' => 'Personnalisation',
+  //   'middlewares' => []
+  // ],
+  // [
+  //   'path' => '/presentation/ecologie',
+  //   'controller' => HomeController::class,
+  //   'controllerMethod' => 'écologie',
+  //   'httpMethod' => 'GET',
+  //   'params' => [],
+  //   'titleMenu' => 'Écologie',
+  //   'middlewares' => []
+  // ],
+  // [
+  //   'path' => '/presentation/{id}',
+  //   'controller' => ProductController::class,
+  //   'controllerMethod' => 'findOne',
+  //   'httpMethod' => 'GET',
+  //   'params' => ['id' => '\d+'],
+  //   'titleMenu' => 'Présentation des produits',
+  //   'middlewares' => []
+  // ],
+  [
+    'path' => '/administration/add',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'displayAddForm',
+    'httpMethod' => 'GET',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
+  [
+    'path' => '/administration/add',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'add',
+    'httpMethod' => 'POST',
+    'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
 ];

@@ -2,6 +2,7 @@
 
 namespace Diginamic\Framework\Controller;
 
+use Diginamic\Framework\Services\LoginService;
 use Diginamic\Framework\Services\NavigationService;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -14,34 +15,21 @@ class HomeController extends Controller
   // On stocke les routes dans un attribut $routes
   // on crée une méthode qui permet de créer le tableau links à partir de $routes
 
-  public function __construct(NavigationService $navService, Environment $twig)
+  public function __construct(NavigationService $navService, Environment $twig, LoginService $loginService)
   {
     $this->navService = $navService;
     $this->twig = $twig;
+    $this->loginService = $loginService;
   }
+
   public function index(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/index.twig', [
-      'title' => "Bienvenue sur notre site web",
+      'title' => "Accueil - Mobile Bike",
       'links' => $this->navService->routesToLinks('/'),
+      'status' => $this->loginService->connection()
     ]);
-
-
-    return new Response(
-      200,
-      ['Content-Type' => 'text/html'],
-      $html
-    );
-  }
-  public function personnalisation(ServerRequestInterface $request): ResponseInterface
-  {
-
-    $html = $this->twig->render('presentation/personnalisation.twig', [
-      'title' => "Personnalisation",
-      'links' => $this->navService->routesToLinks('/presentation/personnalisation'),
-    ]);
-
 
     return new Response(
       200,
@@ -50,48 +38,14 @@ class HomeController extends Controller
     );
   }
 
-  public function Écologie(ServerRequestInterface $request): ResponseInterface
+  public function displayOverview(ServerRequestInterface $request): ResponseInterface
   {
 
-    $html = $this->twig->render('presentation/ecologie.twig', [
-      'title' => "Écologie",
-      'links' => $this->navService->routesToLinks('/presentation/ecologie'),
-
+    $html = $this->twig->render('home/presentation.twig', [
+      'title' => "Présentation - Mobile Bike",
+      'links' => $this->navService->routesToLinks('/presentation'),
+      'status' => $this->loginService->connection()
     ]);
-
-    return new Response(
-      200,
-      ['Content-Type' => 'text/html'],
-      $html
-    );
-  } //View::baseTemplate("presentationEcologie", $html)
-
-  public function pageAdministration(ServerRequestInterface $request): ResponseInterface
-  {
-
-    $html = $this->twig->render('home/administration.twig', [
-      'title' => "Administration",
-      'links' => $this->navService->routesToLinks('/administration'),
-      'date' => date(DATE_ATOM, strtotime('now'))
-    ]);
-    /* $html = View::header($links);
-        $html .= "<h1>Page d'accueil</h1>"; */
-    return new Response(
-      200,
-      ['Content-Type' => 'text/html'],
-      $html
-    );
-  }
-
-
-  public function event(ServerRequestInterface $request): ResponseInterface
-  {
-
-    $html = $this->twig->render('home/evenement.twig', [
-      'title' => "Évènements",
-      'links' => $this->navService->routesToLinks('/evenement'),
-    ]);
-
 
     return new Response(
       200,
@@ -100,50 +54,30 @@ class HomeController extends Controller
     );
   }
 
-  //View::baseTemplate("Accueil", $html)
+  public function displayEvent(ServerRequestInterface $request): ResponseInterface
+  {
 
-  public function entretien(ServerRequestInterface $request): ResponseInterface
+    $html = $this->twig->render('home/evenements.twig', [
+      'title' => "Évènements - Mobile Bike",
+      'links' => $this->navService->routesToLinks('/evenements'),
+      'status' => $this->loginService->connection()
+    ]);
+
+    return new Response(
+      200,
+      ['Content-Type' => 'text/html'],
+      $html
+    );
+  }
+
+  public function displayMaintenance(ServerRequestInterface $request): ResponseInterface
   {
 
     $html = $this->twig->render('home/entretien.twig', [
-      'title' => "Entretien",
+      'title' => "Entretien - Mobile Bike",
       'links' => $this->navService->routesToLinks('/entretien'),
+      'status' => $this->loginService->connection()
     ]);
-
-
-    return new Response(
-      200,
-      ['Content-Type' => 'text/html'],
-      $html
-    );
-  } //View::baseTemplate("Accueil", $html)
-
-  public function pageInscription(ServerRequestInterface $request): ResponseInterface
-  {
-
-    $html = $this->twig->render('home/inscription.twig', [
-      'title' => "Inscription",
-      'links' => $this->navService->routesToLinks('/inscription'),
-    ]);
-    /* $html = View::header($links);
-        $html .= "<h1>Page d'accueil</h1>"; */
-    return new Response(
-      200,
-      ['Content-Type' => 'text/html'],
-      $html
-    );
-  }
-  public function subscriptionSuccess(ServerRequestInterface $request): ResponseInterface
-  {
-
-    $title =  "Ajout d'un utilisateur";
-    $html = $this->twig->render('home/inscriptionReussie.twig', [
-      'title' => $title,
-      'links' => $this->navService->routesToLinks('/'),
-
-    ]);
-
-
 
     return new Response(
       200,

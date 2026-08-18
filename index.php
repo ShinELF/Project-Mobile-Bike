@@ -7,15 +7,15 @@ use Diginamic\Framework\Response\ResponseEmitter;
 use Diginamic\Framework\Exception\RouteNotFoundException;
 use Diginamic\Framework\Middleware\MiddlewareHandler;
 use Diginamic\Framework\Middleware\AuthMiddleware;
-use Diginamic\Framework\Middleware\AuthAdminMiddleware;
 use Diginamic\Framework\Middleware\InputSanitizerMiddleware;
 use Diginamic\Framework\Services\NavigationService;
+use Diginamic\Framework\Services\LoginService;
 use GuzzleHttp\Psr7\ServerRequest;
 use GuzzleHttp\Psr7\Response;
 
 // Démarrer la session si vous utilisez les sessions pour l'authentification
+ini_set('session.use_strict_mode', 1);
 session_start();
-
 
 // Chemins relatifs à la racine du projet
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/src/Views');
@@ -58,6 +58,7 @@ $routes = require_once __DIR__ . '/src/Router/routes.php';
 
 // Instanciation des services
 $navService = new NavigationService($routes);
+$loginService = new LoginService();
 
 // Parcours du tableau de routes et ajout de chaque route au router
 foreach ($routes as $route) {
@@ -91,7 +92,7 @@ try {
   }
 
   // Définition du contrôleur comme fonction finale avec instanciation du contrôleur en fonction de la route
-  $controller = new $route['controller']($navService, $twig);
+  $controller = new $route['controller']($navService, $twig, $loginService);
   $method = $route['controllerMethod'];
 
   $middlewareHandler->setController(function ($request) use ($controller, $method, $route) {

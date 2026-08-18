@@ -1,16 +1,5 @@
-//===========================================
-//                  Fonts
-//===========================================
-
 $regular : 400;
 $semibold : 600;
-
-//===========================================
-//                  Colors
-//===========================================
-
-//  Primary
-//-------------------------------------------
 
 $color-primary-05: #D0FCCD;
 $color-primary-10: #93FA87;
@@ -24,9 +13,6 @@ $color-primary-80: #143510;
 $color-primary-90: #0A2007;
 $color-primary-95: #051403;
 
-//  Neutral
-//-------------------------------------------
-
 $color-neutral-05: #F1F3F2;
 $color-neutral-10: #E3E8E5;
 $color-neutral-20: #C7D1CB;
@@ -38,12 +24,12 @@ $color-neutral-70: #46534B;
 $color-neutral-80: #2E3832;
 $color-neutral-90: #171C19;
 
-
-//  Semantic
-//-------------------------------------------
-
 $color-white: #FFFFFF;
 $color-black: #000000;
-$color-danger: #BC4749;
-$color-warning: #EAC435;
-$color-info: #258EA6;
+$color-danger-background:#FFC7B7;
+$color-danger-text: #6D1E10;
+$color-warning-background: #FFF1AA;
+$color-warning-text: #494322;
+$color-info-background: #BDD7E0;
+$color-info-text:#23434C;
+$color-background: #2e3832CC;

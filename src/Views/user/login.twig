@@ -1,0 +1,29 @@
+{# {% extends "base.twig" %} #}
+
+{% block content %}
+	<dialog id="login_modale" closedby="any">
+		<button type="button" commandfor="login_modale" command="close" class="close-button">Fermer</button>
+		<form method="post" action="/login-post">
+
+			<h2>Connexion</h2>
+
+			<div class="input-area">
+				<label id="login-label" for="login">Login</label>
+				<input type="text" id="login" name="login" required>
+
+				<label for="password" id="password-label">Mot de passe</label>
+				<input type="password" id="password" name="password" required>
+			</div>
+
+			<button type="submit">Connexion</button>
+
+			<div class="form-paragraph">
+				<p>Vous n'avez pas encore de compte ?
+					<a href="/inscription">Créez un compte</a>
+				</p>
+			</div>
+
+		</form>
+
+	</dialog>
+{% endblock %}

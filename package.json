@@ -19,5 +19,8 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.89.1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

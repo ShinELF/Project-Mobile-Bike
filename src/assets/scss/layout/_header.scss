@@ -1,48 +1,13 @@
 @use "./../abstracts/variables";
 @use "./../abstracts/mixins";
 
-//===========================================
-//                  Top
-//===========================================
-
-//  Base
-//-------------------------------------------
-
-.header-top {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-
-    @media screen and (min-width: 768px) {
-        height: 72px;
-        border-bottom: solid 0.5px variables.$color-neutral-10;
-        margin-bottom: 8px;
-    }
-}
-
-//  Burger menu
-//-------------------------------------------
-
 .burger {
-    &:not(#burger) {
-        justify-self: start;
-        position: relative;
-        z-index: 2;
-    }
+    display: flex;
+    flex-direction: column;
+    @include mixins.icon(24);
+    z-index: 2;
 
-    &#burger {
-        display: flex;
-        flex-direction: column;
-        @include mixins.icon(24);
-
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
-    }
-
-    & span {
+    span {
         width: 25px;
         height: 3px;
         background: variables.$color-black;
@@ -52,97 +17,61 @@
     }
 
     &.open {
-        position: fixed;
-        top:10px;
-
-        & span:nth-child(2) {
+        span:nth-child(2) {
             opacity: 0;
         }
 
-        & span:nth-child(1) {
+        span:nth-child(1) {
             transform: translateY(8.4px) rotate(45deg);
         }
 
-        & span:nth-child(3) {
+        span:nth-child(3) {
             transform: translateY(-8.4px) rotate(-45deg);
         }
     }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
-//  Logo
-//-------------------------------------------
-
-div.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+a.index {
+    @media screen and (min-width:768px) {
+        display: none;
+    }
 }
 
-svg.logo {
+a.logo {
     display: none;
 
     @media screen and (min-width: 768px) {
-        display: block;
-        width: 4em;
-        height: 4em;
-    }
-
-    path.logo-ext {
-        fill: variables.$color-black;
-    }
-
-    path.logo-int {
-        fill: variables.$color-primary-40;
-    }
-}
-
-p.logo {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-        display: contents;
-        @include mixins.logo(small, horizontal);
-    }
-}
-
-//  User's icons
-//-------------------------------------------
-
-div.user {
-    display: flex;
-    justify-self: end;
-
-    button {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 4px;
-        margin-left: 16px;
 
-        &:hover {
-            color: variables.$color-primary-60;
-            fill: variables.$color-primary-60;
+        svg {
+            width: 2.7em;
+            height: 2.7em;
+        }
+
+        path.logo-int {
+            fill: variables.$color-primary-40;
         }
 
         p {
-            display: none;
-
-            @media screen and (min-width:768px) {
-                display: block;
-            }
+            @include mixins.logo(xsmall, horizontal);
         }
     }
-}
 
-//===========================================
-//                Navigation
-//===========================================
+    @media screen and (min-width: 992px) {
 
-h1.navigation {
-    display: none;
+        svg {
+            width: 3.4em;
+            height: 3.4em;
+        }
 
-    &.active {
-        display: contents;
+        p {
+            @include mixins.logo(small, horizontal);
+        }
     }
 }
 
@@ -151,15 +80,55 @@ nav.navigation {
 
     &.open {
         position: fixed;
-        top: 0px;
+        top: 40px;
         left: 0px;
-        right: 0px;
+        width: 70%;
         height: 100dvh;
         display: block;
-        justify-content: center;
-        padding: 48px 16px 8px 16px;
+        padding: 8px 16px 8px 16px;
         background: variables.$color-neutral-05;
 
+        @media screen and (min-width:576px) {
+            top: 56px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        display: block;
+    }
+
+    a {
+        font-size: 24px;
+        color: variables.$color-black;
+
+        &:hover {
+            color: variables.$color-primary-60;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 992px) {
+            font-size: 18px;
+        }
+    }
+}
+
+ul.navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+    gap: 8px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+        gap: 24px;
     }
 }
 
@@ -167,48 +136,70 @@ li.navigation {
     display: flex;
     flex-direction: column;
     text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-
-    h1.navigation {
-        &.active {
-            display: none;
-        }
-    }
-
-    nav.navigation {
-        display: contents;
-    }
-
-    li.navigation {
-
-        flex-direction: row;
-        // padding-inline: 10px;
-
-        // li {
-        //     margin: 0 1rem;
-        // }
-    }
-}
-
-ul.navigation {
-    flex-direction: column;
-    width: max-content;
-    align-items: flex-start;
-    gap: 8px;
-
-    & li a {
-        font-size: 24px;
-    }
-
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
-        gap:32px;
+    }
+}
 
-        & li a {
-            font-size: 18px;
+ul.user {
+    display: flex;
+    justify-self: end;
+
+    p:not(#logout-text) {
+        display: none;
+
+        @media screen and (min-width:576px) and (max-width:768px),
+        (min-width:992px) {
+            display: block;
         }
     }
+
+    a,
+    button {
+        color: variables.$color-black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin-inline: 8px;
+
+        &:hover {
+            color: variables.$color-primary-60;
+            fill: variables.$color-primary-60;
+        }
+    }
+
+    form {
+        padding: 0;
+    }
+}
+
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    right: 0px;
+    z-index: 2;
+    background-color: variables.$color-white;
+    padding-block: 8px;
+    border: solid 1px variables.$color-primary-70;
+
+    li:hover {
+        background-color: variables.$color-neutral-05;
+    }
+
+    button p {
+        margin: 0px;
+    }
+}
+
+li.user:hover .sous-menu {
+    display: grid;
+}
+
+li.user {
+    position: relative;
 }
