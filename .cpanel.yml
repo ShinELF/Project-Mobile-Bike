@@ -1,5 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mexa4585/public_html
-    - /usr/bin/rsync -av src/ $DEPLOYPATH
+    - export DEPLOYPATH=/home/mexa4585/public_html/
+    - /usr/bin/rsync -av src $DEPLOYPATH
+    - /usr/bin/rsync -av index.php $DEPLOYPATH
