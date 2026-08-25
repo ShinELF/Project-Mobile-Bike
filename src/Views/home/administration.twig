@@ -1,8 +1,8 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	 <script src="../../js/administration.js" defer></script>
-	 <script src="../../js/addForm.js" defer></script>
+	 <script src="/src/assets/js/administration.js" defer></script>
+	 <script src="/src/assets/js/addForm.js" defer></script>
 
 	{# making the page act like a background #}
 		<section id="background" class="product-displayed"> <div class="produits">
@@ -11,7 +11,7 @@
 			<div id="boutique-container">
 				{% for prod in product %}
 					<article>
-						<a href=""><img src="./../../../Ressources/assets/img/{{prod.image}}" alt="">
+						<a href=""><img src="/src/assets/img/shop/{{prod.image}}" alt="">
 							<h3>
 								{{prod.modele}}
 							</h3>
