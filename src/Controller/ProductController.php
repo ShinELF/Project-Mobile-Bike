@@ -43,7 +43,7 @@ class ProductController extends Controller
             $html
         );
     }
-          public function displayAddForm(ServerRequestInterface $request): ResponseInterface
+    public function displayAddForm(ServerRequestInterface $request): ResponseInterface
     {
 
         $title =  "Ajout d'un produit";
@@ -82,8 +82,109 @@ class ProductController extends Controller
         // Si tout s'est bien passé, on redirige
         return new Response(
             302,
-            ['Location' => '/administration'],
+            ['Location' => '/admin'],
             ''
+        );
+    }
+
+
+    public function edit(ServerRequestInterface $request, array $routeParams = [])
+    {
+        // Récupération de l'id qui provient de la requête (le paramètre de la route)
+        $id = $routeParams["id"];
+        if (isset($id)) {
+
+            $formData = $request->getParsedBody();
+
+            $product = $this->productRepository->findById($id);
+            $product->hydrate($formData);
+            $product->id = $id;
+
+            if (!$this->productRepository->save($product)) {
+                return new Response(
+                    418,
+                    ['Content-Type' => 'text/html'],
+                    '<h1>Problème dans la mise à jour </h1>'
+                );
+            }
+
+            return new Response(
+                302,
+                ['Location' => '/admin'],
+                ''
+            );
+        }
+        return new Response(
+            400,
+            ['Content-Type' => 'text/html'],
+            '<h1>La requête HTTP a été mal formulée </h1>'
+        );
+
+    }
+    public function displayEditForm(ServerRequestInterface $request, array $routeParams = [])
+    {
+        // Récupération de l'id qui provient de la requête (le paramètre de la route)
+        $id = $routeParams["id"];
+
+        $title = "Modification d'un produit";
+        if (isset($id)) {
+
+
+            $product = $this->productRepository->findById($id);
+
+            $html = $this->twig->render('shop/editForm.twig', [
+                'title' => $title,
+                'links' => $this->navService->routesToLinks('/administration/edit'),
+                'product' => $product,
+                'status' => $this->loginService->connection()
+            ]);
+
+            if (!$product) {
+                return new Response(
+                    404,
+                    ['Content-Type' => 'text/html'],
+                    '<h1>Aucun produit ne correspond ! </h1>'
+                );
+            }
+
+            return new Response(
+                200,
+                ['Content-Type' => 'text/html'],
+                $html
+            );
+        }
+        return new Response(
+            400,
+            ['Content-Type' => 'text/html'],
+            '<h1>La requête HTTP a été mal forumlée </h1>'
+        );
+    }
+
+public function delete(ServerRequestInterface $request, array $routeParams = []): ResponseInterface
+    {
+        // Récupération de l'id qui provient de la requête (le paramètre de la route)
+        $id = $routeParams["id"];
+        if (isset($id)) {
+            $delete = $this->productRepository->delete($id);
+
+            if (!$delete) {
+                return new Response(
+                    418,
+                    ['Content-Type' => 'text/html'],
+                    '<h1>Problème dans la suppression du produit </h1>'
+                );
+            }
+
+            return new Response(
+                302,
+                ['Location' => '/admin'],
+                ''
+            );
+        }
+        return new Response(
+            400,
+            ['Content-Type' => 'text/html'],
+            '<h1>La requête HTTP a été mal formulée </h1>'
         );
     }
 }

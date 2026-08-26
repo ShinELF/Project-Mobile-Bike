@@ -211,21 +211,40 @@ return [
   //   'titleMenu' => 'Présentation des produits',
   //   'middlewares' => []
   // ],
-  [
-    'path' => '/administration/add',
-    'controller' => ProductController::class,
-    'controllerMethod' => 'displayAddForm',
-    'httpMethod' => 'GET',
-    'params' => [],
-    'titleMenu' => '',
-    'middlewares' => []
-  ],
+
   [
     'path' => '/administration/add',
     'controller' => ProductController::class,
     'controllerMethod' => 'add',
     'httpMethod' => 'POST',
     'params' => [],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
+  [
+    'path' => '/administration/edit/{id}',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'displayEditForm',
+    'httpMethod' => 'GET',
+    'params' => ['id' => '\d+'],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
+  [
+    'path' => '/administration/edit/{id}',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'edit',
+    'httpMethod' => 'POST',
+    'params' => ['id' => '\d+'],
+    'titleMenu' => '',
+    'middlewares' => []
+  ],
+    [
+    'path' => '/administration/delete/{id}',
+    'controller' => ProductController::class,
+    'controllerMethod' => 'delete',
+    'httpMethod' => 'GET',
+    'params' => ['id' => '\d+'],
     'titleMenu' => '',
     'middlewares' => []
   ],

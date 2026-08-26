@@ -16,9 +16,9 @@ closeButton.addEventListener("click", () => {
     background.classList.replace("form-hidden", "product-displayed");
 });
 
-// background.addEventListener("click", () => {
-//     form.classList.replace("form-displayed", "form-hidden");
-// });
+background.addEventListener("click", () => {
+    form.classList.replace("form-displayed", "form-hidden");
+});
 
 // Récupérer le contenu de /boutique et l'insérer dans une div
 async function chargerBoutique() {

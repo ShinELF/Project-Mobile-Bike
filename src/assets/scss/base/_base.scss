@@ -50,7 +50,7 @@ label {
     margin-left: 2%;
 }
 
-input {
+input, textarea {
     display: block;
     background-color: variables.$color-neutral-10;
     border-radius: 10px;
