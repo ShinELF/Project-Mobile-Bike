@@ -2,7 +2,7 @@
 @use "./../ressources/fonts";
 
 @mixin body($size) {
-    font-family: "DM Sans";
+    font-family: "Atkinson";
     font-weight: variables.$regular;
     font-style: normal;
 
@@ -22,7 +22,7 @@
 }
 
 @mixin header($size) {
-    font-family: 'DM Sans';
+    font-family: "Atkinson";
     font-weight: variables.$semibold;
     font-style: normal;
     color: variables.$color-primary-60;

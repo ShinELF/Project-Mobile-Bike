@@ -13,7 +13,6 @@ use Twig\Environment;
 
 class ProductController extends Controller
 {
-    // Attributs
     private $productRepository;
 
     public function __construct(NavigationService $navService, Environment $twig, LoginService $loginService)
@@ -43,7 +42,7 @@ class ProductController extends Controller
             $html
         );
     }
-          public function displayAddForm(ServerRequestInterface $request): ResponseInterface
+    public function displayAddForm(ServerRequestInterface $request): ResponseInterface
     {
 
         $title =  "Ajout d'un produit";
@@ -73,11 +72,8 @@ class ProductController extends Controller
         // Hydratation de l'utilisation
         $productEntity->hydrate($data);
 
-
         // Appel au modèle ou au repository
         $this->productRepository->save($productEntity);
-
-
 
         // Si tout s'est bien passé, on redirige
         return new Response(

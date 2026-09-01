@@ -123,8 +123,6 @@ class InputSanitizerMiddleware implements MiddlewareInterface
 
     // Échapper les caractères pour éviter les injections SQL
     if ($this->options['escape_sql']) {
-      // Notez que ceci est une mesure de sécurité de base
-      // Pour une application réelle, utilisez des requêtes préparées
       $string = addslashes($string);
     }
 

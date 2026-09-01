@@ -38,8 +38,6 @@ class AuthMiddleware implements MiddlewareInterface
     // Vérifiez si la route actuelle est protégée
     foreach ($this->protectedRoutes as $protectedRoute) {
       if (strpos($path, $protectedRoute) === 0) {
-        // Ici, mettre la logique d'authentification
-        // Par exemple, vérifier si l'utilisateur est connecté via une session
 
         if (!$this->isAuthenticated($request)) {
           // Redirection vers la page de connexion ou message d'erreur

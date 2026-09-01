@@ -11,9 +11,6 @@ use Twig\Environment;
 
 class HomeController extends Controller
 {
-  // Il faut créer un constructeur qui va récupérer les routes (dans les paramètres)
-  // On stocke les routes dans un attribut $routes
-  // on crée une méthode qui permet de créer le tableau links à partir de $routes
 
   public function __construct(NavigationService $navService, Environment $twig, LoginService $loginService)
   {

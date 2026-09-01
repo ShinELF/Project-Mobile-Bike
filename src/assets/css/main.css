@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "DM Sans";
-  src: url("/src/assets/font/DM_Sans/DMSans-VariableFont_opsz,wght.ttf"), url("/src/assets/font/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf");
+  font-family: "Atkinson";
+  src: url("/src/assets/font/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf"), url("/src/assets/font/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-Italic-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: Genos;
@@ -152,7 +152,7 @@ ul {
 }
 
 body {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -160,7 +160,7 @@ body {
 }
 
 h1 {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 600;
   font-style: normal;
   color: #2D6525;
@@ -170,7 +170,7 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-family: "DM Sans";
+    font-family: "Atkinson";
     font-weight: 600;
     font-style: normal;
     color: #2D6525;
@@ -181,7 +181,7 @@ h1 {
 }
 
 h2 {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 600;
   font-style: normal;
   color: #2D6525;
@@ -191,7 +191,7 @@ h2 {
 }
 
 h3 {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 600;
   font-style: normal;
   color: #2D6525;
@@ -201,7 +201,7 @@ h3 {
 }
 
 h4 {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 600;
   font-style: normal;
   color: #2D6525;
@@ -212,7 +212,7 @@ h4 {
 
 a {
   text-decoration: none;
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -224,7 +224,7 @@ a:hover {
 }
 
 button {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -232,7 +232,7 @@ button {
 }
 
 p {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -255,7 +255,7 @@ form button:hover {
 }
 
 .close-button {
-  font-family: "DM Sans";
+  font-family: "Atkinson";
   font-weight: 400;
   font-style: normal;
   font-size: 14px;

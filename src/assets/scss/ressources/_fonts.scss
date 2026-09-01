@@ -1,10 +1,10 @@
 $font-path: "/src/assets/font";
 
 @font-face {
-    font-family: 'DM Sans';
+    font-family: 'Atkinson';
     src:
-        url($font-path + "/DM_Sans/DMSans-VariableFont_opsz,wght.ttf"),
-        url($font-path + "/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf");
+        url($font-path + "/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf"),
+        url($font-path + "/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-Italic-VariableFont_wght.ttf");
 }
 
 @font-face {

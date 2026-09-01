@@ -22,15 +22,11 @@ class InputCheckerMiddleware implements MiddlewareInterface
     // Vérifier si la route actuelle doit être exclue
     $path = $request->getUri()->getPath();
 
-
     // Récupérer et vérifier le payload (le body) de la requête POST (login, password, email)
     $parsedBody = $request->getParsedBody();
 
     // Teste si le mot de passe a bien été envoyé via une condition
-
     if (isset($parsedBody["password"])) {
-      // Vérification du bon format à l'aide des expressions régulières
-
 
       // Cas favorable -> je passe au middleware suivant
       return $next($request);
