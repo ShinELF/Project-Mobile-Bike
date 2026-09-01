@@ -1,0 +1,8 @@
+@use "./../abstracts/variables";
+
+.products {
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    padding-top: 32px;
+}

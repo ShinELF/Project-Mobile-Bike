@@ -56,7 +56,7 @@ label {
   margin-left: 2%;
 }
 
-input {
+input, textarea {
   display: block;
   background-color: #E3E8E5;
   border-radius: 10px;
@@ -64,7 +64,7 @@ input {
   width: 90%;
   padding: 2%;
 }
-input:target {
+input:target, textarea:target {
   border: 1px solid #46534B;
 }
 
@@ -265,6 +265,20 @@ form button:hover {
   right: 16px;
 }
 
+.edit {
+  padding: 12px;
+  font-size: 1.2em;
+  background-color: #214E1A;
+  color: #FFFFFF;
+}
+
+.delete {
+  padding: 12px;
+  font-size: 1.2em;
+  background-color: #DD1C1A;
+  color: #FFFFFF;
+}
+
 @media screen and (min-width: 1024px) {
   #maintenance-button-prev {
     position: absolute;
@@ -449,34 +463,6 @@ section.down .carousel-dot .dot6 {
   font-size: 1.1em;
 }
 
-#background {
-  height: 70%;
-}
-
-.form-hidden {
-  display: none;
-}
-
-.product-displayed {
-  display: block;
-}
-
-.form-displayed {
-  display: block;
-  margin-inline: 15%;
-}
-
-.product-hidden {
-  display: none;
-  background: #748B7D;
-}
-
-#boutique-container {
-  border: 1px solid #46534B;
-  height: 700px;
-  margin-top: 5%;
-}
-
 dialog {
   margin: auto;
   padding: 32px;
@@ -504,6 +490,22 @@ dialog form {
   .scroller {
     scrollbar-width: auto;
   }
+}
+
+.product {
+  background-color: #F1F3F2;
+  padding: 16px;
+  width: 290px;
+}
+.product img {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
 }
 
 .burger {
@@ -710,6 +712,13 @@ li.user:hover .sous-menu {
 
 li.user {
   position: relative;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding-top: 32px;
 }
 
 section.high article {
@@ -969,11 +978,6 @@ section.basse .basse-reservation {
     padding-top: 250px;
   }
 }
-img {
-  margin-top: 50px;
-  box-shadow: 8px 8px 10px 0 #46534B;
-}
-
 .co2-text,
 .print-text,
 .health-text {
@@ -997,11 +1001,6 @@ img {
 .print-text,
 .health-text {
   display: none;
-}
-
-img {
-  margin-top: 50px;
-  box-shadow: 8px 8px 10px 0 #46534B;
 }
 
 .co2-text,
@@ -1254,11 +1253,6 @@ img {
   }
 }
 @media screen and (min-width: 720px) and (min-width: 1300px) {
-  img {
-    width: 500px;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
   .texte {
     width: 100%;
     text-align: left;

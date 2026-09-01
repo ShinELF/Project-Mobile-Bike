@@ -1,0 +1,17 @@
+@use "./../abstracts/variables";
+
+.product {
+    background-color: variables.$color-neutral-05;
+    padding: 16px;
+    width: 290px;
+    & img {
+        width: 100%;
+    }
+}
+
+.buttons {
+    display : flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}

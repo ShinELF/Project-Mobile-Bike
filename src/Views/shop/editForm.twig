@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<script src="/src/assets/js/addForm.js" defer></script>
+
+	<h2>{{ title }}</h2>
+	<form method="post" action="/administration/edit/{{product.id}}">
+		<div>
+			<div>
+				<div>
+                    <img src="/src/assets/img/shop/{{product.image}}" alt="">
+					<label for="image">Image</label>
+					<input type="file" id="image" name="image" placeholder="Ajouter une image">
+					<div></div>
+				</div>
+
+				<div>
+					<label for="modele">Modèle</label>
+					<input type="text" id="modele" name="modele" value="{{product.modele}}">
+				</div>
+
+				<div>
+					<label for="price">Prix</label>
+					<input type="text" id="price" name="price" value="{{product.price}}">
+				</div>
+
+				<div>
+					<label for="description">Description</label>
+					<textarea id="description" name="description" value="{{product.description}}"></textarea>
+				</div>
+
+
+				<button type="submit">Modifier le produit</button>
+
+			</div>
+		</div>
+	</form>
+
+
+{% endblock %}

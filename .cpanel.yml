@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mexa4585/public_html/
+    - export DEPLOYPATH=/home/mexa4585/mobile-bike/
     - /usr/bin/rsync -av src $DEPLOYPATH
     - /usr/bin/rsync -av index.php $DEPLOYPATH

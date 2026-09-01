@@ -1,9 +1,5 @@
 @use "./../abstracts/variables";
 
-img {
-    margin-top: 50px;
-    box-shadow: 8px 8px 10px 0 variables.$color-neutral-70;
-}
 
 .co2-text,
 .print-text,
@@ -30,10 +26,6 @@ img {
     display: none;
 }
 
-img {
-    margin-top: 50px;
-    box-shadow: 8px 8px 10px 0 variables.$color-neutral-70;
-}
 
 .co2-text,
 .print-text,
@@ -325,11 +317,6 @@ img {
     }
 
     @media screen and (min-width: 1300px) {
-        img {
-            width: 500px;
-            margin-left: 100px;
-            margin-right: 100px;
-        }
 
         .texte {
             width: 100%;

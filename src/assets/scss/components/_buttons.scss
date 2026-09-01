@@ -24,6 +24,20 @@ form button {
     right:16px;
 }
 
+.edit {
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: variables.$color-primary-70;
+    color: variables.$color-white;
+}
+
+.delete {
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: variables.$color-danger;
+    color: variables.$color-white;
+}
+
 @media screen and (min-width: 1024px) {
 
 

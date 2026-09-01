@@ -1,75 +1,66 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	 <script src="/src/assets/js/administration.js" defer></script>
-	 <script src="/src/assets/js/addForm.js" defer></script>
-
-	{# making the page act like a background #}
-		<section id="background" class="product-displayed"> <div class="produits">
-			<h2>Produits</h2>
-
-			<div id="boutique-container">
-				{% for prod in product %}
-					<article>
-						<a href=""><img src="/src/assets/img/shop/{{prod.image}}" alt="">
-							<h3>
-								{{prod.modele}}
-							</h3>
-							<p>
-								A partir de
-								{{prod.price}}
-								€ (TVA compris)
-							</p>
-						</a>
-					</article>
-				{% endfor %}
-			</div>
-
-			<button type="button" class="button-form" id="add-button">Ajout d'un produit
-			</button>
-
-		</div>
+	<script src="/src/assets/js/administration.js" defer></script>
+	<script src="/src/assets/js/addForm.js" defer></script>
 
 
-	</section>
+	<section>
+		<h2>Produits</h2>
+		<button type="button" class="edit" commandfor="add-modale" command="show-modal">Ajout d'un produit
+		</button>
+		<section class="products">
+			{% for prod in product %}
+				<article class="product">
+					<img src="/src/assets/img/shop/{{prod.image}}" alt="">
+					<h3>
+						{{prod.modele}}
+					</h3>
+					<p>
+						A partir de
+						{{prod.price}}
+						€ (TVA compris)
+					</p>
+					<div class="buttons">
+						<a href="/administration/edit/{{prod.id}}" class="edit">Modifier</a>
+						<a href="/administration/delete/{{prod.id}}" class="delete">Supprimer</a>
+					</div>
+				</article>
+			{% endfor %}
+		</section>
 
-	{# container for the form window #}
-	<div id="add-form" class="form-hidden">
-		<form method="post" action="/administration/add">
-			<div>
+		<dialog id="add-modale" closedby="any">
+			<button type="button" commandfor="add-modale" command="close" class="close-button">Fermer</button>
+			<form method="post" action="/administration/add">
 				<div>
 					<div>
-						<label for="image">Image</label>
-						<input
-						type="file" id="image" name="image" placeholder="Ajouter une image" required>
-						{# container for the image preview #}
-						<div class="image-preview"></div>
+						<div>
+							<label for="image">Image</label>
+							<input type="file" id="image" name="image" placeholder="Ajouter une image" required>
+						</div>
+
+						<div>
+							<label for="modele">Modèle</label>
+							<input type="text" id="modele" name="modele" required>
+						</div>
+
+						<div>
+							<label for="price">Prix</label>
+							<input type="text" id="price" name="price" required>
+						</div>
+
+						<div>
+							<label for="description">Description</label>
+							<input type="text" id="description" name="description">
+						</div>
+
+						<button type="submit">Créer un produit</button>
+
 					</div>
-
-					<div>
-						<label for="modele">Modèle</label>
-						<input type="text" id="modele" name="modele" required>
-					</div>
-
-					<div>
-						<label for="price">Prix</label>
-						<input type="text" id="price" name="price" required>
-					</div>
-
-					<div>
-						<label for="description">Description</label>
-						<input type="text" id="description" name="description">
-					</div>
-
-
-					<button type="submit">Créer un produit</button>
-
-					<button type="button" id="close-button">Fermer
-					</button>
 				</div>
-			</div>
-		</form>
-	</div>
+			</form>
+		</dialog>
+	</section>
 
 
 {% endblock %}
